@@ -12,7 +12,10 @@ import { resolve, join } from 'node:path';
 import { readFileSync, existsSync } from 'node:fs';
 
 const args = process.argv.slice(2);
-const proj = resolve(args.find((a) => !a.startsWith('--') && !/^[\d.]+$/.test(a)) || '.');
+// projeto = o primeiro argumento que não é opção nem valor de opção (antes: "." era tomado por número e o valor de
+// --profile virava a pasta do projeto)
+const COM_VALOR = ['--profile', '--step', '--caption-bottom'];
+const proj = resolve(args.find((a, i) => !a.startsWith('--') && !COM_VALOR.includes(args[i - 1])) || '.');
 const opt = (k, d) => (args.includes(k) ? args[args.indexOf(k) + 1] : d);
 const PROFILES = {
   reels: { left: 90, right: 990, top: 220, bottom: 1520, colX: 940, colY: 1150 },

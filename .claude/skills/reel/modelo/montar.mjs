@@ -14,6 +14,10 @@
 //   fontes → assets/fonts/fontes.css; com origem "nativa" nada muda e o resultado é o da referência;
 // - aplica o SOM: padrão do vsl.json = "enxuto" (R2); pele com efeitos desligados → nenhum; intensidade 0,3 → enxuto
 //   e −3 dB; 0,6 ou ausente → o que o vsl.json diz; 0,85 → "referencia" (o som exato do vídeo aprovado);
+// - LEGENDA v3 (vsl.json "legenda": "v3", padrão dos vídeos novos): injeta legenda-pre.js antes do beats.js e legenda.js
+//   depois (legenda própria, aprovada em nov/2026) e copia fonts-legenda/ para assets/; sem a chave, a legenda é a do kit
+//   (K.mouthCaps), como no exemplo aprovado;
+// - copia sfx-extra/ (whoosh2.wav, impacto2.wav) para assets/sfx/: a mixagem final é do ferramentas/mixar-sfx.py;
 // - escreve index.html e meta.json; imprime o resumo.
 import { readFileSync, writeFileSync, existsSync, cpSync, mkdirSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
@@ -32,6 +36,7 @@ if (!gsapSrc) { console.error("falta o GSAP: rode npm install na raiz do projeto
 cpSync(gsapSrc, join("assets", "gsap.min.js"));
 cpSync(join(M, "fonts"), join("assets", "fonts"), { recursive: true });
 cpSync(join(M, "sfx"), join("assets", "sfx"), { recursive: true });
+if (existsSync(join(MOD, "sfx-extra"))) cpSync(join(MOD, "sfx-extra"), join("assets", "sfx"), { recursive: true });
 mkdirSync("src", { recursive: true });
 if (!existsSync("src/index.template.html")) cpSync(join(M, "index.template.html"), "src/index.template.html");
 if (!existsSync("src/beats.js")) cpSync(join(MOD, "beats-modelo.js"), "src/beats.js");
@@ -100,6 +105,12 @@ else if (som && som.sfxIntensidade != null) {
 if (SO_CAMERA) { cfg.sfx = false; sfxNota = "nenhum (só câmera)"; }
 const sfxFiltro = cfg.sfxModo === "enxuto" ? readFileSync(join(MOD, "sfx-enxuto.js"), "utf8") : "";
 
+// ---------------- legenda v3 ----------------
+const LEG3 = cfg.legenda === "v3";
+if (LEG3) cpSync(join(MOD, "fonts-legenda"), join("assets", "fonts-legenda"), { recursive: true, force: false });
+const legPre = LEG3 ? readFileSync(join(MOD, "legenda-pre.js"), "utf8") + "\n" : "";
+const legPos = LEG3 ? "\n" + readFileSync(join(MOD, "legenda.js"), "utf8") : "";
+
 // ---------------- matte e música ----------------
 const matte = existsSync("assets/matte.webm")
   ? `<div class="lens" id="lensMatte"><video id="matte" src="assets/matte.webm" data-start="0" data-duration="${dur}" data-track-index="2" muted playsinline></video></div>`
@@ -115,7 +126,7 @@ const beats = readFileSync("src/beats.js", "utf8");
 let html = readFileSync("src/index.template.html", "utf8")
   .replaceAll("__DUR__", String(dur)).replace("__CFG__", JSON.stringify(cfg)).replace("__WORDS__", JSON.stringify(words)).replace("__FACE__", JSON.stringify(face))
   .replace("__CLASS__", `t-${cfg.theme || "roxo"} f-${cfg.font || "padrao"}`)
-  .replace("__MATTE__", matte).replace("__MUSIC__", music).replace("__BEATS__", beats + (sfxFiltro ? "\n" + sfxFiltro : ""));
+  .replace("__MATTE__", matte).replace("__MUSIC__", music).replace("__BEATS__", () => legPre + beats + legPos + (sfxFiltro ? "\n" + sfxFiltro : ""));
 if (peleCss) html = html.replace('<link rel="stylesheet" href="assets/kit.css">', `<link rel="stylesheet" href="assets/kit.css">\n${fontesLink}<link rel="stylesheet" href="assets/pele.css">`);
 if (SO_CAMERA) html = html.replace("</head>", `<style>#ui,#cap,#fx,#behind,#inset,#cover,#under{display:none!important}</style>\n</head>`);
 writeFileSync("index.html", html);
@@ -123,4 +134,4 @@ const meta = read("meta.json", {});
 Object.assign(meta, { id: "vsl", width: 1080, height: 1920, fps: 30 });
 writeFileSync("meta.json", JSON.stringify(meta, null, 2));
 if (!existsSync("hyperframes.json")) cpSync(join(MOD, "hyperframes.json"), "hyperframes.json");
-console.log(`index.html ok${SO_CAMERA ? " (SÓ CÂMERA — rode de novo sem --so-camera depois do render)" : ""} — ${dur}s · ${words.length} palavras · boca: ${face ? "sim" : "NÃO (rode ferramentas/rastrear-boca.py)"} · matte: ${matte.startsWith("<div") ? "sim" : "não"} · música: ${music ? "sim" : "não"} · pele: ${peleNota} · sfx: ${sfxNota}`);
+console.log(`index.html ok${SO_CAMERA ? " (SÓ CÂMERA — rode de novo sem --so-camera depois do render)" : ""} — ${dur}s · ${words.length} palavras · boca: ${face ? "sim" : "NÃO (rode ferramentas/rastrear-boca.py)"} · matte: ${matte.startsWith("<div") ? "sim" : "não"} · música: ${music ? "sim" : "não"} · pele: ${peleNota} · sfx: ${sfxNota} · legenda: ${LEG3 ? "v3" : "kit"}`);

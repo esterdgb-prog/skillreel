@@ -644,3 +644,28 @@ Usar só se pedirem:
 4 com `exemplo/keeps.json` sobre o bruto de exemplo
 e compare o `edl.json` com `exemplo/edl.json`. Se a mudança não era para alterar este caso, eles precisam ser
 idênticos.
+
+---
+
+## 16 · Registro de ajustes (o que mudou, em que gravação e por quê)
+
+### 2026-11 · montagem do vídeo trecho a trecho (`scripts/3-corte.py`)
+- **Sintoma:** o passo de imagem foi morto por falta de memória (SIGKILL) em duas gravações de iPhone: vertical 4K HEVC
+  de 72 s e 1080p de 151 s, numa máquina de 15 GB.
+- **Causa:** um único `filter_complex` com N `trim` da mesma entrada; o ffmpeg guarda quadros para todos os ramos.
+- **Mudança:** cada trecho é codificado sozinho (`-ss` rápido 2 s antes + `-copyts` + `trim` nos **mesmos** tempos
+  absolutos de antes) e os trechos são juntados com o concat demuxer (`-c copy`). Nenhum parâmetro de corte mudou.
+- **Regressão:** no caso do reel "pós-eleição" o `edl.json` saiu idêntico; o `clean.mp4` tem os mesmos 1563 quadros, e
+  a imagem coincide quadro a quadro com a montagem antiga (PSNR mínimo de 42,7 dB, só a diferença de recompressão).
+  Contar quadros depois do `-ss` (`select=gte(n,…)`) ou cortar em tempo relativo errava ±1 quadro: não use.
+
+### 2026-11 · lições de duas gravações de iPhone (sem mudança de parâmetro)
+- **Bruto HDR 4K:** faça antes uma cópia de trabalho 1080×1920 em SDR (tonemap hable, ver `modelo/preparar.sh`) e
+  rode `3-corte.py` sobre ela. Os tempos são os mesmos e o resto do motor trabalha em SDR.
+- **Fala rápida comendo fim de palavra:** "3 de **15**," e "mais **eficiente**." perderam a sílaba final na emenda.
+  O `conferencia.txt` mostrou "3 de 3 de 12" e "mais difícil". Resolvido com `force` em `ajustes.json` cobrindo a
+  palavra ([65,0, 66,25] e [29,6, 31,15]). Sobrou uma pausa de 0,26 s, aceita (o estilo tolera até 0,35 s).
+- **Falsa largada no meio da frase:** "…eu só vou… / Eu só consigo liberar…". Use `cut` em `ajustes.json` cobrindo
+  a falsa largada ([105,30, 107,15]) e o keep anterior terminando antes dela.
+- **Whisper em silêncio:** inventou "Legenda por Sônia Ruberti", "Obrigado." e "E aí?" em trechos sem fala.
+  Antes de manter uma linha curta do `tomadas.txt`, transcreva só a janela dela.

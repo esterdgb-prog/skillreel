@@ -20,6 +20,7 @@ entradas: PASTA/keeps.json {"keeps":[{"from","to","why", "raw"?}]}, PASTA/audio1
 saídas:   PASTA/edl.json (trechos + deslocamento da imagem), PASTA/corte.wav (48 kHz estéreo),
           PASTA/corte16k.wav, PASTA/vicios-removidos.txt, PASTA/clean.mp4 (horizontal, com J/L)
 """
+import shutil
 import glob, json, os, subprocess, sys, unicodedata, wave
 import numpy as np
 
@@ -140,17 +141,24 @@ if "--sem-video" in args:
     sys.exit(0)
 
 # ---- imagem: cada trecho visual j vai de VSTART[j] a VSTART[j+1] no tempo de saída, fonte = src_j + (T − out_j)
+# Monta trecho a trecho e junta com o concat demuxer (nov/2026): um único filter_complex com N trims da mesma entrada
+# guarda quadros na memória e foi morto por falta de RAM (bruto 4K HEVC de 72 s; 1080p de 151 s) numa máquina de 15 GB.
 VSTART = [0.0] + [c["out"] + c["vshift"] for c in edl[1:]] + [t]
-fc = []
+enc = ["-c:v", "h264_videotoolbox", "-b:v", "16M"] if sys.platform == "darwin" else ["-c:v", "libx264", "-preset", "veryfast", "-crf", "18"]
+seg_dir = f"{P}/_trechos"; os.makedirs(seg_dir, exist_ok=True)
+lista = []
 for j, c in enumerate(edl):
     vs = c["src"] + VSTART[j] - c["out"]; ve = c["src"] + VSTART[j + 1] - c["out"]
-    fc.append(f"[0:v]trim={vs:.4f}:{ve:.4f},setpts=PTS-STARTPTS,fps={FPS},format=yuv420p[v{j}];")
-fc.append("".join(f"[v{j}]" for j in range(len(edl))) + f"concat=n={len(edl)}:v=1:a=0[v]")
-filtro = "".join(fc)
-enc = ["-c:v", "h264_videotoolbox", "-b:v", "16M"] if sys.platform == "darwin" else ["-c:v", "libx264", "-preset", "veryfast", "-crf", "18"]
-cmd = lambda e: ["ffmpeg", "-v", "error", "-y", "-i", VIDEO, "-i", f"{P}/corte.wav", "-filter_complex", filtro,
-                 "-map", "[v]", "-map", "1:a", *e, "-g", str(FPS), "-r", str(FPS), "-c:a", "aac", "-b:a", "192k",
-                 "-shortest", f"{P}/clean.mp4"]
-if subprocess.run(cmd(enc)).returncode != 0:
-    subprocess.run(cmd(["-c:v", "libx264", "-preset", "veryfast", "-crf", "18"]), check=True)
+    pre = max(0.0, vs - 2.0)                       # busca rápida 2 s antes, mantendo os tempos originais (-copyts):
+    seg = f"{seg_dir}/t{j:03d}.mp4"                # o trim usa os MESMOS tempos absolutos da montagem original
+    base = ["ffmpeg", "-v", "error", "-y", "-ss", f"{pre:.4f}", "-copyts", "-i", VIDEO, "-vf",
+            f"trim={vs:.4f}:{ve:.4f},setpts=PTS-STARTPTS,fps={FPS},format=yuv420p", "-an"]
+    tail = ["-g", str(FPS), "-r", str(FPS), seg]
+    if subprocess.run(base + enc + tail).returncode != 0:
+        subprocess.run(base + ["-c:v", "libx264", "-preset", "veryfast", "-crf", "18"] + tail, check=True)
+    lista.append(f"file '{os.path.abspath(seg)}'")
+open(f"{seg_dir}/lista.txt", "w").write("\n".join(lista))
+subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", f"{seg_dir}/lista.txt", "-i", f"{P}/corte.wav",
+                "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-shortest", f"{P}/clean.mp4"], check=True)
+shutil.rmtree(seg_dir, ignore_errors=True)
 print(f"→ {P}/clean.mp4")

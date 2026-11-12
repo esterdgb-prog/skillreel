@@ -642,3 +642,28 @@ Ambas as imagens são renders do próprio projeto de referência (nenhum quadro 
 
 **Teste de fidelidade (28/10/2026):** o exemplo remontado com `montar.mjs` gerou um `index.html` byte a byte igual ao
 da referência. Em 18 quadros comparados, 17 saíram idênticos pixel a pixel e 1 com PSNR de 72 dB.
+
+---
+
+## 15 · Atualização aprovada pelo cliente (nov/2026) — vale por cima das seções anteriores
+
+Fonte: três rodadas num anúncio real ("Método 40", v1 → v3, aprovado como "ficou perfeito") e um reel de notícia. As
+regras completas são as **R12–R17** de `regras-da-casa.md`. O que muda neste estilo:
+
+| Tema | Antes (referência) | Agora (aprovado) |
+|---|---|---|
+| Legenda (§6) | `K.mouthCaps`: some no SPLIT e em toda troca; `hideMouth` largo em lettering | **legenda v3** (`modelo/legenda.js`): nunca some (no SPLIT fica fixa no topo do card); pula só as palavras do lettering (`hideCap` exato); cada palavra invisível até ser dita; bloco ≥ 0,4 s; segue o rosto pelo tempo, 48 px abaixo do queixo |
+| Fonte da legenda | Plus Jakarta Sans, palavras-acento na cor de apoio | Poppins 600 + destaque em Anton branca com sublinhado na cor de destaque (sem caixa); fonte da marca por `"legendaFonte"` |
+| Movimento da legenda | todas as palavras dão "pop" | blocos normais só acendem; blocos com destaque: palavras sobem de baixo para cima |
+| Lettering (§7.4) | resumo da ideia ("NÃO PRECISA DE HORAS") | **palavras exatas da fala**, 2–3 linhas, cada uma na sua palavra (R13) |
+| Logo do cliente | — | PNG sem fundo, intocado, canto superior direito / canto do card, impacto em toda menção, legenda continua (`LOGO_CANTO`, R14) |
+| Som (§8) | efeitos do kit "no render" | o render **não** leva os efeitos: `ferramentas/mixar-sfx.py` mixa whoosh nas trocas (≈ −4 dB da fala), impacto na logo, sem glitch/boom (R15) |
+| Gancho (§7.4) | punch 1,14 seco | zoom forte e contínuo `K.drift(0, fim, 0.34)` (1,04 → 1,38) |
+| CTA de anúncio | botão com cursor | com botão nativo ("Saiba mais"): **sem botão desenhado**, só pílulas (R17) |
+| Zona segura | Reels | anúncio: `_anuncio` do `vsl.json` (y 270–1248) |
+| Cor (§9) | grade natural | natural por padrão; `_corViva` quando o cliente pede "mais vivo" (com destaque quente: tinta 2 = 0) |
+| HDR | — | `preparar.sh` converte HLG/PQ para SDR; render sempre com `--sdr` (R16) |
+| Fundo | — | sem desfoque de fundo (testado e reprovado) |
+
+Verificação a mais antes de entregar: `node ferramentas/checar-ancoras.mjs -v`, `node ferramentas/tempo-legenda.mjs`, a
+medição de que os efeitos estão no áudio final (`sons-mixados.json` + diferença render × mix) e quadros do render final.

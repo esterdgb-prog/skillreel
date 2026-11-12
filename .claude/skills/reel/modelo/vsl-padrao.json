@@ -1,17 +1,44 @@
 {
-  "_leia": "Valores da referência aprovada. face/head/punch/fullPos/splitPos mudam por vídeo (meça num quadro do clean com o punch aplicado); grade e tinta NÃO mudam (R4). sfxModo: 'enxuto' (padrão, regra R2: ≤ 0,8 efeito/s com a digitação) ou 'referencia' (o som exato do vídeo aprovado, ~1,4/s — reprova o item de SFX do verificar.py).",
+  "_leia": "Valores aprovados. face/head/punch/fullPos/splitPos mudam por vídeo (meça num quadro do clean com o punch aplicado). legenda 'v3' = legenda própria aprovada em nov/2026 (legenda.js; tire a chave para a legenda do kit). sfxModo 'referencia': todos os eventos chegam ao sons.json e o ferramentas/mixar-sfx.py escolhe e mixa (o render não leva os sons do kit). Anúncio: copie _anuncio para safe/capY/topY. Cor: grade natural (R4); _corViva é o preset aprovado pelo cliente quando ele pede 'mais vivo'.",
   "theme": "roxo",
   "font": "padrao",
   "punch": 1.06,
   "fullPos": "50% 28%",
   "splitPos": "50% 26%",
   "pipPos": "50% 24%",
-  "face": { "x": 310, "y": 300, "w": 540, "h": 680 },
-  "head": { "x": 580, "y": 620 },
+  "face": {
+    "x": 310,
+    "y": 300,
+    "w": 540,
+    "h": 680
+  },
+  "head": {
+    "x": 580,
+    "y": 620
+  },
   "topY": 240,
   "capY": 1500,
   "gradeFilter": "saturate(1.04) contrast(1.05) brightness(0.97)",
   "tint": 0.3,
   "tint2": 0.25,
-  "sfxModo": "enxuto"
+  "sfxModo": "referencia",
+  "sfxVol": 1.0,
+  "legenda": "v3",
+  "_anuncio": {
+    "safe": {
+      "top": 270,
+      "bottom": 1248,
+      "left": 65,
+      "right": 1015,
+      "colX": 1015,
+      "colY": 1248
+    },
+    "capY": 1240,
+    "topY": 290
+  },
+  "_corViva": {
+    "gradeFilter": "saturate(1.16) contrast(1.08) brightness(1.03)",
+    "tint": 0.18,
+    "tint2": 0.0
+  }
 }

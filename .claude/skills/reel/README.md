@@ -13,6 +13,15 @@ painel e sem escolhas: manda o vídeo, ela corta e edita.
 
 Entrega `render/reel-v1.mp4` verificado (`VERIFY.md`, folha de quadros, zona segura, LUFS) e itera a pedido.
 
+**Atualização aprovada pelo cliente (nov/2026)** — `regras-da-casa.md` R12–R17 e `ESTILO.md` §15:
+- **Legenda v3**: nunca come palavra, segue o rosto pelo tempo, destaque em Anton com palavras subindo.
+- **Letterings fiéis à fala.**
+- **Logo do cliente** sem fundo no canto, com impacto.
+- **Efeitos sonoros mixados de verdade** (o render não os levava): whoosh nas trocas.
+- **HDR do iPhone** convertido para SDR.
+- **Zona segura de anúncio.**
+- **Corte trecho a trecho**, sem estourar a memória.
+
 ## Instalar
 ```bash
 git clone https://github.com/Felpborges/skill-reel.git ~/.claude/skills/reel

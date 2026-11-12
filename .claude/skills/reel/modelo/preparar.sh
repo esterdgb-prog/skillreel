@@ -39,11 +39,19 @@ echo "câmera: $VIDEO"; echo "voz: ${AUDIO:-(da própria câmera)}"; echo "palav
 read -r W H < <(ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=p=0 "$VIDEO" | tr ',' ' ')
 VF="scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920"
 [[ "$W" == 1080 && "$H" == 1920 ]] && VF="null"
+# HDR (iPhone grava HLG): o hyperframes troca para a composição HDR em camadas, que põe a câmera POR CIMA da interface
+# em FULL e gera H.265 10-bit (visto em nov/2026). Converte para SDR BT.709 (tone-mapping hable) — e renderize com --sdr.
+TRC=$(ffprobe -v error -select_streams v:0 -show_entries stream=color_transfer -of csv=p=0 "$VIDEO" | tr -d '[:space:],')
+COR=(-color_primaries bt709 -color_trc bt709 -colorspace bt709)
+if [[ "$TRC" == "arib-std-b67" || "$TRC" == "smpte2084" ]]; then
+  VF="$VF,zscale=t=linear:npl=100,format=gbrpf32le,zscale=p=bt709,tonemap=hable:desat=0,zscale=t=bt709:m=bt709:r=tv,format=yuv420p"
+  echo "câmera HDR ($TRC) → SDR BT.709 (tonemap hable)"
+fi
 if [[ -n "$AUDIO" ]]; then
-  ffmpeg -v error -y -i "$VIDEO" -i "$AUDIO" -map 0:v:0 -map 1:a:0 -vf "$VF" -r 30 -c:v libx264 -crf 16 -preset medium -g 30 -pix_fmt yuv420p \
+  ffmpeg -v error -y -i "$VIDEO" -i "$AUDIO" -map 0:v:0 -map 1:a:0 -vf "$VF" -r 30 -c:v libx264 -crf 16 -preset medium -g 30 -pix_fmt yuv420p "${COR[@]}" \
     -c:a aac -b:a 192k -ar 48000 -shortest -movflags +faststart assets/clean.mp4
 else
-  ffmpeg -v error -y -i "$VIDEO" -map 0:v:0 -map '0:a:0?' -vf "$VF" -r 30 -c:v libx264 -crf 16 -preset medium -g 30 -pix_fmt yuv420p \
+  ffmpeg -v error -y -i "$VIDEO" -map 0:v:0 -map '0:a:0?' -vf "$VF" -r 30 -c:v libx264 -crf 16 -preset medium -g 30 -pix_fmt yuv420p "${COR[@]}" \
     -c:a aac -b:a 192k -ar 48000 -movflags +faststart assets/clean.mp4
 fi
 echo "assets/clean.mp4 pronto (${W}×${H} → 1080×1920)"
