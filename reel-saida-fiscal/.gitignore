@@ -12,3 +12,5 @@ preparo/audio16k.wav
 render/_*.mp4
 motor/exemplo/
 motor/.modelos/
+render/work-*/
+qa/render.log
