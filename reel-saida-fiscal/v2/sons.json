@@ -1,0 +1,194 @@
+{
+ "efeitos": [
+  {
+   "t": 0.02,
+   "arquivo": "pop.wav",
+   "volume": 0.138
+  },
+  {
+   "t": 1.12,
+   "arquivo": "glitch.wav",
+   "volume": 0.275
+  },
+  {
+   "t": 2.96,
+   "arquivo": "whoosh.wav",
+   "volume": 0.121
+  },
+  {
+   "t": 4.38,
+   "arquivo": "pop.wav",
+   "volume": 0.121
+  },
+  {
+   "t": 5.28,
+   "arquivo": "stamp.wav",
+   "volume": 0.275
+  },
+  {
+   "t": 8.23,
+   "arquivo": "whoosh.wav",
+   "volume": 0.121
+  },
+  {
+   "t": 10.13,
+   "arquivo": "stamp.wav",
+   "volume": 0.121
+  },
+  {
+   "t": 10.46,
+   "arquivo": "stamp.wav",
+   "volume": 0.275
+  },
+  {
+   "t": 10.83,
+   "arquivo": "whoosh.wav",
+   "volume": 0.121
+  },
+  {
+   "t": 11.44,
+   "arquivo": "ding.wav",
+   "volume": 0.121
+  },
+  {
+   "t": 13.19,
+   "arquivo": "pop.wav",
+   "volume": 0.121
+  },
+  {
+   "t": 16.57,
+   "arquivo": "pop.wav",
+   "volume": 0.121
+  },
+  {
+   "t": 18.45,
+   "arquivo": "swoosh.wav",
+   "volume": 0.121
+  },
+  {
+   "t": 21,
+   "arquivo": "pop.wav",
+   "volume": 0.121
+  },
+  {
+   "t": 22.16,
+   "arquivo": "whoosh.wav",
+   "volume": 0.121
+  },
+  {
+   "t": 23.33,
+   "arquivo": "pop.wav",
+   "volume": 0.121
+  },
+  {
+   "t": 24.89,
+   "arquivo": "pop.wav",
+   "volume": 0.121
+  },
+  {
+   "t": 27.49,
+   "arquivo": "swoosh.wav",
+   "volume": 0.121
+  },
+  {
+   "t": 28.54,
+   "arquivo": "ding.wav",
+   "volume": 0.121
+  },
+  {
+   "t": 31.43,
+   "arquivo": "pop.wav",
+   "volume": 0.138
+  },
+  {
+   "t": 32.83,
+   "arquivo": "whoosh.wav",
+   "volume": 0.121
+  },
+  {
+   "t": 36.37,
+   "arquivo": "pop.wav",
+   "volume": 0.121
+  },
+  {
+   "t": 36.97,
+   "arquivo": "pop.wav",
+   "volume": 0.121
+  },
+  {
+   "t": 37.86,
+   "arquivo": "ding.wav",
+   "volume": 0.121
+  },
+  {
+   "t": 42.44,
+   "arquivo": "whoosh.wav",
+   "volume": 0.121
+  },
+  {
+   "t": 43.82,
+   "arquivo": "pop.wav",
+   "volume": 0.121
+  },
+  {
+   "t": 46.32,
+   "arquivo": "pop.wav",
+   "volume": 0.121
+  },
+  {
+   "t": 47.81,
+   "arquivo": "stamp.wav",
+   "volume": 0.121
+  },
+  {
+   "t": 49.21,
+   "arquivo": "pop.wav",
+   "volume": 0.165
+  },
+  {
+   "t": 50.66,
+   "arquivo": "pop.wav",
+   "volume": 0.165
+  },
+  {
+   "t": 52.23,
+   "arquivo": "whoosh.wav",
+   "volume": 0.193
+  },
+  {
+   "t": 52.93,
+   "arquivo": "pop.wav",
+   "volume": 0.138
+  },
+  {
+   "t": 54,
+   "arquivo": "shimmer.wav",
+   "volume": 0.138
+  },
+  {
+   "t": 54.26,
+   "arquivo": "click.wav",
+   "volume": 0.275
+  },
+  {
+   "t": 55.86,
+   "arquivo": "whoosh.wav",
+   "volume": 0.22
+  },
+  {
+   "t": 56.16,
+   "arquivo": "boom.wav",
+   "volume": 0.303
+  },
+  {
+   "t": 57.95,
+   "arquivo": "pop.wav",
+   "volume": 0.165
+  },
+  {
+   "t": 59.57,
+   "arquivo": "pop.wav",
+   "volume": 0.165
+  }
+ ]
+}
