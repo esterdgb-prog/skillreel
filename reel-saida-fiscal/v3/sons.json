@@ -3,62 +3,62 @@
   {
    "t": 0.02,
    "arquivo": "pop.wav",
-   "volume": 0.25
+   "volume": 0.225
   },
   {
    "t": 1.08,
    "arquivo": "glitch.wav",
-   "volume": 0.5
+   "volume": 0.375
   },
   {
    "t": 1.33,
    "arquivo": "whoosh.wav",
-   "volume": 0.35
+   "volume": 0.98
   },
   {
    "t": 3.25,
-   "arquivo": "swoosh.wav",
-   "volume": 0.4
+   "arquivo": "whoosh.wav",
+   "volume": 0.88
   },
   {
    "t": 5.68,
    "arquivo": "stamp.wav",
-   "volume": 0.5
+   "volume": 0.275
   },
   {
    "t": 6.56,
-   "arquivo": "swoosh.wav",
-   "volume": 0.35
+   "arquivo": "whoosh.wav",
+   "volume": 0.77
   },
   {
    "t": 8.12,
    "arquivo": "pop.wav",
-   "volume": 0.35
+   "volume": 0.315
   },
   {
    "t": 9.83,
    "arquivo": "stamp.wav",
-   "volume": 0.55
+   "volume": 0.303
   },
   {
    "t": 11.47,
    "arquivo": "boom.wav",
-   "volume": 0.35
+   "volume": 0.158
   },
   {
    "t": 13.31,
-   "arquivo": "swoosh.wav",
-   "volume": 0.4
+   "arquivo": "whoosh.wav",
+   "volume": 0.88
   },
   {
    "t": 14.45,
    "arquivo": "pop.wav",
-   "volume": 0.3
+   "volume": 0.27
   },
   {
    "t": 17.02,
    "arquivo": "whoosh.wav",
-   "volume": 0.35
+   "volume": 0.98
   },
   {
    "t": 19.85,
@@ -73,127 +73,127 @@
   {
    "t": 22.88,
    "arquivo": "ding.wav",
-   "volume": 0.35
+   "volume": 0.28
   },
   {
    "t": 23.2,
    "arquivo": "whoosh.wav",
-   "volume": 0.3
+   "volume": 0.84
   },
   {
    "t": 23.98,
-   "arquivo": "swoosh.wav",
-   "volume": 0.35
+   "arquivo": "whoosh.wav",
+   "volume": 0.77
   },
   {
    "t": 24.77,
    "arquivo": "whoosh.wav",
-   "volume": 0.3
+   "volume": 0.84
   },
   {
    "t": 27.34,
    "arquivo": "pop.wav",
-   "volume": 0.35
+   "volume": 0.315
   },
   {
    "t": 29.29,
-   "arquivo": "swoosh.wav",
-   "volume": 0.3
+   "arquivo": "whoosh.wav",
+   "volume": 0.66
   },
   {
    "t": 30.37,
    "arquivo": "click.wav",
-   "volume": 0.45
+   "volume": 0.203
   },
   {
    "t": 31.01,
    "arquivo": "click.wav",
-   "volume": 0.45
+   "volume": 0.203
   },
   {
    "t": 31.46,
    "arquivo": "ding.wav",
-   "volume": 0.35
+   "volume": 0.28
   },
   {
    "t": 32.63,
    "arquivo": "riser.wav",
-   "volume": 0.3
+   "volume": 0.39
   },
   {
    "t": 33.41,
    "arquivo": "pop.wav",
-   "volume": 0.25
+   "volume": 0.225
   },
   {
    "t": 35.56,
-   "arquivo": "swoosh.wav",
-   "volume": 0.35
+   "arquivo": "whoosh.wav",
+   "volume": 0.77
   },
   {
    "t": 37.17,
    "arquivo": "ding.wav",
-   "volume": 0.4
+   "volume": 0.32
   },
   {
    "t": 38.35,
    "arquivo": "whoosh.wav",
-   "volume": 0.3
+   "volume": 0.84
   },
   {
    "t": 39.2,
-   "arquivo": "swoosh.wav",
-   "volume": 0.4
+   "arquivo": "whoosh.wav",
+   "volume": 0.88
   },
   {
    "t": 43.07,
    "arquivo": "pop.wav",
-   "volume": 0.35
+   "volume": 0.315
   },
   {
    "t": 44.45,
    "arquivo": "riser.wav",
-   "volume": 0.25
+   "volume": 0.325
   },
   {
    "t": 46.59,
    "arquivo": "shimmer.wav",
-   "volume": 0.3
+   "volume": 0.33
   },
   {
    "t": 48.14,
    "arquivo": "ding.wav",
-   "volume": 0.35
+   "volume": 0.28
   },
   {
    "t": 49.36,
    "arquivo": "boom.wav",
-   "volume": 0.3
+   "volume": 0.135
   },
   {
    "t": 51.11,
    "arquivo": "pop.wav",
-   "volume": 0.35
+   "volume": 0.315
   },
   {
    "t": 53.53,
-   "arquivo": "swoosh.wav",
-   "volume": 0.3
+   "arquivo": "whoosh.wav",
+   "volume": 0.66
   },
   {
    "t": 55.15,
    "arquivo": "stamp.wav",
-   "volume": 0.5
+   "volume": 0.275
   },
   {
    "t": 56.45,
    "arquivo": "pop.wav",
-   "volume": 0.3
+   "volume": 0.27
   },
   {
    "t": 57.3,
-   "arquivo": "swoosh.wav",
-   "volume": 0.3
+   "arquivo": "whoosh.wav",
+   "volume": 0.66
   },
   {
    "t": 57.96,
@@ -203,47 +203,47 @@
   {
    "t": 58.56,
    "arquivo": "pop.wav",
-   "volume": 0.3
+   "volume": 0.27
   },
   {
    "t": 59.35,
    "arquivo": "whoosh.wav",
-   "volume": 0.35
+   "volume": 0.98
   },
   {
    "t": 60.19,
    "arquivo": "pop.wav",
-   "volume": 0.25
+   "volume": 0.225
   },
   {
    "t": 61.36,
    "arquivo": "shimmer.wav",
-   "volume": 0.25
+   "volume": 0.275
   },
   {
    "t": 61.6,
    "arquivo": "click.wav",
-   "volume": 0.5
+   "volume": 0.225
   },
   {
    "t": 63.18,
    "arquivo": "whoosh.wav",
-   "volume": 0.4
+   "volume": 1.12
   },
   {
    "t": 63.48,
    "arquivo": "boom.wav",
-   "volume": 0.55
+   "volume": 0.248
   },
   {
    "t": 65.31,
    "arquivo": "pop.wav",
-   "volume": 0.3
+   "volume": 0.27
   },
   {
    "t": 66.8,
    "arquivo": "pop.wav",
-   "volume": 0.3
+   "volume": 0.27
   }
  ]
 }
