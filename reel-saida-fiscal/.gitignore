@@ -1,0 +1,14 @@
+motor/node_modules/
+motor/snapshots/
+motor/assets/kit.js
+motor/assets/kit.css
+motor/assets/gsap.min.js
+motor/assets/fonts/
+motor/assets/sfx/
+motor/assets/clean.mp4
+voz/teste-*
+corte/corte.wav
+preparo/audio16k.wav
+render/_*.mp4
+motor/exemplo/
+motor/.modelos/
