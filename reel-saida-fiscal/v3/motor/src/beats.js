@@ -60,6 +60,12 @@ const PLANE = (w = 64, c = GOLDL) => `<div class="pl" style="position:absolute;l
 const LABEL = (txt, x, y, opt = {}) => `<div class="${opt.cls || "lb"}" style="position:absolute;left:${x}px;top:${y}px;${opt.center ? "transform:translateX(-50%);" : ""}white-space:nowrap;font:${opt.font || "800 30px/1 var(--fS)"};color:${opt.color || WHITE};letter-spacing:${opt.ls || "0"};${opt.css || ""}">${txt}</div>`;
 const TAG = (txt, x, y, cls, c = GOLD) => `<div class="${cls}" style="position:absolute;left:${x}px;top:${y}px;transform:translateX(-50%);white-space:nowrap;padding:12px 22px;border-radius:999px;background:rgba(var(--panel2RGB),.92);border:2px solid ${c};font:800 24px/1 var(--fS);letter-spacing:.08em;text-transform:uppercase;color:${WHITE};box-shadow:0 0 22px rgba(var(--accRGB),.35)">${txt}</div>`;
 
+// mixagem dos efeitos (medida contra a voz: alvo −8 a −14 dB RMS abaixo dela). O swoosh.wav do kit sai quase mudo
+// (−59 dB), então vira whoosh; carimbo/boom/clique estavam colados no nível da voz e descem.
+{
+  const sfx0 = K.sfx, GAIN = { whoosh: 2.8, pop: 0.9, stamp: 0.55, boom: 0.45, click: 0.45, glitch: 0.75, ding: 0.8, riser: 1.3, shimmer: 1.1, tick: 1 };
+  K.sfx = (name, t, vol = 0.5) => name === "swoosh" ? sfx0("whoosh", t, vol * 2.2) : sfx0(name, t, vol * (GAIN[name] ?? 1));
+}
 K.drift(0, CFG.dur, 0.06);
 document.querySelector("#vsl").style.setProperty("--cyanRGB", "205,205,205"); // glitch prata em vez de ciano
 
