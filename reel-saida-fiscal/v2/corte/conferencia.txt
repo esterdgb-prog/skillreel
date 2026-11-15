@@ -1,0 +1,28 @@
+== TEXTO DO CORTE (leia inteiro) ==
+Saída fiscal agora é lei? Você sabia que a obrigação relacionada à saída fiscal não é uma novidade? Muita gente pensa que essa é uma exigência recente, mas isso não é verdade. Desde 1958, a legislação brasileira já previa procedimentos específicos para quem deixava o país em caráter definitivo. E ao longo dos anos, as regras e os procedimentos foram sendo atualizados. E hoje, se você sai do Brasil em caráter permanente ou passa à condição de não-residente após uma saída temporária, precisa cumprir as obrigações fiscais aplicáveis à sua situação. Então, o que mudou? Hoje, existem acordos internacionais de troca automática de informações, como o CRS e o FATCA, e esses cruzamentos estão ficando cada vez mais precisos e avançados com a inteligência artificial. Ignorar essas obrigações pode gerar pendências com a Receita Federal, cobranças de impostos retroativos e multas. Por isso, se você mora no exterior e ainda não regularizou sua situação fiscal, não deixe para depois. Clique no link da Bio e fale com a equipe da Resultax Internacional para entender como regularizar sua situação e proteger o seu patrimônio.
+
+== REPETIÇÕES COLADAS ==
+  nenhuma
+
+== EMENDAS (janela ±2 s, transcrita sozinha) ==
+    2.13s  (fonte 2.77) :: Saída fiscal agora é lei? Você sabia que a obrigação relacionada
+    6.40s  (fonte 7.33) :: saída fiscal não é uma novidade? Muita gente pensa que essa é uma
+   10.87s  (fonte 12.23) :: recente, mas isso não é verdade. Desde 1958...
+   15.30s  (fonte 16.77) :: A administração brasileira já previa procedimentos específicos para quem deixava o país
+   16.10s  (fonte 17.73) :: já previa procedimentos específicos para quem deixava o país em caráter definitivo.
+   18.40s  (fonte 20.40) :: deixava o país em caráter definitivo. E ao longo dos anos, as regras e os procedimentos
+   21.73s  (fonte 24.30) :: e os procedimentos foram sendo atualizados. E hoje, se você sai do Brasil em caráter...
+   22.27s  (fonte 25.03) :: procedimentos foram sendo atualizados. E hoje, se você sai do Brasil em caráter permanente,
+   24.40s  (fonte 27.43) :: você sai do Brasil em caráter permanente ou passa a condição de não-residente...
+   27.70s  (fonte 31.17) :: residente, após uma saída temporária, precisa cumprir as obrigações fiscais aplicadas.
+   30.97s  (fonte 34.83) :: fiscais aplicáveis à sua situação. Então, o que mudou? Hoje existem
+   32.17s  (fonte 36.53) :: sua situação. Então, o que mudou? Hoje existem acordos internacionais
+   37.53s  (fonte 42.30) :: como o CRS e o FAT, e esses cruzamentos estão ficando cada vez mais preciosos.
+   42.03s  (fonte 47.23) :: e avançados com a inteligência artificial. Ignorar essas obrigações pode gerar
+   48.27s  (fonte 53.90) :: impostos retroativos e multas. Por isso, se você mora no exterior e
+   53.60s  (fonte 59.67) :: situação fiscal, não deixe para depois. Clique no link da Bio e fale com a equipe
+
+== PAUSAS > 0,25 s QUE SOBRARAM ==
+  nenhuma
+
+duração do corte: 61.00s

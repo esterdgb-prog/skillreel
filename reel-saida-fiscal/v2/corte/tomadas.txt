@@ -1,0 +1,21 @@
+   0.08-   1.43 ( 1.3s) :: Saída fiscal.
+   1.29-   2.46 ( 1.2s) :: Agora é lei?
+   2.53-   7.08 ( 4.5s) :: Você sabia que a obrigação relacionada à saída fiscal não é uma novidade?
+   7.25-  12.18 ( 4.9s) :: Muita gente pensa que essa é uma exigência recente, mas isso não é verdade.
+  12.11-  17.79 ( 5.7s) :: Desde 1958, a legislação brasileira já previa procedimentos específicos
+  17.65-  20.16 ( 2.5s) :: Pra quem deixava o país em caráter definitivo.
+  20.30-  24.01 ( 3.7s) :: E, ao longo dos anos, as regras e os procedimentos foram sendo atualizados.
+  24.23-  24.99 ( 0.8s) :: E hoje...
+  24.87-  30.78 ( 5.9s) :: Se você sai do Brasil em caráter permanente ou passa a condição de não-residente após uma saída temporária,
+  30.77-  34.49 ( 3.7s) :: Precisa cumprir as obrigações fiscais aplicáveis à sua situação.
+  34.74-  35.43 ( 0.7s) :: Então...
+  35.32-  36.06 ( 0.7s) :: O que mudou?
+  36.46-  42.13 ( 5.7s) :: Hoje, existem acordos internacionais de troca automática de informações, como o CRS e o FATCA.
+  42.19-  46.85 ( 4.7s) :: E esses cruzamentos estão ficando cada vez mais precisos e avançados com a inteligência artificial.
+  47.15-  50.83 ( 3.7s) :: Ignorar essas obrigações pode gerar pendências com a Receita Federal,
+  50.74-  53.68 ( 2.9s) :: Cobranças de impostos retroativos e multas.
+  53.81-  58.12 ( 4.3s) :: Por isso, se você mora no exterior e ainda não regularizou sua situação fiscal,
+  58.04-  59.45 ( 1.4s) :: Não deixe para depois.
+  59.56-  64.01 ( 4.5s) :: Clique no link da Bio e fale com a equipe da Resultex Internacional para entender...
+  63.86-  65.65 ( 1.8s) :: Como regularizar a sua situação...
+  65.53-  67.17 ( 1.6s) :: e proteger o seu patrimônio.
