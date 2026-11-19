@@ -1,0 +1,31 @@
+== TEXTO DO CORTE (leia inteiro) ==
+Na aula de hoje você vai aprender a fazer exercícios conjugados, ou bsets, ou combinados Vem cá que eu vou te mostrar Na sua ficha vai estar aparecendo aqui, ó, exercício combinado Aqui vai ter um exercício e na frente o outro Agora eu vou te mostrar como você vai fazer Se na sua ficha tiver, por exemplo, 12 puxadas no triângulo, mais 12 rosca direta com halter Você vai fazer 12 puxadas aqui no triângulo Fez as 12 sem descansar, você já vai pegar o halter e vai fazer mais 12 Acabou as 12 no halter? Aí sim você vai descansar 1 minuto e repetir todo esse processo
+
+== REPETIÇÕES COLADAS ==
+  nenhuma
+
+== EMENDAS (janela ±2 s, transcrita sozinha) ==
+    1.90s  (fonte 3.43) :: Na aula de hoje, você vai aprender a fazer exercícios conjugados, ou bissetes, ou combinados.
+    2.60s  (fonte 4.40) :: você vai aprender a fazer exercícios conjugados, ou bissets, ou combinados, porque acabou de manter
+    3.93s  (fonte 6.00) :: conjugados, ou bisets, ou combinados. Vem cá que eu vou te mostrar. Na sua ficha vai estar aparecendo aqui.
+    4.93s  (fonte 21.83) :: sets ou combinado. Vem cá, que eu vou te mostrar. Na sua ficha vai estar aparecendo aqui, ó. Exercício combinado.
+    7.07s  (fonte 24.47) :: Só que a gente vai estar aparecendo aqui. Exercício combinado. Aqui vai ter um exercício e na frente o outro.
+    8.27s  (fonte 26.33) :: Aqui vai ter um exercício e na frente o outro. Agora eu vou te mostrar como vai.
+    9.13s  (fonte 27.60) :: vai ter um exercício e na frente o agora vou te mostrar como você vai fazer se não
+   10.03s  (fonte 28.73) :: e na frente o outro. Agora eu vou te mostrar como você vai fazer. Se na sua ficha tiver por
+   10.97s  (fonte 44.03) :: Agora eu vou te mostrar como você vai fazer. Se na sua ficha tiver, por exemplo, 12 puxadas,
+   12.40s  (fonte 45.73) :: vai fazer. Se na sua ficha tiver, por exemplo, 12 puxado ao triângulo, mais 12
+   15.87s  (fonte 49.83) :: mais 12 rosca direta com alter. Você vai fazer 12 puxadas aqui no triângulo,
+   16.53s  (fonte 51.50) :: busca direta com alté você vai fazer 12 puxadas aqui no triângulo
+   18.30s  (fonte 57.40) :: 12 puxadas aqui no triângulo
+   21.17s  (fonte 60.73) :: Fez as doze sem descansar, você já
+   24.17s  (fonte 65.60) :: descansar, você já vai pegar o halter e vai fazer mais doze.
+   25.23s  (fonte 67.20) :: pegar o halter e vai fazer mais doze.
+   28.23s  (fonte 73.07) :: Acabou as 12 no altar? Aí sim você vai
+   31.40s  (fonte 76.37) :: Aí sim você vai descansar um minuto e repetir todo esse processo.
+
+== PAUSAS > 0,25 s QUE SOBRARAM ==
+  fim 21.2415 | silence_duration: 3.06946
+  fim 28.2416 | silence_duration: 3.01429
+
+duração do corte: 32.67s

@@ -1,0 +1,10 @@
+{"keeps":[
+ {"from":1.15,"to":7.3,"why":"abertura: aula de hoje, exercícios conjugados/bi-sets/combinados"},
+ {"from":21.6,"to":29.95,"why":"2ª tomada de 'na sua ficha vai estar aparecendo' (completa, diz 'exercício combinado'); 1ª tomada 17.3 e 'acho melhor gravar a tela' fora"},
+ {"from":43.75,"to":53.5,"why":"explicação: 12 puxadas no triângulo + 12 rosca direta"},
+ {"from":57.4,"to":60.25,"raw":true,"why":"demonstração: últimas puxadas sem fala, emendando na próxima frase"},
+ {"from":60.25,"to":63.95,"why":"fez as doze, pega o halter"},
+ {"from":65.3,"to":67.2,"why":"e vai fazer mais doze"},
+ {"from":67.2,"to":70.2,"raw":true,"why":"demonstração: rosca direta sem fala"},
+ {"from":72.7,"to":78.3,"why":"fechamento: descansa um minuto e repete"}
+]}

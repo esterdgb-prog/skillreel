@@ -1,0 +1,7 @@
+bruto/
+render/
+qa/
+corte/*.wav
+corte/*.mp4
+corte/vicios/
+corte/tomadas.json
