@@ -1,39 +1,37 @@
 == TEXTO DO CORTE (leia inteiro) ==
-Na aula de hoje, você vai aprender a fazer o drop set Como que a gente faz o drop set? Primeiro, você vai colocar o peso na máquina O máximo que você aguenta Por exemplo, vamos supor que eu aguente 50 quilos Eu vou botar na máquina 50 quilos Agora, eu vou fazer 10 repetições Normal, sobe com força e volta devagar Sem correr, fiz as 10 repetições Sem descansar, eu vou abaixar 10 quilos na máquina Ou seja, eu vou botar 40 Faço novamente mais 10, lembre-se, sem descansar Mesma coisa, sobe com força Volta devagar, sem correr, concentrado Fiz as 10, vou abaixar novamente pra 30 Faço novamente mais 10 Agora sim, acabei Eu vou descansar 1 minuto Isso foi uma série de drop set Se sua física tiver escrito drop set 3 séries Você vai fazer todo esse processo 3 vezes
+Na aula de hoje você vai aprender a fazer o drop set, como que a gente faz o drop set? Primeiro você vai colocar o peso na máquina, o máximo que você aguenta, por exemplo, vamos supor que eu aguente 50kg, vou botar na máquina 50kg Agora eu vou fazer 10 repetições, normal, sobe com força e volta devagar, sem correr Fiz as 10 repetições, sem descansar, eu vou abaixar 10kg na máquina, ou seja, eu vou botar 40kg Faço novamente mais 10, lembre-se, sem descansar Mesma coisa, sobe com força, volta devagar, sem correr, concentrado Fiz as 10, vou abaixar novamente para 30kg Faço novamente mais 10 Agora sim, acabei, vou descansar 1 minuto Isso foi uma série de drop set Se sua física tiver escrito drop set 3 séries, você vai fazer todo esse processo 3 vezes
 
 == REPETIÇÕES COLADAS ==
   nenhuma
 
 == EMENDAS (janela ±2 s, transcrita sozinha) ==
-    2.53s  (fonte 15.87) :: Hoje você vai aprender a fazer o drop set. Como que a gente faz o drop? Primeiro você vai colocar o
-    3.50s  (fonte 17.97) :: o drop set. Como que a gente faz o drop set? Primeiro você vai colocar o peso na máquina
-    6.73s  (fonte 21.73) :: na máquina, o máximo que você aguenta. Por exemplo, vamos supor que eu aguente
-   11.13s  (fonte 28.17) :: quilos. Eu vou botar na máquina 50 quilos. Agora, eu vou fazer 10 repetições. Normal,
-   12.80s  (fonte 33.37) :: Agora eu vou fazer 10 repetições. Normal. Sobe com força e volta direto.
-   14.47s  (fonte 35.40) :: normal, sobe com força e volta devagar, sem correr. Fiz as 10
-   15.33s  (fonte 37.57) :: sobe com força e volta devagar, sem correr. Fiz as 10 repetições sem
-   15.93s  (fonte 41.27) :: força e volta devagar, sem correr. Fiz as 10 repetições sem descansar?
-   19.00s  (fonte 44.53) :: sem descansar, eu vou abaixar 10kg na máquina, ou seja, eu vou botar com
-   20.03s  (fonte 45.93) :: Eu vou abaixar 10 quilos na máquina. Ou seja, eu vou botar 40. Faço novamente novamente.
-   21.30s  (fonte 49.10) :: quilos na máquina. Ou seja, eu vou botar 40. Faço novamente mais 10. Lembre, sem descansar.
-   22.50s  (fonte 50.73) :: eu vou botar 40. Faço novamente mais 10. Lembre, sem descansar. Mesma coisa, sobe
-   22.83s  (fonte 51.27) :: Faço novamente mais 10. Lembre. Sem descansar. Mesma coisa. Sobe com fogo.
-   23.67s  (fonte 55.93) :: novamente mais 10, lembre-se, sem descansar. Mesma coisa, sobe com força, volta de
-   24.27s  (fonte 57.30) :: Lembre, sem descansar. Mesma coisa. Sobe com força, volta devagar, sem descansar.
-   25.27s  (fonte 58.50) :: Mesma coisa. Sobe com força, volta devagar sem correr. Concentrar.
-   26.70s  (fonte 61.03) :: Volta devagar, sem correr. Concentrado. Fiz as 10? Vou abaixar.
-   27.60s  (fonte 62.90) :: devagar, sem correr, concentrado. Fiz as 10, vou abaixar novamente pra
-   28.40s  (fonte 64.03) :: Concentrado. Fiz as 10. Vou abaixar novamente pra 30. Passo 9.
-   29.87s  (fonte 67.13) :: as 10? Vou abaixar novamente pra 30. Faço novamente mais 10.
-   31.40s  (fonte 70.60) :: pra 30. Faço novamente mais 10.
-   34.20s  (fonte 78.87) :: Agora sim, acabei. Eu vou descansar um minuto.
-   36.63s  (fonte 86.23) :: assim, acabei, eu vou descansar um minuto. Isso foi uma série de drop sets.
-   38.57s  (fonte 95.10) :: Isso foi uma série de drop sets. Se sua ficha tiver escrito drop sets.
+    2.53s  (fonte 15.57) :: Hoje você vai aprender a fazer o drop set. Como que a gente faz o drop set?
+    4.37s  (fonte 17.97) :: Como que a gente faz o drop set? Primeiro você vai colocar o peso na máquina
+    7.60s  (fonte 21.73) :: na máquina, o máximo que você aguenta. Por exemplo, vamos supor que eu aguente
+   12.00s  (fonte 27.90) :: quilos. Eu vou botar na máquina 50 quilos. Agora, eu vou fazer 10 repetições.
+   59.80s  (fonte 78.87) :: Agora sim, acabei? Eu vou descansar um minuto.
+   62.23s  (fonte 86.23) :: assim, acabei, eu vou descansar um minuto. Isso foi uma série de drop sets.
+   64.17s  (fonte 95.10) :: Isso foi uma série de drop sets. Se sua ficha tiver escrito drop sets.
 
 == PAUSAS > 0,25 s QUE SOBRARAM ==
-  fim 27.6196 | silence_duration: 0.290021
-  fim 34.2598 | silence_duration: 2.86983
-  fim 41.6426 | silence_duration: 0.274708
-  fim 44.3 | silence_duration: 0.3105
+  fim 2.88602 | silence_duration: 0.414729
+  fim 12.2785 | silence_duration: 0.510167
+  fim 17.5086 | silence_duration: 3.39175
+  fim 19.4901 | silence_duration: 0.307937
+  fim 21.6422 | silence_duration: 1.31344
+  fim 25.4133 | silence_duration: 3.09646
+  fim 30.0933 | silence_duration: 0.376125
+  fim 33.2674 | silence_duration: 1.93281
+  fim 34.8808 | silence_duration: 0.334062
+  fim 40.0024 | silence_duration: 3.8331
+  fim 41.3799 | silence_duration: 0.653021
+  fim 42.6386 | silence_duration: 0.308729
+  fim 45.2283 | silence_duration: 1.18854
+  fim 47.0196 | silence_duration: 1.25669
+  fim 48.1653 | silence_duration: 0.337375
+  fim 51.306 | silence_duration: 1.69546
+  fim 59.8598 | silence_duration: 7.02013
+  fim 67.2426 | silence_duration: 0.274708
+  fim 69.9 | silence_duration: 0.3105
 
-duração do corte: 44.30s
+duração do corte: 69.90s

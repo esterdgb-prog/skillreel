@@ -1,15 +1,8 @@
 {"keeps":[
  {"from":11.8,"to":17.55,"why":"abertura: aula de hoje é o drop set + como a gente faz"},
  {"from":17.7,"to":26.3,"why":"peso máximo; exemplo 50 kg"},
- {"from":27.9,"to":30.35,"why":"agora eu vou fazer dez repetições"},
- {"from":33.1,"to":38.6,"why":"execução: sobe com força, volta devagar, sem correr (com as repetições na tela)"},
- {"from":40.7,"to":47.7,"why":"fez as dez, abaixa 10 kg, bota 40"},
- {"from":48.85,"to":52.4,"why":"mais dez, sem descansar"},
- {"from":55.6,"to":62.05,"why":"mesma coisa, sobe com força, concentrado"},
- {"from":62.45,"to":65.95,"why":"fez as dez, abaixa para 30"},
- {"from":66.9,"to":69.1,"why":"faço mais 10"},
- {"from":70.6,"to":73.4,"raw":true,"why":"demonstração: última série sem fala"},
- {"from":78.65,"to":81.7,"why":"2ª tomada completa de 'agora sim, acabei' (1ª parou em 'a cabeça...')"},
+ {"from":27.9,"to":75.7,"raw":true,"why":"EXECUÇÃO INTEIRA: 'agora vou fazer dez' + série 1, baixa p/ 40, série 2, baixa p/ 30, série 3 — sem nenhum corte"},
+ {"from":78.65,"to":81.7,"why":"2ª tomada completa de 'agora sim, acabei' (1ª, 75.75-78.1, parou em 'a cabeça...')"},
  {"from":85.95,"to":88.7,"why":"isso foi uma série de drop set"},
  {"from":94.95,"to":101.0,"why":"fechamento: 3 séries = repetir 3 vezes; 'e aí' antes fora"}
 ]}

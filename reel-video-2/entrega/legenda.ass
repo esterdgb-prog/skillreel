@@ -14,47 +14,45 @@ Dialogue: 0,0:00:00.00,0:00:00.53,Leg,,0,0,0,,Na aula de hoje
 Dialogue: 0,0:00:00.53,0:00:01.55,Leg,,0,0,0,,você vai aprender
 Dialogue: 0,0:00:01.55,0:00:02.53,Leg,,0,0,0,,a fazer o drop set.
 Dialogue: 0,0:00:02.53,0:00:02.70,Leg,,0,0,0,,Como que a gente
-Dialogue: 0,0:00:02.70,0:00:03.48,Leg,,0,0,0,,faz o drop set?
-Dialogue: 0,0:00:03.50,0:00:04.62,Leg,,0,0,0,,Primeiro, você vai colocar
-Dialogue: 0,0:00:04.62,0:00:05.38,Leg,,0,0,0,,o peso na máquina
-Dialogue: 0,0:00:05.38,0:00:06.73,Leg,,0,0,0,,o máximo que você aguenta.
-Dialogue: 0,0:00:06.73,0:00:07.28,Leg,,0,0,0,,Por exemplo,
-Dialogue: 0,0:00:07.28,0:00:08.58,Leg,,0,0,0,,vamos supor que eu
-Dialogue: 0,0:00:08.58,0:00:09.42,Leg,,0,0,0,,aguente 50 quilos,
-Dialogue: 0,0:00:09.42,0:00:10.38,Leg,,0,0,0,,eu vou botar na máquina
-Dialogue: 0,0:00:10.38,0:00:11.10,Leg,,0,0,0,,50 quilos.
-Dialogue: 0,0:00:11.15,0:00:11.74,Leg,,0,0,0,,Agora eu vou fazer
-Dialogue: 0,0:00:11.74,0:00:12.80,Leg,,0,0,0,,10 repetições.
-Dialogue: 0,0:00:12.87,0:00:13.22,Leg,,0,0,0,,Normal,
-Dialogue: 0,0:00:13.22,0:00:14.25,Leg,,0,0,0,,sobe com força
-Dialogue: 0,0:00:14.25,0:00:15.23,Leg,,0,0,0,,e volta devagar,
-Dialogue: 0,0:00:15.23,0:00:15.90,Leg,,0,0,0,,sem correr.
-Dialogue: 0,0:00:15.93,0:00:16.88,Leg,,0,0,0,,Fiz as 10 repetições,
-Dialogue: 0,0:00:16.88,0:00:18.01,Leg,,0,0,0,,sem descansar,
-Dialogue: 0,0:00:18.01,0:00:18.83,Leg,,0,0,0,,eu vou abaixar
-Dialogue: 0,0:00:18.83,0:00:20.03,Leg,,0,0,0,,10 quilos na máquina,
-Dialogue: 0,0:00:20.03,0:00:20.44,Leg,,0,0,0,,ou seja,
-Dialogue: 0,0:00:20.44,0:00:21.28,Leg,,0,0,0,,eu vou botar 40.
-Dialogue: 0,0:00:21.30,0:00:22.43,Leg,,0,0,0,,Faço novamente mais 10.
-Dialogue: 0,0:00:22.43,0:00:22.80,Leg,,0,0,0,,Lembre-se,
-Dialogue: 0,0:00:22.80,0:00:23.60,Leg,,0,0,0,,sem descansar.
-Dialogue: 0,0:00:23.67,0:00:24.27,Leg,,0,0,0,,Mesma coisa,
-Dialogue: 0,0:00:24.27,0:00:24.94,Leg,,0,0,0,,sobe com força,
-Dialogue: 0,0:00:24.94,0:00:25.96,Leg,,0,0,0,,volta devagar
-Dialogue: 0,0:00:25.96,0:00:26.70,Leg,,0,0,0,,sem correr,
-Dialogue: 0,0:00:26.70,0:00:27.50,Leg,,0,0,0,,concentrado.
-Dialogue: 0,0:00:27.60,0:00:28.06,Leg,,0,0,0,,Fiz as 10,
-Dialogue: 0,0:00:28.06,0:00:29.06,Leg,,0,0,0,,vou abaixar novamente
-Dialogue: 0,0:00:29.06,0:00:29.80,Leg,,0,0,0,,para 30.
-Dialogue: 0,0:00:29.87,0:00:31.35,Leg,,0,0,0,,Faço novamente mais 10.
-Dialogue: 0,0:00:34.25,0:00:35.06,Leg,,0,0,0,,Agora sim, acabei,
-Dialogue: 0,0:00:35.06,0:00:35.90,Leg,,0,0,0,,eu vou descansar
-Dialogue: 0,0:00:35.90,0:00:36.58,Leg,,0,0,0,,1 minuto.
-Dialogue: 0,0:00:36.64,0:00:37.59,Leg,,0,0,0,,Isso foi uma série
-Dialogue: 0,0:00:37.59,0:00:38.50,Leg,,0,0,0,,de drop set.
-Dialogue: 0,0:00:38.57,0:00:39.16,Leg,,0,0,0,,Se sua ficha
-Dialogue: 0,0:00:39.16,0:00:40.01,Leg,,0,0,0,,tiver escrito
-Dialogue: 0,0:00:40.01,0:00:41.64,Leg,,0,0,0,,"drop set 3 séries",
-Dialogue: 0,0:00:41.64,0:00:42.09,Leg,,0,0,0,,você vai fazer
-Dialogue: 0,0:00:42.09,0:00:43.36,Leg,,0,0,0,,todo esse processo
-Dialogue: 0,0:00:43.36,0:00:44.30,Leg,,0,0,0,,3 vezes.
+Dialogue: 0,0:00:02.70,0:00:04.00,Leg,,0,0,0,,faz o drop set?
+Dialogue: 0,0:00:04.07,0:00:05.19,Leg,,0,0,0,,Primeiro, você vai colocar
+Dialogue: 0,0:00:05.19,0:00:05.95,Leg,,0,0,0,,o peso na máquina
+Dialogue: 0,0:00:05.95,0:00:07.25,Leg,,0,0,0,,o máximo que você aguenta.
+Dialogue: 0,0:00:07.30,0:00:07.85,Leg,,0,0,0,,Por exemplo,
+Dialogue: 0,0:00:07.85,0:00:09.15,Leg,,0,0,0,,vamos supor que eu
+Dialogue: 0,0:00:09.15,0:00:09.99,Leg,,0,0,0,,aguente 50 quilos,
+Dialogue: 0,0:00:09.99,0:00:10.95,Leg,,0,0,0,,eu vou botar na máquina
+Dialogue: 0,0:00:10.95,0:00:11.90,Leg,,0,0,0,,50 quilos.
+Dialogue: 0,0:00:11.97,0:00:12.60,Leg,,0,0,0,,Agora eu vou fazer
+Dialogue: 0,0:00:12.60,0:00:13.70,Leg,,0,0,0,,10 repetições.
+Dialogue: 0,0:00:17.20,0:00:17.75,Leg,,0,0,0,,Normal,
+Dialogue: 0,0:00:17.75,0:00:18.90,Leg,,0,0,0,,sobe com força
+Dialogue: 0,0:00:19.20,0:00:20.20,Leg,,0,0,0,,e volta devagar,
+Dialogue: 0,0:00:21.38,0:00:22.30,Leg,,0,0,0,,sem correr.
+Dialogue: 0,0:00:25.04,0:00:26.06,Leg,,0,0,0,,Fiz as 10 repetições,
+Dialogue: 0,0:00:26.06,0:00:27.30,Leg,,0,0,0,,sem descansar,
+Dialogue: 0,0:00:27.30,0:00:27.95,Leg,,0,0,0,,eu vou abaixar
+Dialogue: 0,0:00:27.95,0:00:29.33,Leg,,0,0,0,,10 quilos na máquina,
+Dialogue: 0,0:00:29.33,0:00:30.12,Leg,,0,0,0,,ou seja,
+Dialogue: 0,0:00:30.12,0:00:31.20,Leg,,0,0,0,,eu vou botar 40.
+Dialogue: 0,0:00:32.92,0:00:34.54,Leg,,0,0,0,,Faço novamente mais 10.
+Dialogue: 0,0:00:34.54,0:00:34.96,Leg,,0,0,0,,Lembre-se,
+Dialogue: 0,0:00:34.96,0:00:36.00,Leg,,0,0,0,,sem descansar.
+Dialogue: 0,0:00:39.65,0:00:40.60,Leg,,0,0,0,,Mesma coisa,
+Dialogue: 0,0:00:41.17,0:00:42.10,Leg,,0,0,0,,sobe com força,
+Dialogue: 0,0:00:42.35,0:00:43.90,Leg,,0,0,0,,volta devagar sem correr,
+Dialogue: 0,0:00:44.92,0:00:45.70,Leg,,0,0,0,,concentrado.
+Dialogue: 0,0:00:46.75,0:00:47.88,Leg,,0,0,0,,Fiz as 10,
+Dialogue: 0,0:00:47.88,0:00:49.50,Leg,,0,0,0,,vou abaixar novamente para 30.
+Dialogue: 0,0:00:51.00,0:00:52.60,Leg,,0,0,0,,Faço novamente mais 10.
+Dialogue: 0,0:00:59.52,0:01:00.95,Leg,,0,0,0,,Agora sim, acabei,
+Dialogue: 0,0:01:00.95,0:01:01.77,Leg,,0,0,0,,eu vou descansar
+Dialogue: 0,0:01:01.77,0:01:01.88,Leg,,0,0,0,,1 minuto.
+Dialogue: 0,0:01:01.93,0:01:02.88,Leg,,0,0,0,,Isso foi uma série
+Dialogue: 0,0:01:02.88,0:01:03.82,Leg,,0,0,0,,de drop set.
+Dialogue: 0,0:01:03.87,0:01:04.46,Leg,,0,0,0,,Se sua ficha
+Dialogue: 0,0:01:04.46,0:01:05.31,Leg,,0,0,0,,tiver escrito
+Dialogue: 0,0:01:05.31,0:01:06.94,Leg,,0,0,0,,"drop set 3 séries",
+Dialogue: 0,0:01:06.94,0:01:07.39,Leg,,0,0,0,,você vai fazer
+Dialogue: 0,0:01:07.39,0:01:08.66,Leg,,0,0,0,,todo esse processo
+Dialogue: 0,0:01:08.66,0:01:09.60,Leg,,0,0,0,,3 vezes.
