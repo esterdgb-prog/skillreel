@@ -1,0 +1,42 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Leg,Inter,74,&H00FFFFFF,&H00FFFFFF,&H00000000,&H64000000,-1,0,0,0,100,100,0,0,1,6,2,2,100,100,500,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.34,Leg,,0,0,0,,Na aula de hoje
+Dialogue: 0,0:00:00.34,0:00:01.14,Leg,,0,0,0,,você vai aprender
+Dialogue: 0,0:00:01.14,0:00:02.20,Leg,,0,0,0,,a fazer o rest-pause.
+Dialogue: 0,0:00:02.20,0:00:03.45,Leg,,0,0,0,,Como fazemos o rest-pause?
+Dialogue: 0,0:00:03.50,0:00:04.42,Leg,,0,0,0,,Coloque o peso normal
+Dialogue: 0,0:00:04.42,0:00:05.26,Leg,,0,0,0,,que você faz,
+Dialogue: 0,0:00:05.26,0:00:06.25,Leg,,0,0,0,,o máximo que você aguenta.
+Dialogue: 0,0:00:06.30,0:00:06.81,Leg,,0,0,0,,Vamos supor que eu
+Dialogue: 0,0:00:06.81,0:00:08.45,Leg,,0,0,0,,aguente 40 quilos.
+Dialogue: 0,0:00:08.50,0:00:09.40,Leg,,0,0,0,,Coloquei 40,
+Dialogue: 0,0:00:09.43,0:00:10.90,Leg,,0,0,0,,vou fazer 10 repetições.
+Dialogue: 0,0:00:20.57,0:00:21.05,Leg,,0,0,0,,Fiz as 10,
+Dialogue: 0,0:00:21.05,0:00:22.70,Leg,,0,0,0,,eu vou descansar 10 segundos,
+Dialogue: 0,0:00:22.70,0:00:23.90,Leg,,0,0,0,,sem tirar o pé da parede.
+Dialogue: 0,0:00:27.17,0:00:27.88,Leg,,0,0,0,,Deu os 10 segundos,
+Dialogue: 0,0:00:27.88,0:00:29.05,Leg,,0,0,0,,você vai fazer novamente
+Dialogue: 0,0:00:29.05,0:00:29.88,Leg,,0,0,0,,a máxima quantidade
+Dialogue: 0,0:00:29.88,0:00:30.90,Leg,,0,0,0,,que você conseguir.
+Dialogue: 0,0:00:40.09,0:00:40.92,Leg,,0,0,0,,Isso conta uma série
+Dialogue: 0,0:00:40.92,0:00:41.97,Leg,,0,0,0,,de rest-pause.
+Dialogue: 0,0:00:41.97,0:00:42.81,Leg,,0,0,0,,Ou seja, se na sua ficha
+Dialogue: 0,0:00:42.81,0:00:43.48,Leg,,0,0,0,,tiver escrito
+Dialogue: 0,0:00:43.48,0:00:45.03,Leg,,0,0,0,,3 séries de rest-pause,
+Dialogue: 0,0:00:45.03,0:00:46.04,Leg,,0,0,0,,você vai fazer 10,
+Dialogue: 0,0:00:46.04,0:00:47.04,Leg,,0,0,0,,descansar 10 segundos
+Dialogue: 0,0:00:47.04,0:00:48.15,Leg,,0,0,0,,e fazer mais 10.
+Dialogue: 0,0:00:48.20,0:00:49.01,Leg,,0,0,0,,Aí você vai descansar
+Dialogue: 0,0:00:49.01,0:00:49.75,Leg,,0,0,0,,1 minuto
+Dialogue: 0,0:00:49.75,0:00:50.47,Leg,,0,0,0,,e vai repetir esse ciclo
+Dialogue: 0,0:00:50.47,0:00:51.83,Leg,,0,0,0,,por 2 vezes.

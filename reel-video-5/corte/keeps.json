@@ -1,0 +1,10 @@
+{"keeps":[
+ {"from":10.25,"to":14.65,"why":"abertura: aula de hoje é o rest-pause (começo parado e 'e...' fora)"},
+ {"from":14.75,"to":25.15,"why":"peso máximo; exemplo 40 kg; vou fazer 10 repetições"},
+ {"from":25.15,"to":34.5,"raw":true,"why":"DEMONSTRAÇÃO: 1ª série (10 repetições), inteira"},
+ {"from":34.5,"to":38.1,"why":"fiz as 10, descanso 10 segundos sem tirar o pé"},
+ {"from":38.1,"to":41.25,"raw":true,"why":"DEMONSTRAÇÃO: a pausa curta do rest-pause, inteira"},
+ {"from":41.25,"to":45.65,"why":"deu os 10 segundos, faz novamente o máximo"},
+ {"from":45.65,"to":54.5,"raw":true,"why":"DEMONSTRAÇÃO: 2ª série até a falha, inteira"},
+ {"from":54.5,"to":70.0,"why":"explicação: 3 séries de rest-pause, descanso de 1 min; 'e...' final fora"}
+]}

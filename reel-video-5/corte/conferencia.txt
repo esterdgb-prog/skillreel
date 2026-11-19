@@ -1,0 +1,31 @@
+== TEXTO DO CORTE (leia inteiro) ==
+Na aula de hoje você vai aprender a fazer o rest-pause. Como fazemos o rest-pause? Coloque o peso normal que você faz, o máximo que você aguenta. Vamos supor que eu aguente 40 quilos. Coloquei 40, vou fazer 10 repetições. Fiz as 10, eu vou descansar 10 segundos, sem tirar o pé da parede. Delos 10 segundos você vai fazer novamente a máxima quantidade que você conseguir. Isso conta uma série de rest-pause, ou seja, se uma só ficha tiver escrito 3 séries de rest-pause, você vai fazer 10, descansar 10 segundos e fazer mais 10. Aí você vai descansar 1 minuto e vai repetir esse ciclo por 2 vezes.
+
+== REPETIÇÕES COLADAS ==
+  nenhuma
+
+== EMENDAS (janela ±2 s, transcrita sozinha) ==
+    2.27s  (fonte 13.17) :: de hoje, você vai aprender a fazer o hash pause. Como fazemos o hash pause? Coloque o peso
+    3.50s  (fonte 14.97) :: resta e pausa. Como fazemos um resta e pausa? Coloque o peso normal que você faz, o máximo
+    6.30s  (fonte 18.33) :: O normal que você faz, o máximo que você aguenta. Vamos supor que eu aguente 45.
+    7.50s  (fonte 19.97) :: que você aguenta. Vamos supor que eu aguente 40 kg. Coloquei 40 kg.
+    8.50s  (fonte 21.70) :: supor que eu aguente 40 quilos. Coloquei 40, vou fazer 10 repetições.
+    9.43s  (fonte 23.37) :: 40 kg. Coloquei 40. Vou fazer 10 repetições.
+   20.57s  (fonte 34.67) :: Fiz as 10, eu vou descansar 10 segundos.
+   27.17s  (fonte 41.43) :: Deus dá em segundo, você vai fazer novamente.
+   29.10s  (fonte 43.53) :: Dê os 10 segundos, você vai fazer novamente a máxima quantidade que você conseguir.
+   40.07s  (fonte 54.73) :: Isso conta uma série de hash pausas.
+   42.03s  (fonte 57.03) :: Isso conta uma série de hash pausas. Ou seja, se uma só ficha estiver escrita...
+   45.07s  (fonte 60.43) :: ficha tiver escrito. 3 séries de respostas, você vai fazer 10, descansar 10 segundos,
+   46.13s  (fonte 62.00) :: série de respostas, você vai fazer 10, descansar 10 segundos e fazer mais 10.
+   48.20s  (fonte 64.93) :: descansar 10 segundos e fazer mais 10. Aí você vai descansar 1 minuto e vai
+   49.93s  (fonte 67.77) :: Aí você vai descansar um minuto e vai repetir esse ciclo por duas vezes.
+
+== PAUSAS > 0,25 s QUE SOBRARAM ==
+  fim 7.66535 | silence_duration: 0.255208
+  fim 20.653 | silence_duration: 9.65675
+  fim 27.1996 | silence_duration: 3.45323
+  fim 39.3909 | silence_duration: 8.4155
+  fim 40.1083 | silence_duration: 0.564604
+
+duração do corte: 51.83s

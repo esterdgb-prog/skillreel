@@ -1,0 +1,20 @@
+   6.89-   8.14 ( 1.3s) :: ããã, hum.
+  10.40-  12.96 ( 2.6s) :: Na aula de hoje, você vai aprender a fazer o hash pausa.
+  13.07-  14.57 ( 1.5s) :: Como fazemos o hash power?
+  14.87-  17.88 ( 3.0s) :: Coloca o peso, o maior que você faz, o máximo que você aguenta.
+  18.22-  19.65 ( 1.4s) :: Vamos supor que eu aguente...
+  19.97-  21.18 ( 1.2s) :: 40 quilos.
+  21.55-  22.75 ( 1.2s) :: Coloquei 40.
+  23.32-  25.12 ( 1.8s) :: Vou fazer dez repetições.
+  31.84-  32.47 ( 0.6s) :: Tchau.
+  34.57-  38.06 ( 3.5s) :: Fiz as 10, eu vou descansar 10 segundos, sem tirar o pé da parede.
+  41.30-  43.66 ( 2.4s) :: Deus dá em segundo, você vai fazer novamente...
+  43.59-  45.62 ( 2.0s) :: A máxima quantidade que você conseguir.
+  53.63-  54.26 ( 0.6s) :: Tchau.
+  54.61-  56.95 ( 2.3s) :: Isso conta uma série de hash pausas.
+  56.92-  60.28 ( 3.4s) :: Ou seja, se uma só ficha tivesse escrito três séries de respostas,
+  60.35-  61.74 ( 1.4s) :: Você vai fazer dez,
+  61.93-  64.31 ( 2.4s) :: Descansar 10 segundos e fazer mais 10.
+  64.83-  66.85 ( 2.0s) :: Aí você vai descansar um minuto...
+  67.73-  69.86 ( 2.1s) :: E vai repetir esse ciclo por duas vezes.
+  70.81-  71.49 ( 0.7s) :: Ná, né?
