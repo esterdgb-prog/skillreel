@@ -1,0 +1,335 @@
+1
+00:00:00,060 --> 00:00:00,580
+Na aula de hoje,
+
+2
+00:00:00,580 --> 00:00:01,220
+você vai aprender
+
+3
+00:00:01,220 --> 00:00:02,000
+a fazer o treino HIIT.
+
+4
+00:00:02,000 --> 00:00:02,520
+Como é que você faz
+
+5
+00:00:02,520 --> 00:00:03,150
+o treino HIIT?
+
+6
+00:00:03,180 --> 00:00:03,740
+Aqui na bicicleta,
+
+7
+00:00:03,740 --> 00:00:04,370
+por exemplo,
+
+8
+00:00:04,370 --> 00:00:04,960
+você vai colocar
+
+9
+00:00:04,960 --> 00:00:06,090
+uma carga moderada
+
+10
+00:00:06,090 --> 00:00:06,800
+pra pesada.
+
+11
+00:00:06,820 --> 00:00:07,530
+Você vai pedalar
+
+12
+00:00:07,530 --> 00:00:08,010
+o mais rápido
+
+13
+00:00:08,010 --> 00:00:08,870
+que você conseguir
+
+14
+00:00:08,870 --> 00:00:09,710
+por, vamos supor,
+
+15
+00:00:09,710 --> 00:00:10,460
+15 segundos.
+
+16
+00:00:10,460 --> 00:00:10,980
+Sem parar,
+
+17
+00:00:10,980 --> 00:00:12,000
+o mais rápido que você consegue.
+
+18
+00:00:12,040 --> 00:00:13,010
+Deu os 15 segundos,
+
+19
+00:00:13,010 --> 00:00:14,060
+você vai diminuir o ritmo.
+
+20
+00:00:14,060 --> 00:00:15,040
+Vai ficar 15 segundos
+
+21
+00:00:15,040 --> 00:00:16,000
+pedalando no ritmo lento.
+
+22
+00:00:16,020 --> 00:00:16,950
+Deu os 15 segundos,
+
+23
+00:00:16,950 --> 00:00:17,910
+você vai pedalar novamente
+
+24
+00:00:17,910 --> 00:00:19,080
+o mais rápido que você consegue.
+
+25
+00:00:19,100 --> 00:00:20,100
+Deu os 15 segundos,
+
+26
+00:00:20,100 --> 00:00:21,340
+novamente, pedala devagar.
+
+27
+00:00:21,340 --> 00:00:22,460
+Respira, dá uma respirada.
+
+28
+00:00:22,460 --> 00:00:23,470
+Deu os 15 segundos,
+
+29
+00:00:23,470 --> 00:00:24,160
+acelera de novo.
+
+30
+00:00:24,160 --> 00:00:25,050
+E assim por diante.
+
+31
+00:00:25,100 --> 00:00:26,030
+Como é que eu vou saber
+
+32
+00:00:26,030 --> 00:00:27,150
+quanto tempo eu faço isso,
+
+33
+00:00:27,150 --> 00:00:27,760
+quantas vezes?
+
+34
+00:00:27,760 --> 00:00:28,860
+Agora eu vou te explicar melhor.
+
+35
+00:00:28,880 --> 00:00:29,640
+Você vai precisar instalar
+
+36
+00:00:29,640 --> 00:00:30,340
+esse aplicativo aqui,
+
+37
+00:00:30,340 --> 00:00:31,150
+vem cá que eu vou te mostrar.
+
+38
+00:00:31,200 --> 00:00:32,740
+O nome dele é Timer Plus,
+
+39
+00:00:32,740 --> 00:00:33,560
+é um timer aqui, ó,
+
+40
+00:00:33,560 --> 00:00:34,850
+00:30, verdinho.
+
+41
+00:00:34,900 --> 00:00:36,090
+Se você não encontrar ele,
+
+42
+00:00:36,090 --> 00:00:37,020
+você pode mandar mensagem
+
+43
+00:00:37,020 --> 00:00:37,540
+no nosso suporte,
+
+44
+00:00:37,540 --> 00:00:38,280
+que a gente envia o link.
+
+45
+00:00:38,300 --> 00:00:39,150
+Após instalado,
+
+46
+00:00:39,150 --> 00:00:40,100
+você vai abrir ele.
+
+47
+00:00:40,160 --> 00:00:41,000
+Agora eu vou te mostrar
+
+48
+00:00:41,000 --> 00:00:41,920
+como que você configura.
+
+49
+00:00:41,920 --> 00:00:43,460
+Aqui em cima tem um reloginho.
+
+50
+00:00:43,460 --> 00:00:44,460
+Você vai clicar nele
+
+51
+00:00:44,460 --> 00:00:45,280
+e vai configurar
+
+52
+00:00:45,280 --> 00:00:46,200
+conforme está aqui.
+
+53
+00:00:46,260 --> 00:00:46,830
+Preparar:
+
+54
+00:00:46,830 --> 00:00:48,420
+vai ser o tempo pra você começar.
+
+55
+00:00:48,420 --> 00:00:50,040
+Exercício e descanso:
+
+56
+00:00:50,040 --> 00:00:51,020
+vai ser o tempo do HIIT.
+
+57
+00:00:51,020 --> 00:00:51,760
+Eu vou te mandar
+
+58
+00:00:51,760 --> 00:00:53,500
+pra você na sua ficha personalizada.
+
+59
+00:00:53,580 --> 00:00:54,520
+Aqui, por exemplo,
+
+60
+00:00:54,520 --> 00:00:55,980
+eu botei 15 segundos de tiro
+
+61
+00:00:55,980 --> 00:00:57,580
+e 15 segundos de descanso,
+
+62
+00:00:57,580 --> 00:00:58,950
+num total de 10 rodadas.
+
+63
+00:00:59,000 --> 00:01:00,340
+Como isso funciona na prática?
+
+64
+00:01:00,340 --> 00:01:01,540
+Eu vou botar aqui pra rodar
+
+65
+00:01:01,540 --> 00:01:02,150
+pra você entender.
+
+66
+00:01:02,200 --> 00:01:03,460
+5 segundos pra você ter atenção.
+
+67
+00:01:03,460 --> 00:01:04,200
+Começou!
+
+68
+00:01:04,280 --> 00:01:05,280
+Ficou no verdinho,
+
+69
+00:01:05,280 --> 00:01:06,380
+você vai pedalar daquele jeito,
+
+70
+00:01:06,380 --> 00:01:07,040
+acelerado,
+
+71
+00:01:07,040 --> 00:01:08,150
+o mais rápido que você conseguir.
+
+72
+00:01:08,200 --> 00:01:09,130
+No descansar,
+
+73
+00:01:09,130 --> 00:01:10,040
+você não vai descansar.
+
+74
+00:01:10,040 --> 00:01:11,200
+Você vai pedalar devagar,
+
+75
+00:01:11,200 --> 00:01:12,150
+como foi mostrado.
+
+76
+00:01:12,220 --> 00:01:13,620
+Acabou de descansar,
+
+77
+00:01:13,620 --> 00:01:14,460
+você volta a pedalar
+
+78
+00:01:14,460 --> 00:01:15,550
+o mais rápido que você conseguir.
+
+79
+00:01:15,620 --> 00:01:16,550
+E assim por diante.
+
+80
+00:01:16,620 --> 00:01:17,400
+Repara aqui em cima
+
+81
+00:01:17,400 --> 00:01:18,520
+que o treino tem somente
+
+82
+00:01:18,520 --> 00:01:19,120
+4 minutos.
+
+83
+00:01:19,120 --> 00:01:20,100
+Mas vai ser os 4 minutos
+
+84
+00:01:20,100 --> 00:01:21,370
+mais intensos da sua vida.
