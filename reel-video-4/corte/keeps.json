@@ -1,0 +1,21 @@
+{"keeps":[
+ {"from":7.45,"to":14.25,"why":"2ª tomada da abertura (a 1ª, 0.75-4.8, parou em 'como é que faz a...'); 'E...' depois fora"},
+ {"from":15.0,"to":18.85,"why":"peso para 15 repetições (mostra a máquina)"},
+ {"from":18.85,"to":29.45,"raw":true,"why":"DEMONSTRAÇÃO: série de 15, inteira"},
+ {"from":29.45,"to":32.9,"why":"fiz as 15, descanso 1 min"},
+ {"from":34.45,"to":37.3,"why":"descansei, vou aumentar o peso"},
+ {"from":37.3,"to":39.9,"raw":true,"why":"DEMONSTRAÇÃO: troca do peso, inteira"},
+ {"from":39.9,"to":42.6,"why":"agora 12 repetições"},
+ {"from":42.6,"to":52.45,"raw":true,"why":"DEMONSTRAÇÃO: série de 12, inteira"},
+ {"from":52.45,"to":55.45,"why":"fiz as 12, descanso"},
+ {"from":59.15,"to":62.3,"why":"descansei, aumento a carga"},
+ {"from":62.3,"to":64.85,"raw":true,"why":"DEMONSTRAÇÃO: troca do peso, inteira"},
+ {"from":64.85,"to":67.7,"why":"agora 10 repetições"},
+ {"from":67.7,"to":82.45,"raw":true,"why":"DEMONSTRAÇÃO: série de 10, inteira"},
+ {"from":82.45,"to":85.45,"why":"fiz as 10, descanso"},
+ {"from":88.35,"to":91.25,"why":"descansei, aumento a carga"},
+ {"from":91.25,"to":93.2,"raw":true,"why":"DEMONSTRAÇÃO: troca do peso, inteira"},
+ {"from":93.2,"to":96.95,"why":"agora somente 8 repetições"},
+ {"from":96.95,"to":113.45,"raw":true,"why":"DEMONSTRAÇÃO: série de 8, inteira"},
+ {"from":113.45,"to":119.6,"why":"fechamento: acabou, só uma série"}
+]}

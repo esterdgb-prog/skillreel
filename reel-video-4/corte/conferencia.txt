@@ -1,0 +1,59 @@
+== TEXTO DO CORTE (leia inteiro) ==
+Na aula de hoje, você vai aprender a fazer a progressão de carga Como é que faz a progressão de carga? O que é que eu vou te mostrar? Você vai colocar um peso que você consiga fazer 15 repetições Fiz as 15 repetições, eu vou descansar 1 minuto Descansei 1 minuto, eu vou aumentar o peso Agora, eu vou fazer 12 repetições Fiz as 12, eu vou descansar novamente 1 minuto Descansei 1 minuto, eu vou aumentar novamente a carga Agora, eu vou fazer 10 repetições Fiz as 10 repetições, descanso novamente 1 minuto Descansei 1 minuto, aumento novamente a carga Agora, eu vou fazer somente 8 repetições Fiz as 8 repetições, acabou Já está completa a progressão de carga Esse, você só faz uma série
+
+== REPETIÇÕES COLADAS ==
+  nenhuma
+
+== EMENDAS (janela ±2 s, transcrita sozinha) ==
+    0.80s  (fonte 8.87) :: Na aula de hoje, você vai aprender a fazer a progressão de carga. Como é
+    2.63s  (fonte 11.20) :: Você vai aprender a fazer a progressão de carga. Como é que faz a progressão de carga? Fica que eu vou te mostrar.
+    4.10s  (fonte 12.87) :: de carga. Como é que faz a progressão de carga? Aqui que eu vou te mostrar. Você vai colocar um peso
+    4.90s  (fonte 15.07) :: faz a progressão de carga, que é o que eu vou te mostrar. Você vai colocar um peso que você consiga fazer
+    6.27s  (fonte 16.57) :: que eu vou te mostrar. Você vai colocar um peso que você consiga fazer 15 repetições.
+    8.13s  (fonte 18.87) :: que você consiga fazer 15 repetições.
+   18.73s  (fonte 29.53) :: Fiz as 15 repetições agora.
+   21.77s  (fonte 34.67) :: as 15 repetições, eu vou descansar um minuto. Descansei um minuto, eu vou aumentar o peso.
+   23.77s  (fonte 37.30) :: Descansei um minuto, eu vou aumentar o peso.
+   26.37s  (fonte 40.00) :: Agora eu vou fazer 12 repetições.
+   28.43s  (fonte 42.60) :: Agora eu vou fazer 12 repetições.
+   38.30s  (fonte 52.67) :: Fiz as doze, eu vou descansar novamente um
+   40.67s  (fonte 59.40) :: a coisa descansar novamente um minuto. Descansei um minuto? Vou aumentar novamente
+   43.27s  (fonte 62.30) :: Vou aumentar novamente a carga.
+   48.20s  (fonte 67.70) :: Agora eu vou fazer 10 repetições.
+   62.97s  (fonte 82.57) :: Fiz as dez repetições, descanso novamente.
+   65.50s  (fonte 88.47) :: repetições, descanso novamente um minuto. Descansei um minuto, aumento novamente
+   67.97s  (fonte 91.27) :: um minuto, aumenta novamente a carga.
+   69.90s  (fonte 93.30) :: Agora eu vou fazer somente...
+   72.70s  (fonte 96.93) :: Agora eu vou fazer somente 8 repetições.
+   89.23s  (fonte 113.63) :: Fiz as 8 repetições, acabou. Já está
+   90.87s  (fonte 115.57) :: Fiz as 8 repetições, acabou. Já está completa a progressão da carga.
+   92.13s  (fonte 117.00) :: mas acabou, já está completo a progressão. Esse você só faz uma série.
+   92.43s  (fonte 117.73) :: boa, já está completa a progressão. Esse você só faz uma série.
+
+== PAUSAS > 0,25 s QUE SOBRARAM ==
+  fim 5.126 | silence_duration: 0.297417
+  fim 9.51015 | silence_duration: 1.38748
+  fim 10.2126 | silence_duration: 0.306896
+  fim 11.0179 | silence_duration: 0.65425
+  fim 18.8841 | silence_duration: 7.3909
+  fim 19.6753 | silence_duration: 0.252521
+  fim 25.0442 | silence_duration: 1.28233
+  fim 26.7738 | silence_duration: 1.5465
+  fim 28.897 | silence_duration: 0.469375
+  fim 36.6175 | silence_duration: 6.56146
+  fim 37.2796 | silence_duration: 0.631208
+  fim 38.3065 | silence_duration: 0.394125
+  fim 44.5658 | silence_duration: 1.30358
+  fim 46.3637 | silence_duration: 1.58615
+  fim 49.1744 | silence_duration: 0.989812
+  fim 50.9572 | silence_duration: 1.14471
+  fim 61.9475 | silence_duration: 10.4309
+  fim 63.0469 | silence_duration: 0.534375
+  fim 70.694 | silence_duration: 2.73117
+  fim 73.874 | silence_duration: 1.18421
+  fim 74.4736 | silence_duration: 0.518604
+  fim 87.8111 | silence_duration: 13.1368
+  fim 88.5911 | silence_duration: 0.434417
+  fim 89.2497 | silence_duration: 0.524667
+
+duração do corte: 93.83s

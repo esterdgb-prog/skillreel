@@ -1,0 +1,46 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Leg,Inter,74,&H00FFFFFF,&H00FFFFFF,&H00000000,&H64000000,-1,0,0,0,100,100,0,0,1,6,2,2,100,100,500,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.07,0:00:00.54,Leg,,0,0,0,,Na aula de hoje,
+Dialogue: 0,0:00:00.54,0:00:01.42,Leg,,0,0,0,,você vai aprender a fazer
+Dialogue: 0,0:00:01.42,0:00:02.60,Leg,,0,0,0,,a progressão de carga.
+Dialogue: 0,0:00:02.60,0:00:02.90,Leg,,0,0,0,,Como é que faz
+Dialogue: 0,0:00:02.90,0:00:04.05,Leg,,0,0,0,,a progressão de carga?
+Dialogue: 0,0:00:04.07,0:00:05.15,Leg,,0,0,0,,Vem cá que eu vou te mostrar.
+Dialogue: 0,0:00:05.20,0:00:06.46,Leg,,0,0,0,,Você vai colocar um peso
+Dialogue: 0,0:00:06.46,0:00:07.62,Leg,,0,0,0,,que você consiga fazer
+Dialogue: 0,0:00:07.62,0:00:09.20,Leg,,0,0,0,,15 repetições.
+Dialogue: 0,0:00:19.45,0:00:21.28,Leg,,0,0,0,,Fiz as 15 repetições,
+Dialogue: 0,0:00:21.28,0:00:22.35,Leg,,0,0,0,,eu vou descansar 1 minuto.
+Dialogue: 0,0:00:22.40,0:00:23.51,Leg,,0,0,0,,Descansei 1 minuto,
+Dialogue: 0,0:00:23.51,0:00:25.30,Leg,,0,0,0,,eu vou aumentar o peso.
+Dialogue: 0,0:00:27.70,0:00:28.57,Leg,,0,0,0,,Agora eu vou fazer
+Dialogue: 0,0:00:28.57,0:00:29.90,Leg,,0,0,0,,12 repetições.
+Dialogue: 0,0:00:40.05,0:00:40.70,Leg,,0,0,0,,Fiz as 12,
+Dialogue: 0,0:00:40.70,0:00:42.22,Leg,,0,0,0,,eu vou descansar novamente
+Dialogue: 0,0:00:42.22,0:00:42.45,Leg,,0,0,0,,1 minuto.
+Dialogue: 0,0:00:42.47,0:00:43.36,Leg,,0,0,0,,Descansei 1 minuto,
+Dialogue: 0,0:00:43.36,0:00:45.20,Leg,,0,0,0,,vou aumentar novamente a carga.
+Dialogue: 0,0:00:48.07,0:00:48.93,Leg,,0,0,0,,Agora eu vou fazer
+Dialogue: 0,0:00:48.93,0:00:50.30,Leg,,0,0,0,,10 repetições.
+Dialogue: 0,0:01:05.52,0:01:06.57,Leg,,0,0,0,,Fiz as 10 repetições,
+Dialogue: 0,0:01:06.57,0:01:08.05,Leg,,0,0,0,,descanso novamente 1 minuto.
+Dialogue: 0,0:01:08.10,0:01:08.99,Leg,,0,0,0,,Descansei 1 minuto,
+Dialogue: 0,0:01:08.99,0:01:10.70,Leg,,0,0,0,,aumento novamente a carga.
+Dialogue: 0,0:01:12.88,0:01:13.84,Leg,,0,0,0,,Agora eu vou fazer
+Dialogue: 0,0:01:13.84,0:01:15.50,Leg,,0,0,0,,somente 8 repetições.
+Dialogue: 0,0:01:32.95,0:01:33.86,Leg,,0,0,0,,Fiz as 8 repetições,
+Dialogue: 0,0:01:33.86,0:01:34.37,Leg,,0,0,0,,acabou.
+Dialogue: 0,0:01:34.37,0:01:34.96,Leg,,0,0,0,,Já está completa
+Dialogue: 0,0:01:34.96,0:01:36.15,Leg,,0,0,0,,a progressão de carga.
+Dialogue: 0,0:01:36.20,0:01:36.73,Leg,,0,0,0,,Esse você só faz
+Dialogue: 0,0:01:36.73,0:01:37.57,Leg,,0,0,0,,uma série.
