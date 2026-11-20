@@ -6,6 +6,7 @@
 | Logo Resultax Internacional (`oficiais/logo-resultax.png`) | enviada pelo cliente (`bruto/resultax-original.png`) | fundo preto removido por luminância | 2026-11-20 |
 | "Fundador do Nubank mudou a residência fiscal para o Uruguai" | Bloomberg Línea, 13/09/2022 · Seu Crédito Digital | mudança documentada (2022). A tese de que ele evitou imposto na venda de ações foi contestada pelo Projeto Comprova; o roteiro só diz "muito se falou", o que é verdade | 2026-11-20 |
 | "Saída Definitiva do País" junto à Receita Federal | nome oficial da Receita (Comunicação / Declaração de Saída Definitiva do País) | — | 2026-11-20 |
+| Mapas (América do Sul e mundo) | Natural Earth via pacote world-atlas 2.0.2 (domínio público), projeção de Mercator — `motor/ferramentas/gerar-mapas.cjs` → `motor/src/mapas.js` | — | 2026-11-20 |
 | Demais telas (mapa, documentos, ícones, malha fina, 100%) | ilustração própria em SVG | sem números ou dados de terceiros | — |
 
 Links: https://www.bloomberglinea.com.br/2022/09/13/por-que-o-bilionario-david-velez-nao-mora-mais-no-brasil/ ·

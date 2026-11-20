@@ -14,3 +14,5 @@ preparo/silencio.wav
 render/_*.mp4
 render/work-*/
 qa/render.log
+motor/snaps*/
+render/

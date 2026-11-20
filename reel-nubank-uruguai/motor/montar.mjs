@@ -111,7 +111,7 @@ if (cfg.music && existsSync(join("assets", cfg.music.file))) {
 }
 
 // ---------------- index.html ----------------
-const beats = readFileSync("src/beats.js", "utf8");
+const beats = (existsSync("src/mapas.js") ? readFileSync("src/mapas.js", "utf8") + "\n" : "") + readFileSync("src/beats.js", "utf8"); // mapas.js: dados do mapa (gerar-mapas.cjs)
 let html = readFileSync("src/index.template.html", "utf8")
   .replaceAll("__DUR__", String(dur)).replace("__CFG__", JSON.stringify(cfg)).replace("__WORDS__", JSON.stringify(words)).replace("__FACE__", JSON.stringify(face))
   .replace("__CLASS__", `t-${cfg.theme || "roxo"} f-${cfg.font || "padrao"}`)
