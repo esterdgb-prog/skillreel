@@ -1,0 +1,13 @@
+/* gerado por montar.mjs a partir de pele-resolvida.json — não edite */
+#vsl{
+  --bg0:#0b0a09; --bg1:#141210; --bg2:#302e2d; --bg3:#4f4d4c; --panel2:#110f0e; --thumb:#272523;
+  --panelRGB:44,42,40; --panel2RGB:16,14,13; --shadowRGB:4,4,3;
+  --blob1:#816630; --blob2:#564421; --blob3:#695228;
+  --acc:#b08a3e; --acc2:#b6934d; --deep:#9e7c38; --accRGB:176,138,62;
+  --btnA:#b08a3e; --btnB:#c0a165;
+  --tintTopRGB:123,97,43; --tintMidRGB:70,55,25; --tintEndRGB:21,17,7;
+  --lav:#e7d8a1; --lav2:#d5c794; --lavT:#f1e8c7; --hiRGB:231,216,161;
+  --tint2:linear-gradient(100deg,rgba(231,216,161,.55) 0%,rgba(176,138,62,.25) 45%,rgba(192,161,101,.35) 100%);
+  --white:#ffffff; --muted:#b9b9b9; --dim:#787878;
+}
+#vsl, html, body{ color:#ffffff; }

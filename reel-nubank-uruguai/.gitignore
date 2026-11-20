@@ -1,0 +1,16 @@
+motor/node_modules
+motor/snapshots/
+motor/snaps2/
+motor/snaps3/
+motor/exemplo/
+motor/.modelos/
+motor/assets/kit.js
+motor/assets/kit.css
+motor/assets/gsap.min.js
+motor/assets/fonts/
+motor/assets/sfx/
+motor/assets/clean.mp4
+preparo/silencio.wav
+render/_*.mp4
+render/work-*/
+qa/render.log
