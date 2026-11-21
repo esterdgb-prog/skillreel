@@ -2,7 +2,7 @@
 // O montar.mjs põe este arquivo (e src/mapas.js) ANTES do src/beats.js: as cenas usam tudo daqui sem importar nada.
 // Fundo neutro escuro, ilustração plana colorida, câmera (cam/camSet), objetos andando por caminho (along), desenhos prontos
 // (CHAR, SUITCASE, FLAG_UY, FLAG_BR, COIN, CASH, BAR, PIGGY, NEWS, TILE, BADGE, CHIP, LEAD) e a mixagem dos efeitos (GAIN).
-// Conteúdo em y 240–1120; a legenda (K.mouthCaps no fim do beats.js) fica em ~y 1190. Não use `$` como nome (o kit já usa).
+// Conteúdo em y 240–1120; a legenda (K.mouthCaps no fim do beats.js) fica em ~y 1190. Não declare uma variável chamada $ (o kit já usa); use q1 e $$.
 const A = (p, n = 1, after = 0) => K.at(p, n, after);
 const UI = document.querySelector("#ui");
 const FULL = `position:absolute;left:0;top:0;width:1080px;height:1920px;overflow:visible`;

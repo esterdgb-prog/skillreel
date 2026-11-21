@@ -7,7 +7,8 @@ N="${1:?versão}"; M="$(cd "$(dirname "$0")/.." && pwd)"; cd "$M"; P="$(cd .. &&
 mkdir -p "$P/render" "$P/entrega" "$P/qa"
 CHROME="${CHROME:-$(ls -d /opt/pw-browsers/chromium-*/chrome-linux*/chrome 2>/dev/null | head -1)}"; export CHROME
 node montar.mjs
-npx hyperframes lint 2>&1 | grep "✗" && { echo "lint com erro"; exit 1; } || true
+LINT="$(npx hyperframes lint 2>&1 || true)"
+if grep -q "✗" <<<"$LINT"; then grep "✗" <<<"$LINT"; echo "lint com erro: corrija antes do render"; exit 1; fi
 npx hyperframes render -q high -o "$P/render/_reel-bruto.mp4" > "$P/qa/render.log" 2>&1
 # os efeitos nascem em tempo de execução e o renderizador NÃO os grava: lista e mixa por fora
 node ferramentas/sons.mjs "$P/sons.json"

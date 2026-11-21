@@ -75,7 +75,7 @@ Kit (`K.*`, do motor VSL): `K.pill`, `K.stamp`, `K.cta`, `K.logo`, `K.glitch`, `
 - **Cena que nunca sai:** se uma peça entra depois do `until` da cena, ela fica até o fim do vídeo (foi o caso da bandeira do Uruguai em todas as cenas). Calcule `until = Math.max(próxima frase, último evento + 1 s)` e empurre o início da cena seguinte.
 - **Preenchimento antes do traço:** um elemento com `fill` desenhado com `draw` mostra o fundo antes do traço. Use `fill: none` ou dê `pop` no preenchimento.
 - **Legenda sobe:** uma pílula do kit (`K.pill`) abaixo de ~y 1040 empurra a legenda para cima, sobre o conteúdo. Use etiquetas da cena (`CHIP`) ou `K.hideMouth` no trecho, como no CTA.
-- **Nome `$`:** o kit já declara `$`. Use `q1` e `$$`.
+- **Texto das cenas com `$`:** o `montar.mjs` desta skill insere as cenas com uma função no `replace`. Na versão antiga (texto), `$$` virava `$` e ``$` `` colava o começo da página de novo (vídeo e voz duplicados, lint `overlapping_clips_same_track`). Não volte para `replace` com texto.
 - **Ambiente:**
   - `npm install --ignore-scripts`, porque o onnxruntime-node falha atrás do proxy;
   - `HF_HUB_DISABLE_XET=1` para baixar o Whisper;

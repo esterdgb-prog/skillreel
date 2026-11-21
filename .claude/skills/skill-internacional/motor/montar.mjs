@@ -116,7 +116,7 @@ const beats = pre + "\n" + readFileSync("src/beats.js", "utf8");
 let html = readFileSync("src/index.template.html", "utf8")
   .replaceAll("__DUR__", String(dur)).replace("__CFG__", JSON.stringify(cfg)).replace("__WORDS__", JSON.stringify(words)).replace("__FACE__", JSON.stringify(face))
   .replace("__CLASS__", `t-${cfg.theme || "roxo"} f-${cfg.font || "padrao"}`)
-  .replace("__MATTE__", matte).replace("__MUSIC__", music).replace("__BEATS__", beats + (sfxFiltro ? "\n" + sfxFiltro : ""));
+  .replace("__MATTE__", matte).replace("__MUSIC__", music).replace("__BEATS__", () => beats + (sfxFiltro ? "\n" + sfxFiltro : "")); // função: o texto das cenas pode ter $` e $' (padrões especiais do replace)
 if (peleCss) html = html.replace('<link rel="stylesheet" href="assets/kit.css">', `<link rel="stylesheet" href="assets/kit.css">\n${fontesLink}<link rel="stylesheet" href="assets/pele.css">`);
 if (SO_CAMERA) html = html.replace("</head>", `<style>#ui,#cap,#fx,#behind,#inset,#cover,#under{display:none!important}</style>\n</head>`);
 writeFileSync("index.html", html);
