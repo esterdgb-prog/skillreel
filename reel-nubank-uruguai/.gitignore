@@ -16,3 +16,6 @@ render/work-*/
 qa/render.log
 motor/snaps*/
 render/
+corte/*.wav
+corte/vicios/
+bruto/bruto.mp4

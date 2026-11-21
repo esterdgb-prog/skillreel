@@ -1,0 +1,34 @@
+== TEXTO DO CORTE (leia inteiro) ==
+Quando o fundador do Nubank mudou a residência fiscal para o Uruguai, muito se falou na economia de imposto, mas você não precisa ser bilionário para cair na mesma lógica. Quem vai morar fora do Brasil, seja para trabalhar, estudar ou recomeçar a vida, precisa de planejamento para não pagar imposto em dobro. E não basta arrumar as malas. O processo tem dois passos. Primeiro, formalizar sua saída definitiva do país junto à Receita Federal. Sem isso, você pode continuar sendo tratado como residente fiscal aqui, mesmo morando lá fora. Segundo, organizar o que você deixa para trás. Conta, investimentos, imóvel, empresa, declaração de imposto de renda. Se ficar solto, vira pendência. E pendência vira dor de cabeça e malha fina. Vai morar no exterior e quer fazer tudo isso 100% dentro da lei? Na Resultax Internacional, a gente cuida do processo todo. Clica no link da Bill e agende o seu diagnóstico.
+
+== REPETIÇÕES COLADAS ==
+  nenhuma
+
+== EMENDAS (janela ±2 s, transcrita sozinha) ==
+    3.73s  (fonte 4.07) :: Muito se falou na economia de emprego.
+    6.13s  (fonte 7.07) :: se falou na economia de imposto. Mas você não precisa ser bilionário para
+    9.50s  (fonte 10.77) :: para cair na mesma lógica. Quem vai morar fora do Brasil, seja para trabalhar,
+   10.80s  (fonte 12.37) :: Quem vai morar fora do Brasil? Seja para trabalhar, estudar ou
+   14.07s  (fonte 15.77) :: estudar ou recomeçar a vida, precisa de planejamento para não
+   17.50s  (fonte 19.80) :: para não pagar imposto em dobro. E não basta arrumar as malas.
+   19.23s  (fonte 21.80) :: E não basta arrumar as malas. O processo tem dois passos. Primeiro,
+   20.63s  (fonte 23.73) :: O processo tem dois passos. Primeiro, formalizar a sua saída
+   21.23s  (fonte 24.47) :: O processo tem dois passos. Primeiro, formalizar a sua saída definitiva.
+   25.57s  (fonte 29.20) :: do país junto à Receita Federal. Sem isso, você pode continuar sendo tratado
+   29.33s  (fonte 33.03) :: como residente fiscal aqui, mesmo morando lá fora. Segundo,
+   30.60s  (fonte 34.83) :: mesmo morando lá fora. Segundo, organizar o que você deixa
+   31.13s  (fonte 35.47) :: mesmo morando lá fora. Segundo, organizar o que você deixa para trás.
+   33.07s  (fonte 37.87) :: organizar o que você deixa para trás. Conta, investimentos, imóveis,
+   34.77s  (fonte 39.73) :: Conta, investimentos, imóvel, empresa, declarações,
+   38.33s  (fonte 43.63) :: Declaração de imposto de renda, se ficar solto, vira pendência.
+   39.53s  (fonte 44.97) :: de renda, se ficar solto, vira pendência. E pendência vira dor
+   40.13s  (fonte 45.90) :: Se ficar solto, vira pendência. E pendência vira dor de cabeça.
+   43.27s  (fonte 49.50) :: dor de cabeça e malha fina. Vai morar no exterior e quer fazer tudo
+   47.27s  (fonte 53.67) :: tudo isso 100% dentro da lei? Na Risultex Internacional, a gente
+   50.20s  (fonte 56.77) :: A gente cuida do processo todo. Clica no link da Bill e agende o serviço.
+   50.57s  (fonte 57.53) :: a gente cuida do processo todo. Clica no link da Bill e agende o seu diagnóstico.
+
+== PAUSAS > 0,25 s QUE SOBRARAM ==
+  nenhuma
+
+duração do corte: 52.60s
