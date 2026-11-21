@@ -359,10 +359,10 @@ const tL = A("mesma lógica");
     <div class="stp" style="position:absolute;left:520px;top:880px;padding:16px 30px;border:8px solid ${C.green};border-radius:18px;color:${C.green};font:900 52px/1 var(--fS);letter-spacing:.06em;transform:rotate(-12deg);background:rgba(255,255,255,.9)">ENVIADA ✓</div>`, t0, t1);
   pop($$(g, ".bg1"), A("primeiro"));
   K.sfx("boom", A("primeiro"), 0.3);
-  const doc = q1(g, ".doc"); K.fromTo(doc, { y: 600, rotation: 8 }, { y: 0, rotation: 0, duration: 0.55, ease: "back.out(1.4)" }, A("formalizar") - 0.1);
+  const doc = q1(g, ".doc"); gsap.set(doc, { x: 800, rotation: 14 }); q1(g, ".ttl").style.opacity = "0"; K.fromTo(doc, { x: 800, rotation: 14 }, { x: 0, rotation: 0, duration: 0.55, ease: "back.out(1.4)" }, A("formalizar") - 0.1);
   K.sfx("swoosh", A("formalizar") - 0.1, 0.35);
   K.fromTo(q1(g, ".ttl"), { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.4 }, A("saída definitiva"));
-  $$(g, ".fil").forEach((e, i) => { gsap.set(e, { transformOrigin: "0 50%" }); K.fromTo(e, { scaleX: 0 }, { scaleX: 1, duration: 0.35, ease: "power2.out" }, A("país") + i * 0.22); });
+  $$(g, ".fil").forEach((e, i) => { gsap.set(e, { transformOrigin: "0 50%", scaleX: 0 }); K.fromTo(e, { scaleX: 0 }, { scaleX: 1, duration: 0.35, ease: "power2.out" }, A("país") + i * 0.22); });
   K.sfx("type", A("país"), 0.25);
   const stp = q1(g, ".stp"); stp.style.opacity = "0";
   K.fromTo(stp, { opacity: 0, scale: 2.2 }, { opacity: 1, scale: 1, duration: 0.18, ease: "power4.in" }, A("receita federal") + 0.1);
@@ -460,7 +460,7 @@ const tL = A("mesma lógica");
       ${[...Array(18)].map((_, k) => `<rect class="cf" x="-7" y="-14" width="14" height="28" rx="4" fill="${[C.yellow, C.sky, C.pink, C.green, C.orange][k % 5]}" transform="translate(540 720)"/>`).join("")}
     </svg>
     <div style="position:absolute;left:0;width:1080px;top:350px;text-align:center"><span class="pc" style="font:900 120px/1 var(--fS);color:#fff;text-shadow:0 0 30px rgba(34,164,85,.7)"><span class="n">0</span>%</span></div>
-    ${CHIP("Dentro da lei", 540, 975, "dl", C.green, "#fff", 36)}`, A("100%") - 0.2, t1);
+    ${CHIP("Dentro da lei", 540, 975, "dl", C.green, "#fff", 36)}`, t0 + 0.15, t1);
   const rg = q1(g, ".rg"); tl.fromTo(rg, { strokeDashoffset: L }, { strokeDashoffset: 0, duration: 0.8, ease: "power2.out", immediateRender: false }, A("100%"));
   count(q1(g, ".n"), 0, 100, A("100%"), 0.8);
   for (let k = 1; k <= 3; k++) K.sfx("tick", A("100%") + k * 0.2, 0.25);
