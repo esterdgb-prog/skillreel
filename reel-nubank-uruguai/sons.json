@@ -6,207 +6,232 @@
    "volume": 0.98
   },
   {
-   "t": 1.06,
+   "t": 1.16,
    "arquivo": "glitch.wav",
    "volume": 0.375
   },
   {
-   "t": 1.5,
+   "t": 1.64,
    "arquivo": "whoosh.wav",
    "volume": 0.77
   },
   {
-   "t": 1.91,
+   "t": 2.36,
    "arquivo": "whoosh.wav",
    "volume": 0.98
   },
   {
-   "t": 3.13,
+   "t": 3.38,
    "arquivo": "boom.wav",
    "volume": 0.135
   },
   {
-   "t": 4.68,
+   "t": 4.93,
    "arquivo": "whoosh.wav",
    "volume": 0.77
   },
   {
-   "t": 5.56,
+   "t": 5.92,
    "arquivo": "tick.wav",
    "volume": 0.3
   },
   {
-   "t": 5.82,
+   "t": 6.34,
    "arquivo": "ding.wav",
    "volume": 0.28
   },
   {
-   "t": 6.7,
+   "t": 7.48,
    "arquivo": "whoosh.wav",
    "volume": 0.77
   },
   {
-   "t": 8.02,
+   "t": 8.38,
+   "arquivo": "shimmer.wav",
+   "volume": 0.33
+  },
+  {
+   "t": 8.89,
    "arquivo": "stamp.wav",
    "volume": 0.275
   },
   {
-   "t": 8.88,
+   "t": 9.82,
    "arquivo": "pop.wav",
    "volume": 0.27
   },
   {
-   "t": 9.9,
+   "t": 11.1,
    "arquivo": "whoosh.wav",
    "volume": 0.66
   },
   {
-   "t": 10.22,
+   "t": 11.42,
    "arquivo": "whoosh.wav",
    "volume": 0.98
   },
   {
-   "t": 13.99,
+   "t": 12.92,
+   "arquivo": "pop.wav",
+   "volume": 0.27
+  },
+  {
+   "t": 14.38,
+   "arquivo": "pop.wav",
+   "volume": 0.27
+  },
+  {
+   "t": 15.89,
    "arquivo": "whoosh.wav",
    "volume": 0.66
   },
   {
-   "t": 14.73,
+   "t": 16.68,
    "arquivo": "click.wav",
    "volume": 0.18
   },
   {
-   "t": 15.88,
+   "t": 17.92,
    "arquivo": "whoosh.wav",
    "volume": 0.77
   },
   {
-   "t": 16.72,
+   "t": 18.81,
    "arquivo": "stamp.wav",
    "volume": 0.275
   },
   {
-   "t": 18.08,
+   "t": 20.4,
    "arquivo": "whoosh.wav",
    "volume": 0.66
   },
   {
-   "t": 18.94,
+   "t": 21.3,
    "arquivo": "riser.wav",
    "volume": 0.325
   },
   {
-   "t": 18.96,
+   "t": 21.36,
    "arquivo": "click.wav",
    "volume": 0.203
   },
   {
-   "t": 20.08,
+   "t": 22.62,
    "arquivo": "ding.wav",
    "volume": 0.28
   },
   {
-   "t": 20.65,
+   "t": 23.54,
    "arquivo": "boom.wav",
    "volume": 0.135
   },
   {
-   "t": 21.27,
+   "t": 24.34,
    "arquivo": "whoosh.wav",
    "volume": 0.77
   },
   {
-   "t": 23.44,
+   "t": 26.66,
    "arquivo": "type.wav",
    "volume": 0.25
   },
   {
-   "t": 24.39,
+   "t": 28.01,
    "arquivo": "stamp.wav",
    "volume": 0.275
   },
   {
-   "t": 25.69,
+   "t": 28.5,
    "arquivo": "boom.wav",
    "volume": 0.135
   },
   {
-   "t": 29.14,
+   "t": 32.82,
    "arquivo": "whoosh.wav",
    "volume": 0.98
   },
   {
-   "t": 30.56,
+   "t": 34.58,
    "arquivo": "boom.wav",
    "volume": 0.135
   },
   {
-   "t": 33.09,
+   "t": 37.57,
    "arquivo": "click.wav",
    "volume": 0.18
   },
   {
-   "t": 33.7,
+   "t": 38.33,
    "arquivo": "click.wav",
    "volume": 0.18
   },
   {
-   "t": 34.75,
+   "t": 39.47,
    "arquivo": "click.wav",
    "volume": 0.18
   },
   {
-   "t": 35.33,
+   "t": 40.31,
    "arquivo": "click.wav",
    "volume": 0.18
   },
   {
-   "t": 36.01,
+   "t": 41.23,
    "arquivo": "ding.wav",
    "volume": 0.24
   },
   {
-   "t": 38.36,
+   "t": 43.16,
    "arquivo": "whoosh.wav",
    "volume": 0.66
   },
   {
-   "t": 41.29,
+   "t": 44.82,
+   "arquivo": "pop.wav",
+   "volume": 0.27
+  },
+  {
+   "t": 46.62,
    "arquivo": "glitch.wav",
    "volume": 0.188
   },
   {
-   "t": 42.67,
+   "t": 48.32,
    "arquivo": "stamp.wav",
    "volume": 0.275
   },
   {
-   "t": 43.32,
+   "t": 48.8,
    "arquivo": "whoosh.wav",
    "volume": 0.84
   },
   {
-   "t": 45.66,
-   "arquivo": "tick.wav",
-   "volume": 0.25
+   "t": 52.53,
+   "arquivo": "shimmer.wav",
+   "volume": 0.33
   },
   {
-   "t": 46.73,
+   "t": 52.58,
    "arquivo": "ding.wav",
    "volume": 0.32
   },
   {
-   "t": 47.39,
+   "t": 53.16,
    "arquivo": "whoosh.wav",
    "volume": 1.12
   },
   {
-   "t": 47.69,
+   "t": 53.46,
    "arquivo": "boom.wav",
    "volume": 0.248
   },
   {
-   "t": 50.94,
+   "t": 56.76,
+   "arquivo": "shimmer.wav",
+   "volume": 0.275
+  },
+  {
+   "t": 57.3,
    "arquivo": "click.wav",
    "volume": 0.225
   }
