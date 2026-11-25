@@ -3,7 +3,9 @@
 import sys, wave, os
 import numpy as np
 sys.path.insert(0, os.path.dirname(__file__))
-from timeline import VOICE, SFX, BPM, BEAT, DUR
+import importlib
+_tl = importlib.import_module(os.environ.get("TIMELINE", "timeline"))
+VOICE, SFX, BPM, BEAT, DUR = _tl.VOICE, _tl.SFX, _tl.BPM, _tl.BEAT, _tl.DUR
 
 SR = 44100
 rng = np.random.default_rng(7)

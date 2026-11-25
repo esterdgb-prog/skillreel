@@ -2,3 +2,7 @@ render/
 audio/
 qa/
 __pycache__/
+render2/
+audio2/
+imgs/
+models/
