@@ -238,6 +238,8 @@ class Captions:
         out = []; deco = False
         for part in text.split("*"):
             for w in part.split():
+                if out and all(ch in ",.:;!?" for ch in w):
+                    out[-1] = (out[-1][0] + w, out[-1][1]); continue
                 out.append((w, deco))
             deco = not deco
         return out
