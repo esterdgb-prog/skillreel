@@ -14,8 +14,10 @@
 //   fontes → assets/fonts/fontes.css; com origem "nativa" nada muda e o resultado é o da referência;
 // - aplica o SOM: padrão do vsl.json = "enxuto" (R2); pele com efeitos desligados → nenhum; intensidade 0,3 → enxuto
 //   e −3 dB; 0,6 ou ausente → o que o vsl.json diz; 0,85 → "referencia" (o som exato do vídeo aprovado);
+// - liga o VÍDEO DE APOIO (K.broll, broll.js) se existir assets/broll/ com algum .mp4 (ferramentas/pixabay.py da skill);
+//   sem a pasta nada muda e o resultado é o da referência;
 // - escreve index.html e meta.json; imprime o resumo.
-import { readFileSync, writeFileSync, existsSync, cpSync, mkdirSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync, cpSync, mkdirSync, readdirSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -110,8 +112,12 @@ if (cfg.music && existsSync(join("assets", cfg.music.file))) {
   music = `<audio id="music" src="assets/${cfg.music.file}" data-start="${s}" data-duration="${(dur - s).toFixed(3)}" data-track-index="3" data-volume="${cfg.music.volume ?? 0.18}"></audio>`;
 }
 
+// ---------------- vídeo de apoio (K.broll) ----------------
+const brolls = existsSync("assets/broll") ? readdirSync("assets/broll").filter((f) => f.endsWith(".mp4")) : [];
+const brollJs = brolls.length ? readFileSync(join(MOD, "broll.js"), "utf8") + "\n" : "";
+
 // ---------------- index.html ----------------
-const beats = readFileSync("src/beats.js", "utf8");
+const beats = brollJs + readFileSync("src/beats.js", "utf8");
 let html = readFileSync("src/index.template.html", "utf8")
   .replaceAll("__DUR__", String(dur)).replace("__CFG__", JSON.stringify(cfg)).replace("__WORDS__", JSON.stringify(words)).replace("__FACE__", JSON.stringify(face))
   .replace("__CLASS__", `t-${cfg.theme || "roxo"} f-${cfg.font || "padrao"}`)
@@ -123,4 +129,4 @@ const meta = read("meta.json", {});
 Object.assign(meta, { id: "vsl", width: 1080, height: 1920, fps: 30 });
 writeFileSync("meta.json", JSON.stringify(meta, null, 2));
 if (!existsSync("hyperframes.json")) cpSync(join(MOD, "hyperframes.json"), "hyperframes.json");
-console.log(`index.html ok${SO_CAMERA ? " (SÓ CÂMERA — rode de novo sem --so-camera depois do render)" : ""} — ${dur}s · ${words.length} palavras · boca: ${face ? "sim" : "NÃO (rode ferramentas/rastrear-boca.py)"} · matte: ${matte.startsWith("<div") ? "sim" : "não"} · música: ${music ? "sim" : "não"} · pele: ${peleNota} · sfx: ${sfxNota}`);
+console.log(`index.html ok${SO_CAMERA ? " (SÓ CÂMERA — rode de novo sem --so-camera depois do render)" : ""} — ${dur}s · ${words.length} palavras · boca: ${face ? "sim" : "NÃO (rode ferramentas/rastrear-boca.py)"} · matte: ${matte.startsWith("<div") ? "sim" : "não"} · música: ${music ? "sim" : "não"} · pele: ${peleNota} · sfx: ${sfxNota}${brolls.length ? ` · vídeo de apoio: ${brolls.length} clipe(s)` : ""}`);

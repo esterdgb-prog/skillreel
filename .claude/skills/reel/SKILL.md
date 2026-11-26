@@ -23,11 +23,12 @@ ESTILO.md             a espec do motor VSL: layouts, enquadramento, movimento, l
 pele.json             os valores nativos (fontes, cinco cores, invariantes) — a pele da referência
 corte/                motor de corte: CORTE.md (roteiro) · references/EDICAO-BRUTA.md (o porquê) · scripts/ · exemplo/
 modelo/               motor VSL: kit/ (intocado) · montar.mjs · preparar.sh · ferramentas/ · exemplo/ (o reel aprovado) · README.md
-ferramentas/          preparar.py · rosto.py · ancoras.py · verificar.py · zona-segura.py · recortar.py · audio-final.sh
+ferramentas/          preparar.py · rosto.py · ancoras.py · verificar.py · zona-segura.py · recortar.py · audio-final.sh · pixabay.py
 anexos/               quadros da referência e o antes × depois da cor
 ```
 `S=~/.claude/skills/reel` (ou `REEL_SKILL`). Variáveis de ambiente (R10): `WHISPER_MODEL`, `VSL_PYTHON`
-(Python com mediapipe ou opencv), `FACE_MODEL`, `VSL_NODE_MODULES`, `CHROME`, `RVM_PYTHON` (só para matte).
+(Python com mediapipe ou opencv), `FACE_MODEL`, `VSL_NODE_MODULES`, `CHROME`, `RVM_PYTHON` (só para matte),
+`PIXABAY_API_KEY` (imagem e vídeo de apoio do banco).
 
 ## Fluxo (ordem fixa)
 
@@ -68,6 +69,15 @@ boca e a 1ª montagem. Sem `pele-resolvida.json` a pele é a **nativa** (a da re
 3. **Material real** (R3): prints e logos oficiais em `assets/img/` + `../assets/SOURCES.md` (origem, licença,
    data); fato e preço com página oficial; tela sem print → ilustração declarada (`ferramentas/ilustracoes/`).
    Nunca invente logo, número ou print.
+   **Cena de contexto** (a fala descreve um lugar, objeto ou gesto: "no escritório", "digitando", "na rua"):
+   banco Pixabay (`ESTILO.md` 7.7), ~1 clipe a cada 10 s no máximo, sem substituir a interface:
+   ```bash
+   python3 $S/ferramentas/pixabay.py buscar "pessoa digitando notebook" --tipo video --folha ../qa/px.jpg  # olhe a folha
+   python3 $S/ferramentas/pixabay.py baixar <id> --projeto .. --tipo video --ate 4    # → assets/broll/ + SOURCES.md
+   python3 $S/ferramentas/pixabay.py baixar <id> --projeto .. --tipo foto             # → assets/img/px-<id>.jpg
+   ```
+   No `beats.js`: `K.broll("px-<id>.mp4", t0, t1)` num trecho SPLIT (ou `{tela: "cheia"}`, cena sem o
+   apresentador, ≤ 2,5 s); foto em `K.fan`/`K.grid`/`K.orbit`/`K.wall`/`K.panel` como `assets/img/px-<id>.jpg`.
 4. **Mapa → beats**: `assets/map.md` (tempo × fala × câmera × peça, como `exemplo/mapa.md`) e depois
    `src/beats.js`, uma chamada `K.*` por linha do mapa, tempos só por `K.at("frase exata")` (leia
    `exemplo/beats-exemplo.js` inteiro antes). Algo novo a cada 1,5–3 s; FULL ≈ SPLIT; `K.hideMouth` em toda
