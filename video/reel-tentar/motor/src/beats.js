@@ -61,17 +61,15 @@ function big(lines, opt = {}) {
     if (i === 0) K.sfx("pop", L.t, 0.28);
   });
   if (opt.until) K.out(g, opt.until);
-  if (opt.hide !== false) K.hideMouth(lines[0].t - 0.02, opt.until || lines[lines.length - 1].t + 1);
+  if (opt.hide !== false && top > 900) K.hideMouth(lines[0].t - 0.02, opt.until || lines[lines.length - 1].t + 1);  // no alto a legenda continua
   return g;
 }
 
-// ================= 0) ABERTURA — a aluna executando a série (sem corte, pedido) + gancho com a frase-tese
+// ================= 0) ABERTURA — a aluna executando a série (sem corte, pedido); sem título antes da fala (pedido)
 const tG = 1.0;   // gancho visual: não há fala antes de "Boa!" (6,6 s), então o glitch tem tempo fixo
 K.camcorder(0, tG, { label: "TREINO · AO VIVO" });
 K.glitch(tG);
 drift(tG + 0.05, "aluna", 2.5, 0.1);
-big([{ text: "O TENTAR", t: tG + 0.3, style: "letters", color: RED },
-     { text: "NÃO EXISTE", t: tG + 1.1, style: "glow" }], { top: 240, until: tG + 2.5 });
 drift(tG + 2.55, "aberto", A("boa") - tG - 2.6 - 1.4, 0.08);
 drift(A("boa") - 1.45, "dois", 1.4, 0.05);
 
@@ -100,10 +98,10 @@ cam(tTry2 + 0.01, { s: 1.75, x0: 445, y0: 435 }, A("não presta") - tTry2 - 0.12
 
 // 4) "Não, presta atenção no que eu tô falando" — close
 cam(A("não presta") - 0.08, "close");
-big([{ text: "PRESTA", t: A("presta"), style: "pop" }, { text: "ATENÇÃO", t: A("atenção"), style: "glow", color: ORANGE }], { top: 1060, max: 96, until: A("tenta fazer", 2) - 0.08 });
+big([{ text: "PRESTA", t: A("presta"), style: "pop" }, { text: "ATENÇÃO", t: A("atenção"), style: "glow", color: ORANGE }], { top: 1060, max: 96, until: A("tenta fazer") - 0.08 });
 
 // 5) "Tenta fazer mais uma repetição" — aberto com push-in lento
-drift(A("tenta fazer", 2) - 0.02, "aberto", A("eu já fiz") - A("tenta fazer", 2) - 0.1, 0.14);
+drift(A("tenta fazer") - 0.02, "aberto", A("eu já fiz") - A("tenta fazer") - 0.1, 0.14);
 
 // 6) "Eu já fiz" — aluna
 cam(A("eu já fiz") - 0.08, "aluna");
@@ -231,12 +229,19 @@ big([{ text: "VERDADE", t: A("verdade") + 0.04, style: "pop", size: 110 }], { to
 
 // 22) "Então bora, já deu um minuto" — aberto + carimbo · "faz mais uma" — flash + push-in
 drift(A("então bora") - 0.04, "aberto", A("faz mais uma") - A("então bora") - 0.1, 0.08);
-K.stamp("BORA!", A("bora") + 0.05, { x: 600, y: 270, rot: -7, until: A("faz mais uma") - 0.1 });
+big([{ text: "BORA!", t: A("bora") + 0.05, style: "pop", size: 130, color: RED }], { top: 270, until: A("faz mais uma") - 0.1 });
 K.flash(A("faz mais uma") - 0.1, { peak: 0.45, sfx: false });
 cam(A("faz mais uma") - 0.04, "final");
 cam(A("faz mais uma"), { s: 1.3, x0: 150, y0: 260 }, 1.9, "power1.out");
 big([{ text: "FAZ", t: A("faz mais uma"), style: "pop", size: 150 },
      { text: "MAIS UMA!", t: A("mais uma", 4), style: "glow", color: ORANGE, size: 120 }], { top: 1020, gap: 6 });
+
+// nenhum efeito sonoro em cima da fala (pedido: o "pop" em "mais uma" parecia comer a palavra):
+// remove todo SFX cujo intervalo encosta em alguma palavra (com 0,08 s de margem)
+document.querySelectorAll('#vsl audio[id^="sfx"]').forEach((a) => {
+  const s0 = +a.getAttribute("data-start"), s1 = s0 + +a.getAttribute("data-duration");
+  if (WORDS.some((w) => w.start - 0.08 < s1 && w.end + 0.08 > s0)) a.remove();
+});
 
 // legenda (Poppins, fixa no chão) — SEMPRE por último
 K.mouthCaps({ accent: ["tentar", "tenta", "tentei", "tentando", "faz", "fazer", "falhar"], autoAccent: false });

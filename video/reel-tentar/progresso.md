@@ -43,3 +43,11 @@
 - Cores: pele com destaque vermelho (#ff2d2d) e apoio #ff3b3b. O tema "laranja" do kit (`#vsl.t-laranja`) vencia a pele no
   CSS (especificidade maior) → `theme` voltou ao padrão e a pele manda. Rosto sem tinta vermelha visível nos snapshots.
 - Zona segura: escala de entrada dos letreiros limitada pela largura (nunca passa de 840 px na animação).
+
+## v3 (pedido: tirar o título do gancho · "fazer mais uma" soando comido)
+- O áudio de 6,5–9,6 s foi medido no original, no corte e no render: idêntico (nenhum corte ali). A sensação de palavra comida
+  vinha de um "pop" (efeito do letreiro MAIS UMA) exatamente em "mais", junto com um corte de câmera e a legenda escondida.
+- Regra nova em `src/beats.js`: **nenhum efeito sonoro encosta em palavra** (margem 0,08 s) — sobra só o glitch da abertura.
+- Letreiro no alto não esconde mais a legenda (só os do peito escondem). "BORA!" virou letreiro (o carimbo do kit tem som fixo).
+- Gancho sem título antes da fala. Legenda: "tenta" → "tente", "aí" acrescentado ao fim da 1ª frase.
+- Âncora `A("tenta fazer", 2)` quebrou com a troca para "tente" (virou a 1ª ocorrência) → corrigida; console sem erros.
