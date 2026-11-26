@@ -128,7 +128,10 @@ retranscreva e remapeie (`corte/scripts/remapear.py`), nunca recronometre à mã
   digitação sempre contínua. O som exato da referência (`"referencia"`) só a pedido. Pediram **menos e mais discreto**?
   `vsl.json` `"sfxAlvo": 0.3` (efeitos/s) e `"sfxVol": 0.4`; um efeito específico incomodou (ex.: o whoosh de ruído
   "parece vento/móvel arrastando")? gere um mais suave com o **mesmo nome** em `motor/sfx-projeto/` — ele substitui
-  o do kit só naquele reel.
+  o do kit só naquele reel. **Discreto ≠ inaudível:** o arquivo novo tem pico entre −4 e −11 dBFS (o kit ainda
+  multiplica por ~0,1–0,3), o que dá −16 a −24 dBFS na mixagem, 12–20 dB abaixo da voz. Meça depois do render
+  (pico do arquivo + 20·log10(volume do `sons.json`)); um som abaixo de ~−30 dBFS na mixagem não existe para quem
+  assiste. Prefira sons tonais e curtos; ruído largo (pink/white) soa como vento ou móvel arrastando.
 - **Cores da marca:** com logo ou manual da marca, escreva `<P>/pele-resolvida.json` com `cores` (`origem`, `fundo`,
   `texto`, `destaque`, `apoio`, `acento2`) medidas na logo; destaque claro (dourado, amarelo) ganha texto escuro nos
   botões e pílulas sozinho (`--onAcc`). Logo com fundo preto: alfa pelo brilho → PNG em `<P>/assets/oficiais/`.
