@@ -53,6 +53,17 @@ Palavra comida → proteja o intervalo (`raw`/`force`) e corte de novo. Se a pes
 limpo**, pule: `cp "<vídeo>" corte/clean.mp4` e transcreva com `$S/ferramentas/preparar.py corte/clean.mp4 preparo`.
 Sai: `corte/clean.mp4`, `corte.wav`, `edl.json`, `cortepalavras.json`.
 
+### 1b · Só áudio (narração sem rosto)
+Veio só o áudio (locução, sem ninguém na câmera)? Pergunte se é para fazer sem rosto; se sim:
+1. Embrulhe o áudio num vídeo preto (`ffmpeg -f lavfi -i color=c=black:s=1080x1920:r=30 -i audio.mp3 -shortest …`)
+   e passe pelo corte normal (seção 1). Locução limpa: um keep por frase; a conferência ainda pega palavra comida.
+2. **A câmera é a montagem de cenas:** uma cena do Pixabay por trecho, cortada nas viradas de frase
+   (`pixabay.py baixar <id> --tipo video --vertical --ate <s> --nome cNN`), concatenadas com `corte/corte.wav` em
+   `corte/clean-916.mp4` (o `preparar.sh` usa esse arquivo). Troca FULL ↔ SPLIT junto com o corte de cena.
+3. Depois do `preparar.sh`, troque `assets/face-track.json` por um rastreio **fixo** (x 540, queixo ≈ 1130: legenda
+   centralizada no terço de baixo) — o rastreio real acharia rostos nas cenas de banco e a legenda pularia.
+4. R1 não se aplica (não há apresentador); evite só texto sobre o rosto de pessoa da cena. Marca sem logo: só texto.
+
 ### 2 · Motor VSL · preparo
 ```bash
 cp -R "$S/modelo" motor && cd motor && bash preparar.sh

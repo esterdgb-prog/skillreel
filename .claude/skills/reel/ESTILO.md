@@ -24,6 +24,8 @@ reunião, uma cidade, dinheiro na mão), o banco Pixabay entra como **contexto**
   da tela dividida) ou com `{box}` abaixo do queixo; `{tela: "cheia"}` cobre a câmera inteira como cena de fundo
   própria (R1, opção 3), some a legenda no intervalo e pede a câmera de volta logo depois (≤ 2,5 s).
   O `montar.mjs` liga o `K.broll` sozinho quando existe `assets/broll/`; sem a pasta, nada muda.
+- `--vertical` recorta em 1080×1920 escolhendo a versão que não amplia (em geral 4K ou 1080p deitado): é o
+  formato das cenas que viram a própria câmera num reel sem rosto (`SKILL.md` 1b).
 - Clipe de 2–4 s, cortado com `--ate` (≥ t1 − t0 a partir de `from`); zoom lento padrão 1,06; sem áudio.
 - **Nunca** como logo, print, capa, resultado, número ou depoimento (R3); pessoa reconhecível do banco não pode
   parecer cliente ou aluno; resultado marcado "GERADO POR IA" fica de fora (não é cena real).

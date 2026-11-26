@@ -8,10 +8,12 @@ A chave vem de PIXABAY_API_KEY (R10). Nunca é impressa nem gravada em arquivo.
            Lista id, tamanho, duração, tags e autor. Com --folha monta uma folha de miniaturas numerada
            (para olhar antes de escolher).
   baixar   python3 pixabay.py baixar <id> [<id> ...] --projeto <pasta do reel> [--tipo foto|video]
-                   [--ate 6] [--nome slug]
+                   [--ate 6] [--de 0] [--vertical [--pos 0.5]] [--nome slug]
            Foto  → <P>/assets/banco/px-<id>.jpg (1280 px)
            Vídeo → <P>/assets/banco/px-<id>.mp4 (≤ 1080 px, 30 fps, keyframe a cada 1 s, sem áudio,
-                   cortado em --ate segundos; sem keyframe a cada 1 s o render congela quadros)
+                   cortado em --ate segundos; sem keyframe a cada 1 s o render congela quadros).
+                   --vertical recorta em 1080×1920 (cena de tela inteira, ex.: reel sem rosto), na versão
+                   que não precisa ampliar; --pos escolhe o centro do recorte.
            Copia também para <P>/motor/assets/img/ (foto) ou <P>/motor/assets/broll/ (vídeo) se o motor
            já existir, e acrescenta uma linha em <P>/assets/SOURCES.md (arquivo, página, autor, licença, data).
 
@@ -62,9 +64,14 @@ def baixar_url(url, destino):
         shutil.copyfileobj(r, f)
 
 
-def melhor_video(h):
-    """A menor versão com largura ≥ 1080 (ou a maior que houver)."""
+def melhor_video(h, vertical=False):
+    """A menor versão com largura ≥ 1080 (ou a maior que houver). vertical=True: a menor que ainda dá um recorte
+    9:16 de 1080×1920 sem ampliar (altura ≥ 1920 em vídeo deitado), ou a maior que houver."""
     vs = [v for v in h["videos"].values() if v.get("url")]
+    if vertical:
+        cabe = lambda v: (min(v["height"], v["width"] * 16 / 9) >= 1920)
+        ok = sorted([v for v in vs if cabe(v)], key=lambda v: v["width"] * v["height"])
+        return ok[0] if ok else max(vs, key=lambda v: v["width"] * v["height"])
     ok = sorted([v for v in vs if min(v["width"], v["height"]) >= 1080 or v["width"] >= 1080], key=lambda v: v["width"] * v["height"])
     return ok[0] if ok else max(vs, key=lambda v: v["width"] * v["height"])
 
@@ -183,19 +190,22 @@ def cmd_baixar(a):
         else:
             nome = base + ".mp4"
             out = os.path.join(banco, nome)
-            v = melhor_video(h)
+            v = melhor_video(h, a.vertical)
             with tempfile.TemporaryDirectory() as tmp:
                 raw = os.path.join(tmp, "raw.mp4")
                 baixar_url(v["url"], raw)
                 vf = "scale='if(gt(iw,ih),-2,min(1080,iw))':'if(gt(iw,ih),min(1080,ih),-2)',fps=30"
-                corte = ["-t", str(a.ate)] if a.ate else []
-                cmd = ["ffmpeg", "-v", "error", "-y", "-i", raw, *corte, "-an", "-vf", vf, "-c:v", "libx264", "-crf", "18",
+                if a.vertical:   # tela inteira 9:16 (câmera de reel sem rosto): recorte com o centro em --pos (0–1)
+                    vf = (f"scale=1080:1920:force_original_aspect_ratio=increase,"
+                          f"crop=1080:1920:(iw-1080)*{a.pos}:(ih-1920)/2,setsar=1,fps=30")
+                corte = (["-ss", str(a.de)] if a.de else []) + (["-t", str(a.ate)] if a.ate else [])
+                cmd = ["ffmpeg", "-v", "error", "-y", *corte[:2], "-i", raw, *corte[2:], "-an", "-vf", vf, "-c:v", "libx264", "-crf", "18",
                        "-preset", "medium", "-g", "30", "-keyint_min", "30", "-pix_fmt", "yuv420p", "-movflags", "+faststart"]
                 subprocess.run(cmd + [out], check=True)
             sub = "broll"
             dur = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", out],
                                  capture_output=True, text=True).stdout.strip()
-            info = f'{v["width"]}×{v["height"]} → 30 fps, {float(dur or 0):.1f} s, sem áudio'
+            info = f'{v["width"]}×{v["height"]} → {"1080×1920 " if a.vertical else ""}30 fps, {float(dur or 0):.1f} s, sem áudio'
         if os.path.isdir(motor):
             os.makedirs(os.path.join(motor, sub), exist_ok=True)
             shutil.copy2(out, os.path.join(motor, sub, nome))
@@ -221,6 +231,9 @@ def main():
     d.add_argument("--projeto", required=True)
     d.add_argument("--tipo", choices=["foto", "video"], default="foto")
     d.add_argument("--ate", type=float, default=6.0, help="vídeo: segundos mantidos (0 = inteiro)")
+    d.add_argument("--de", type=float, default=0.0, help="vídeo: segundo do clipe onde começa")
+    d.add_argument("--vertical", action="store_true", help="vídeo: recorta para 1080×1920 (tela inteira 9:16)")
+    d.add_argument("--pos", type=float, default=0.5, help="vídeo --vertical: centro horizontal do recorte, 0 = esquerda, 1 = direita")
     d.add_argument("--nome", help="sufixo legível do arquivo (só com um id)")
     a = ap.parse_args()
     (cmd_buscar if a.cmd == "buscar" else cmd_baixar)(a)
