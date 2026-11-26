@@ -1,0 +1,656 @@
+{
+	"systeminfo": "WHISPER : VITISAI = 0 | COREML = 0 | OPENVINO = 0 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX_VNNI = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | BMI2 = 1 | AVX512 = 1 | AVX512_VBMI = 1 | AVX512_VNNI = 1 | AVX512_BF16 = 1 | AMX_INT8 = 1 | OPENMP = 1 | REPACK = 1 | ",
+	"model": {
+		"type": "large",
+		"multilingual": true,
+		"vocab": 51866,
+		"audio": {
+			"ctx": 1500,
+			"state": 1280,
+			"head": 20,
+			"layer": 32
+		},
+		"text": {
+			"ctx": 448,
+			"state": 1280,
+			"head": 20,
+			"layer": 4
+		},
+		"mels": 128,
+		"ftype": 1
+	},
+	"params": {
+		"model": "/root/.cache/whisper-cpp/ggml-large-v3-turbo.bin",
+		"language": "pt",
+		"translate": false
+	},
+	"result": {
+		"language": "pt"
+	},
+	"transcription": [
+		{
+			"timestamps": {
+				"from": "00:00:00,000",
+				"to": "00:00:00,000"
+			},
+			"offsets": {
+				"from": 0,
+				"to": 0
+			},
+			"text": "",
+			"tokens": [
+				{
+					"text": "[_BEG_]",
+					"timestamps": {
+						"from": "00:00:00,000",
+						"to": "00:00:00,000"
+					},
+					"offsets": {
+						"from": 0,
+						"to": 0
+					},
+					"id": 50365,
+					"p": 0.878737,
+					"t_dtw": -1
+				}
+			]
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,000",
+				"to": "00:00:00,260"
+			},
+			"offsets": {
+				"from": 0,
+				"to": 260
+			},
+			"text": " O",
+			"tokens": [
+				{
+					"text": " O",
+					"timestamps": {
+						"from": "00:00:00,000",
+						"to": "00:00:00,080"
+					},
+					"offsets": {
+						"from": 0,
+						"to": 80
+					},
+					"id": 422,
+					"p": 0.735549,
+					"t_dtw": -1
+				}
+			]
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,260",
+				"to": "00:00:00,320"
+			},
+			"offsets": {
+				"from": 260,
+				"to": 320
+			},
+			"text": " que",
+			"tokens": [
+				{
+					"text": " que",
+					"timestamps": {
+						"from": "00:00:00,260",
+						"to": "00:00:00,320"
+					},
+					"offsets": {
+						"from": 260,
+						"to": 320
+					},
+					"id": 631,
+					"p": 0.88786,
+					"t_dtw": -1
+				}
+			]
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,320",
+				"to": "00:00:01,270"
+			},
+			"offsets": {
+				"from": 320,
+				"to": 1270
+			},
+			"text": " acontece?",
+			"tokens": [
+				{
+					"text": " acontece",
+					"timestamps": {
+						"from": "00:00:00,320",
+						"to": "00:00:00,950"
+					},
+					"offsets": {
+						"from": 320,
+						"to": 950
+					},
+					"id": 19786,
+					"p": 0.967453,
+					"t_dtw": -1
+				},
+				{
+					"text": "?",
+					"timestamps": {
+						"from": "00:00:00,950",
+						"to": "00:00:01,180"
+					},
+					"offsets": {
+						"from": 950,
+						"to": 1180
+					},
+					"id": 30,
+					"p": 0.769593,
+					"t_dtw": -1
+				}
+			]
+		},
+		{
+			"timestamps": {
+				"from": "00:00:01,270",
+				"to": "00:00:01,350"
+			},
+			"offsets": {
+				"from": 1270,
+				"to": 1350
+			},
+			"text": " O",
+			"tokens": [
+				{
+					"text": " O",
+					"timestamps": {
+						"from": "00:00:01,270",
+						"to": "00:00:01,270"
+					},
+					"offsets": {
+						"from": 1270,
+						"to": 1270
+					},
+					"id": 422,
+					"p": 0.861127,
+					"t_dtw": -1
+				}
+			]
+		},
+		{
+			"timestamps": {
+				"from": "00:00:01,350",
+				"to": "00:00:01,880"
+			},
+			"offsets": {
+				"from": 1350,
+				"to": 1880
+			},
+			"text": " tentar,",
+			"tokens": [
+				{
+					"text": " tentar",
+					"timestamps": {
+						"from": "00:00:01,350",
+						"to": "00:00:01,680"
+					},
+					"offsets": {
+						"from": 1350,
+						"to": 1680
+					},
+					"id": 33572,
+					"p": 0.979733,
+					"t_dtw": -1
+				},
+				{
+					"text": ",",
+					"timestamps": {
+						"from": "00:00:01,800",
+						"to": "00:00:01,880"
+					},
+					"offsets": {
+						"from": 1800,
+						"to": 1880
+					},
+					"id": 11,
+					"p": 0.30661,
+					"t_dtw": -1
+				}
+			]
+		},
+		{
+			"timestamps": {
+				"from": "00:00:01,880",
+				"to": "00:00:02,110"
+			},
+			"offsets": {
+				"from": 1880,
+				"to": 2110
+			},
+			"text": " ele",
+			"tokens": [
+				{
+					"text": " ele",
+					"timestamps": {
+						"from": "00:00:01,880",
+						"to": "00:00:02,060"
+					},
+					"offsets": {
+						"from": 1880,
+						"to": 2060
+					},
+					"id": 1118,
+					"p": 0.987221,
+					"t_dtw": -1
+				}
+			]
+		},
+		{
+			"timestamps": {
+				"from": "00:00:02,110",
+				"to": "00:00:02,340"
+			},
+			"offsets": {
+				"from": 2110,
+				"to": 2340
+			},
+			"text": " não",
+			"tokens": [
+				{
+					"text": " não",
+					"timestamps": {
+						"from": "00:00:02,110",
+						"to": "00:00:02,340"
+					},
+					"offsets": {
+						"from": 2110,
+						"to": 2340
+					},
+					"id": 2431,
+					"p": 0.997811,
+					"t_dtw": -1
+				}
+			]
+		},
+		{
+			"timestamps": {
+				"from": "00:00:02,340",
+				"to": "00:00:03,060"
+			},
+			"offsets": {
+				"from": 2340,
+				"to": 3060
+			},
+			"text": " existe.",
+			"tokens": [
+				{
+					"text": " existe",
+					"timestamps": {
+						"from": "00:00:02,340",
+						"to": "00:00:02,800"
+					},
+					"offsets": {
+						"from": 2340,
+						"to": 2800
+					},
+					"id": 16304,
+					"p": 0.994561,
+					"t_dtw": -1
+				},
+				{
+					"text": ".",
+					"timestamps": {
+						"from": "00:00:02,800",
+						"to": "00:00:03,060"
+					},
+					"offsets": {
+						"from": 2800,
+						"to": 3060
+					},
+					"id": 13,
+					"p": 0.95261,
+					"t_dtw": -1
+				}
+			]
+		},
+		{
+			"timestamps": {
+				"from": "00:00:03,060",
+				"to": "00:00:03,310"
+			},
+			"offsets": {
+				"from": 3060,
+				"to": 3310
+			},
+			"text": " Ou",
+			"tokens": [
+				{
+					"text": " Ou",
+					"timestamps": {
+						"from": "00:00:03,060",
+						"to": "00:00:03,100"
+					},
+					"offsets": {
+						"from": 3060,
+						"to": 3100
+					},
+					"id": 11710,
+					"p": 0.864446,
+					"t_dtw": -1
+				}
+			]
+		},
+		{
+			"timestamps": {
+				"from": "00:00:03,310",
+				"to": "00:00:03,460"
+			},
+			"offsets": {
+				"from": 3310,
+				"to": 3460
+			},
+			"text": " a",
+			"tokens": [
+				{
+					"text": " a",
+					"timestamps": {
+						"from": "00:00:03,310",
+						"to": "00:00:03,310"
+					},
+					"offsets": {
+						"from": 3310,
+						"to": 3310
+					},
+					"id": 257,
+					"p": 0.993995,
+					"t_dtw": -1
+				}
+			]
+		},
+		{
+			"timestamps": {
+				"from": "00:00:03,460",
+				"to": "00:00:03,730"
+			},
+			"offsets": {
+				"from": 3460,
+				"to": 3730
+			},
+			"text": " gente",
+			"tokens": [
+				{
+					"text": " gente",
+					"timestamps": {
+						"from": "00:00:03,460",
+						"to": "00:00:03,730"
+					},
+					"offsets": {
+						"from": 3460,
+						"to": 3730
+					},
+					"id": 3788,
+					"p": 0.999571,
+					"t_dtw": -1
+				}
+			]
+		},
+		{
+			"timestamps": {
+				"from": "00:00:03,730",
+				"to": "00:00:03,990"
+			},
+			"offsets": {
+				"from": 3730,
+				"to": 3990
+			},
+			"text": " faz",
+			"tokens": [
+				{
+					"text": " faz",
+					"timestamps": {
+						"from": "00:00:03,730",
+						"to": "00:00:03,770"
+					},
+					"offsets": {
+						"from": 3730,
+						"to": 3770
+					},
+					"id": 4375,
+					"p": 0.994797,
+					"t_dtw": -1
+				}
+			]
+		},
+		{
+			"timestamps": {
+				"from": "00:00:03,990",
+				"to": "00:00:04,220"
+			},
+			"offsets": {
+				"from": 3990,
+				"to": 4220
+			},
+			"text": " uma",
+			"tokens": [
+				{
+					"text": " uma",
+					"timestamps": {
+						"from": "00:00:03,990",
+						"to": "00:00:04,220"
+					},
+					"offsets": {
+						"from": 3990,
+						"to": 4220
+					},
+					"id": 2772,
+					"p": 0.989619,
+					"t_dtw": -1
+				}
+			]
+		},
+		{
+			"timestamps": {
+				"from": "00:00:04,220",
+				"to": "00:00:04,990"
+			},
+			"offsets": {
+				"from": 4220,
+				"to": 4990
+			},
+			"text": " coisa,",
+			"tokens": [
+				{
+					"text": " coisa",
+					"timestamps": {
+						"from": "00:00:04,220",
+						"to": "00:00:04,650"
+					},
+					"offsets": {
+						"from": 4220,
+						"to": 4650
+					},
+					"id": 9614,
+					"p": 0.997221,
+					"t_dtw": -1
+				},
+				{
+					"text": ",",
+					"timestamps": {
+						"from": "00:00:04,650",
+						"to": "00:00:04,760"
+					},
+					"offsets": {
+						"from": 4650,
+						"to": 4760
+					},
+					"id": 11,
+					"p": 0.53463,
+					"t_dtw": -1
+				}
+			]
+		},
+		{
+			"timestamps": {
+				"from": "00:00:04,990",
+				"to": "00:00:05,070"
+			},
+			"offsets": {
+				"from": 4990,
+				"to": 5070
+			},
+			"text": " ou",
+			"tokens": [
+				{
+					"text": " ou",
+					"timestamps": {
+						"from": "00:00:04,990",
+						"to": "00:00:04,990"
+					},
+					"offsets": {
+						"from": 4990,
+						"to": 4990
+					},
+					"id": 2820,
+					"p": 0.995784,
+					"t_dtw": -1
+				}
+			]
+		},
+		{
+			"timestamps": {
+				"from": "00:00:05,070",
+				"to": "00:00:05,310"
+			},
+			"offsets": {
+				"from": 5070,
+				"to": 5310
+			},
+			"text": " a",
+			"tokens": [
+				{
+					"text": " a",
+					"timestamps": {
+						"from": "00:00:05,070",
+						"to": "00:00:05,070"
+					},
+					"offsets": {
+						"from": 5070,
+						"to": 5070
+					},
+					"id": 257,
+					"p": 0.997619,
+					"t_dtw": -1
+				}
+			]
+		},
+		{
+			"timestamps": {
+				"from": "00:00:05,310",
+				"to": "00:00:05,490"
+			},
+			"offsets": {
+				"from": 5310,
+				"to": 5490
+			},
+			"text": " gente",
+			"tokens": [
+				{
+					"text": " gente",
+					"timestamps": {
+						"from": "00:00:05,310",
+						"to": "00:00:05,490"
+					},
+					"offsets": {
+						"from": 5310,
+						"to": 5490
+					},
+					"id": 3788,
+					"p": 0.995211,
+					"t_dtw": -1
+				}
+			]
+		},
+		{
+			"timestamps": {
+				"from": "00:00:05,490",
+				"to": "00:00:05,900"
+			},
+			"offsets": {
+				"from": 5490,
+				"to": 5900
+			},
+			"text": " não",
+			"tokens": [
+				{
+					"text": " não",
+					"timestamps": {
+						"from": "00:00:05,490",
+						"to": "00:00:05,780"
+					},
+					"offsets": {
+						"from": 5490,
+						"to": 5780
+					},
+					"id": 2431,
+					"p": 0.994819,
+					"t_dtw": -1
+				}
+			]
+		},
+		{
+			"timestamps": {
+				"from": "00:00:05,900",
+				"to": "00:00:06,540"
+			},
+			"offsets": {
+				"from": 5900,
+				"to": 6540
+			},
+			"text": " faz.",
+			"tokens": [
+				{
+					"text": " faz",
+					"timestamps": {
+						"from": "00:00:05,900",
+						"to": "00:00:06,130"
+					},
+					"offsets": {
+						"from": 5900,
+						"to": 6130
+					},
+					"id": 4375,
+					"p": 0.960408,
+					"t_dtw": -1
+				},
+				{
+					"text": ".",
+					"timestamps": {
+						"from": "00:00:06,460",
+						"to": "00:00:06,530"
+					},
+					"offsets": {
+						"from": 6460,
+						"to": 6530
+					},
+					"id": 13,
+					"p": 0.896302,
+					"t_dtw": -1
+				},
+				{
+					"text": "[_TT_338]",
+					"timestamps": {
+						"from": "00:00:06,540",
+						"to": "00:00:06,540"
+					},
+					"offsets": {
+						"from": 6540,
+						"to": 6540
+					},
+					"id": 50703,
+					"p": 0.0670778,
+					"t_dtw": -1
+				}
+			]
+		}
+	]
+}

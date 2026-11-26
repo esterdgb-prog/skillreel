@@ -1,0 +1,183 @@
+{
+	"systeminfo": "WHISPER : VITISAI = 0 | COREML = 0 | OPENVINO = 0 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX_VNNI = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | BMI2 = 1 | AVX512 = 1 | AVX512_VBMI = 1 | AVX512_VNNI = 1 | AVX512_BF16 = 1 | AMX_INT8 = 1 | OPENMP = 1 | REPACK = 1 | ",
+	"model": {
+		"type": "large",
+		"multilingual": true,
+		"vocab": 51866,
+		"audio": {
+			"ctx": 1500,
+			"state": 1280,
+			"head": 20,
+			"layer": 32
+		},
+		"text": {
+			"ctx": 448,
+			"state": 1280,
+			"head": 20,
+			"layer": 4
+		},
+		"mels": 128,
+		"ftype": 1
+	},
+	"params": {
+		"model": "/root/.cache/whisper-cpp/ggml-large-v3-turbo.bin",
+		"language": "pt",
+		"translate": false
+	},
+	"result": {
+		"language": "pt"
+	},
+	"transcription": [
+		{
+			"timestamps": {
+				"from": "00:00:00,000",
+				"to": "00:00:00,240"
+			},
+			"offsets": {
+				"from": 0,
+				"to": 240
+			},
+			"text": "",
+			"tokens": [
+				{
+					"text": "[_BEG_]",
+					"timestamps": {
+						"from": "00:00:00,000",
+						"to": "00:00:00,000"
+					},
+					"offsets": {
+						"from": 0,
+						"to": 0
+					},
+					"id": 50365,
+					"p": 0.721126,
+					"t_dtw": -1
+				}
+			]
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,240",
+				"to": "00:00:01,250"
+			},
+			"offsets": {
+				"from": 240,
+				"to": 1250
+			},
+			"text": " Tchau,",
+			"tokens": [
+				{
+					"text": " T",
+					"timestamps": {
+						"from": "00:00:00,240",
+						"to": "00:00:00,250"
+					},
+					"offsets": {
+						"from": 240,
+						"to": 250
+					},
+					"id": 314,
+					"p": 0.149309,
+					"t_dtw": -1
+				},
+				{
+					"text": "chau",
+					"timestamps": {
+						"from": "00:00:00,250",
+						"to": "00:00:01,010"
+					},
+					"offsets": {
+						"from": 250,
+						"to": 1010
+					},
+					"id": 33276,
+					"p": 0.638943,
+					"t_dtw": -1
+				},
+				{
+					"text": ",",
+					"timestamps": {
+						"from": "00:00:01,240",
+						"to": "00:00:01,250"
+					},
+					"offsets": {
+						"from": 1240,
+						"to": 1250
+					},
+					"id": 11,
+					"p": 0.125516,
+					"t_dtw": -1
+				}
+			]
+		},
+		{
+			"timestamps": {
+				"from": "00:00:01,250",
+				"to": "00:00:01,260"
+			},
+			"offsets": {
+				"from": 1250,
+				"to": 1260
+			},
+			"text": " tchau.",
+			"tokens": [
+				{
+					"text": " t",
+					"timestamps": {
+						"from": "00:00:01,250",
+						"to": "00:00:01,250"
+					},
+					"offsets": {
+						"from": 1250,
+						"to": 1250
+					},
+					"id": 256,
+					"p": 0.835699,
+					"t_dtw": -1
+				},
+				{
+					"text": "chau",
+					"timestamps": {
+						"from": "00:00:01,250",
+						"to": "00:00:01,250"
+					},
+					"offsets": {
+						"from": 1250,
+						"to": 1250
+					},
+					"id": 33276,
+					"p": 0.999746,
+					"t_dtw": -1
+				},
+				{
+					"text": ".",
+					"timestamps": {
+						"from": "00:00:01,250",
+						"to": "00:00:01,250"
+					},
+					"offsets": {
+						"from": 1250,
+						"to": 1250
+					},
+					"id": 13,
+					"p": 0.907734,
+					"t_dtw": -1
+				},
+				{
+					"text": "[_TT_63]",
+					"timestamps": {
+						"from": "00:00:01,260",
+						"to": "00:00:01,260"
+					},
+					"offsets": {
+						"from": 1260,
+						"to": 1260
+					},
+					"id": 50428,
+					"p": 0.294159,
+					"t_dtw": -1
+				}
+			]
+		}
+	]
+}

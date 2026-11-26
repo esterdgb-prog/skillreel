@@ -1,0 +1,6 @@
+# mídia pesada fica fora do git (bruto, áudio, renders e quadros de conferência)
+*.mov
+*.mp4
+*.wav
+qa/
+whisper*.log

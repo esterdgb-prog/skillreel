@@ -1,0 +1,127 @@
+{
+	"systeminfo": "WHISPER : VITISAI = 0 | COREML = 0 | OPENVINO = 0 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX_VNNI = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | BMI2 = 1 | AVX512 = 1 | AVX512_VBMI = 1 | AVX512_VNNI = 1 | AVX512_BF16 = 1 | AMX_INT8 = 1 | OPENMP = 1 | REPACK = 1 | ",
+	"model": {
+		"type": "large",
+		"multilingual": true,
+		"vocab": 51866,
+		"audio": {
+			"ctx": 1500,
+			"state": 1280,
+			"head": 20,
+			"layer": 32
+		},
+		"text": {
+			"ctx": 448,
+			"state": 1280,
+			"head": 20,
+			"layer": 4
+		},
+		"mels": 128,
+		"ftype": 1
+	},
+	"params": {
+		"model": "/root/.cache/whisper-cpp/ggml-large-v3-turbo.bin",
+		"language": "pt",
+		"translate": false
+	},
+	"result": {
+		"language": "pt"
+	},
+	"transcription": [
+		{
+			"timestamps": {
+				"from": "00:00:00,000",
+				"to": "00:00:00,250"
+			},
+			"offsets": {
+				"from": 0,
+				"to": 250
+			},
+			"text": "",
+			"tokens": [
+				{
+					"text": "[_BEG_]",
+					"timestamps": {
+						"from": "00:00:00,000",
+						"to": "00:00:00,000"
+					},
+					"offsets": {
+						"from": 0,
+						"to": 0
+					},
+					"id": 50365,
+					"p": 1,
+					"t_dtw": -1
+				}
+			]
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,250",
+				"to": "00:00:00,250"
+			},
+			"offsets": {
+				"from": 250,
+				"to": 250
+			},
+			"text": " E",
+			"tokens": [
+				{
+					"text": " E",
+					"timestamps": {
+						"from": "00:00:00,250",
+						"to": "00:00:00,250"
+					},
+					"offsets": {
+						"from": 250,
+						"to": 250
+					},
+					"id": 462,
+					"p": 0.812934,
+					"t_dtw": -1
+				}
+			]
+		},
+		{
+			"timestamps": {
+				"from": "00:00:00,250",
+				"to": "00:00:00,760"
+			},
+			"offsets": {
+				"from": 250,
+				"to": 760
+			},
+			"text": " aí",
+			"tokens": [
+				{
+					"text": " aí",
+					"timestamps": {
+						"from": "00:00:00,250",
+						"to": "00:00:00,510"
+					},
+					"offsets": {
+						"from": 250,
+						"to": 510
+					},
+					"id": 7461,
+					"p": 0.999981,
+					"t_dtw": -1
+				},
+				{
+					"text": "[_TT_38]",
+					"timestamps": {
+						"from": "00:00:00,760",
+						"to": "00:00:00,760"
+					},
+					"offsets": {
+						"from": 760,
+						"to": 760
+					},
+					"id": 50403,
+					"p": 0.657315,
+					"t_dtw": -1
+				}
+			]
+		}
+	]
+}

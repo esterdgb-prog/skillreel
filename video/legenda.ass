@@ -1,0 +1,86 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Legenda,Poppins,84,&H00FFFFFF,&H00FFFFFF,&H00000000,&H90000000,-1,0,0,0,100,100,0,0,1,6,3,2,90,90,340,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:06.59,0:00:07.19,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}Boa!
+Dialogue: 0,0:00:07.19,0:00:07.54,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}Agora eu quero
+Dialogue: 0,0:00:07.54,0:00:08.16,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}que você tenta
+Dialogue: 0,0:00:08.16,0:00:08.63,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}fazer mais uma
+Dialogue: 0,0:00:08.63,0:00:09.64,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}repetição aí
+Dialogue: 0,0:00:11.59,0:00:12.42,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}Não, não foi
+Dialogue: 0,0:00:12.42,0:00:14.01,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}isso que eu pedi
+Dialogue: 0,0:00:14.01,0:00:14.93,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}Eu pedi pra você
+Dialogue: 0,0:00:14.93,0:00:15.62,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}{\c&H004040FF&\b800\fs94}tentar{\c&H00FFFFFF&\b1\fs84} fazer
+Dialogue: 0,0:00:15.62,0:00:16.81,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}mais uma repetição
+Dialogue: 0,0:00:17.94,0:00:19.69,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}Não, presta atenção
+Dialogue: 0,0:00:19.69,0:00:20.20,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}no que eu tô falando
+Dialogue: 0,0:00:20.20,0:00:20.90,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}{\c&H004040FF&\b800\fs94}Tenta{\c&H00FFFFFF&\b1\fs84} fazer
+Dialogue: 0,0:00:20.90,0:00:22.43,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}mais uma repetição
+Dialogue: 0,0:00:22.43,0:00:23.64,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}Eu já fiz
+Dialogue: 0,0:00:23.86,0:00:24.70,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}{\c&H0000D7FF&\b800\fs94}Exatamente!{\c&H00FFFFFF&\b1\fs84}
+Dialogue: 0,0:00:24.70,0:00:25.57,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}Você conseguiu perceber
+Dialogue: 0,0:00:25.57,0:00:26.10,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}o que aconteceu
+Dialogue: 0,0:00:26.10,0:00:27.00,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}aqui agora?
+Dialogue: 0,0:00:27.10,0:00:27.70,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}Não
+Dialogue: 0,0:00:28.08,0:00:29.35,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}O que acontece?
+Dialogue: 0,0:00:29.35,0:00:29.96,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}O {\c&H004040FF&\b800\fs94}tentar,{\c&H00FFFFFF&\b1\fs84}
+Dialogue: 0,0:00:29.96,0:00:31.14,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}ele {\c&H0000D7FF&\b800\fs94}não{\c&H00FFFFFF&\b1\fs84} {\c&H0000D7FF&\b800\fs94}existe{\c&H00FFFFFF&\b1\fs84}
+Dialogue: 0,0:00:31.14,0:00:32.07,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}Ou a gente {\c&H0000D7FF&\b800\fs94}faz{\c&H00FFFFFF&\b1\fs84}
+Dialogue: 0,0:00:32.07,0:00:33.07,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}uma coisa
+Dialogue: 0,0:00:33.07,0:00:34.72,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}ou a gente {\c&H0000D7FF&\b800\fs94}não{\c&H00FFFFFF&\b1\fs84} {\c&H0000D7FF&\b800\fs94}faz{\c&H00FFFFFF&\b1\fs84}
+Dialogue: 0,0:00:34.72,0:00:35.38,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}O {\c&H004040FF&\b800\fs94}tentar,{\c&H00FFFFFF&\b1\fs84}
+Dialogue: 0,0:00:35.38,0:00:36.13,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}a gente acaba
+Dialogue: 0,0:00:36.13,0:00:37.18,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}usando isso pra
+Dialogue: 0,0:00:37.18,0:00:38.59,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}{\c&H0000D7FF&\b800\fs94}sabotar{\c&H00FFFFFF&\b1\fs84} {\c&H0000D7FF&\b800\fs94}a{\c&H00FFFFFF&\b1\fs84} {\c&H0000D7FF&\b800\fs94}nossa{\c&H00FFFFFF&\b1\fs84} {\c&H0000D7FF&\b800\fs94}mente{\c&H00FFFFFF&\b1\fs84}
+Dialogue: 0,0:00:38.81,0:00:39.21,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}Quando a gente fala
+Dialogue: 0,0:00:39.21,0:00:39.69,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}que a gente vai
+Dialogue: 0,0:00:39.69,0:00:40.28,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}{\c&H004040FF&\b800\fs94}tentar{\c&H00FFFFFF&\b1\fs84} fazer
+Dialogue: 0,0:00:40.28,0:00:41.12,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}alguma coisa,
+Dialogue: 0,0:00:41.12,0:00:41.57,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}a gente tem
+Dialogue: 0,0:00:41.57,0:00:42.20,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}{\c&H0000D7FF&\b800\fs94}muito{\c&H00FFFFFF&\b1\fs84} {\c&H0000D7FF&\b800\fs94}mais{\c&H00FFFFFF&\b1\fs84} {\c&H0000D7FF&\b800\fs94}chance{\c&H00FFFFFF&\b1\fs84}
+Dialogue: 0,0:00:42.20,0:00:42.93,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}{\c&H0000D7FF&\b800\fs94}de{\c&H00FFFFFF&\b1\fs84} {\c&H0000D7FF&\b800\fs94}falhar{\c&H00FFFFFF&\b1\fs84} nisso
+Dialogue: 0,0:00:42.93,0:00:43.88,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}Por quê?
+Dialogue: 0,0:00:43.88,0:00:44.59,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}Porque a gente fala,
+Dialogue: 0,0:00:44.59,0:00:45.15,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}a gente fala:
+Dialogue: 0,0:00:45.15,0:00:46.26,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}"Ah, eu {\c&H004040FF&\b800\fs94}tentei"{\c&H00FFFFFF&\b1\fs84}
+Dialogue: 0,0:00:46.28,0:00:47.03,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}Por exemplo,
+Dialogue: 0,0:00:47.03,0:00:47.66,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}eu vou {\c&H004040FF&\b800\fs94}tentar{\c&H00FFFFFF&\b1\fs84}
+Dialogue: 0,0:00:47.66,0:00:48.92,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}fazer uma dieta
+Dialogue: 0,0:00:48.92,0:00:49.48,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}eu vou {\c&H004040FF&\b800\fs94}tentar{\c&H00FFFFFF&\b1\fs84}
+Dialogue: 0,0:00:49.48,0:00:50.25,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}fazer cardio
+Dialogue: 0,0:00:50.25,0:00:51.02,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}todos os dias
+Dialogue: 0,0:00:51.02,0:00:51.59,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}da semana
+Dialogue: 0,0:00:51.59,0:00:52.30,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}Eu vou {\c&H004040FF&\b800\fs94}tentar{\c&H00FFFFFF&\b1\fs84}
+Dialogue: 0,0:00:52.30,0:00:53.59,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}me alimentar bem
+Dialogue: 0,0:00:53.59,0:00:54.13,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}eu vou {\c&H004040FF&\b800\fs94}tentar{\c&H00FFFFFF&\b1\fs84}
+Dialogue: 0,0:00:54.13,0:00:55.19,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}treinar todo dia
+Dialogue: 0,0:00:55.19,0:00:55.94,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}Quando a gente bota
+Dialogue: 0,0:00:55.94,0:00:56.66,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}isso na cabeça
+Dialogue: 0,0:00:56.66,0:00:57.39,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}é {\c&H0000D7FF&\b800\fs94}muito{\c&H00FFFFFF&\b1\fs84} {\c&H0000D7FF&\b800\fs94}mais{\c&H00FFFFFF&\b1\fs84} {\c&H0000D7FF&\b800\fs94}fácil{\c&H00FFFFFF&\b1\fs84}
+Dialogue: 0,0:00:57.39,0:00:58.44,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}da gente {\c&H0000D7FF&\b800\fs94}falhar{\c&H00FFFFFF&\b1\fs84}
+Dialogue: 0,0:00:58.44,0:00:58.86,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}Então a gente tem
+Dialogue: 0,0:00:58.86,0:00:59.50,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}que pensar o quê?
+Dialogue: 0,0:00:59.50,0:01:00.54,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}{\c&H0000D7FF&\b800\fs94}Eu{\c&H00FFFFFF&\b1\fs84} {\c&H0000D7FF&\b800\fs94}vou{\c&H00FFFFFF&\b1\fs84} {\c&H0000D7FF&\b800\fs94}fazer{\c&H00FFFFFF&\b1\fs84}
+Dialogue: 0,0:01:00.54,0:01:01.36,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}dieta essa semana
+Dialogue: 0,0:01:01.36,0:01:02.42,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}{\c&H0000D7FF&\b800\fs94}eu{\c&H00FFFFFF&\b1\fs84} {\c&H0000D7FF&\b800\fs94}vou{\c&H00FFFFFF&\b1\fs84} {\c&H0000D7FF&\b800\fs94}treinar{\c&H00FFFFFF&\b1\fs84} bem
+Dialogue: 0,0:01:02.42,0:01:04.33,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}{\c&H0000D7FF&\b800\fs94}eu{\c&H00FFFFFF&\b1\fs84} {\c&H0000D7FF&\b800\fs94}vou{\c&H00FFFFFF&\b1\fs84} me alimentar
+Dialogue: 0,0:01:04.48,0:01:05.42,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}Porque dessa forma
+Dialogue: 0,0:01:05.42,0:01:05.92,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}a gente tem
+Dialogue: 0,0:01:05.92,0:01:06.73,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}{\c&H0000D7FF&\b800\fs94}muito{\c&H00FFFFFF&\b1\fs84} {\c&H0000D7FF&\b800\fs94}menos{\c&H00FFFFFF&\b1\fs84} {\c&H0000D7FF&\b800\fs94}chance{\c&H00FFFFFF&\b1\fs84}
+Dialogue: 0,0:01:06.73,0:01:08.12,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}{\c&H0000D7FF&\b800\fs94}de{\c&H00FFFFFF&\b1\fs84} {\c&H0000D7FF&\b800\fs94}falhar{\c&H00FFFFFF&\b1\fs84}
+Dialogue: 0,0:01:08.12,0:01:08.42,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}porque a gente
+Dialogue: 0,0:01:08.42,0:01:09.88,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}{\c&H0000D7FF&\b800\fs94}não{\c&H00FFFFFF&\b1\fs84} {\c&H0000D7FF&\b800\fs94}vai{\c&H00FFFFFF&\b1\fs84} {\c&H0000D7FF&\b800\fs94}estar{\c&H00FFFFFF&\b1\fs84} {\c&H004040FF&\b800\fs94}tentando{\c&H00FFFFFF&\b1\fs84}
+Dialogue: 0,0:01:09.88,0:01:10.24,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}Entendeu?
+Dialogue: 0,0:01:10.24,0:01:11.79,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}Verdade
+Dialogue: 0,0:01:12.08,0:01:12.24,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}Então bora,
+Dialogue: 0,0:01:12.24,0:01:13.10,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}já deu um minuto
+Dialogue: 0,0:01:13.10,0:01:14.17,Legenda,,0,0,0,,{\fscx85\fscy85\t(0,70,\fscx104\fscy104)\t(70,140,\fscx100\fscy100)}faz mais uma
