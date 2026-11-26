@@ -125,7 +125,13 @@ retranscreva e remapeie (`corte/scripts/remapear.py`), nunca recronometre à mã
   seção 9 de `corte/references/EDICAO-BRUTA.md`, um de cada vez, registrado.
 - **Uma versão por rodada**, completa e verificada.
 - **Som enxuto** (`"sfxModo": "enxuto"`, o padrão do `vsl-padrao.json`): ≤ 0,8 efeito/s contando a digitação,
-  digitação sempre contínua. O som exato da referência (`"referencia"`) só a pedido.
+  digitação sempre contínua. O som exato da referência (`"referencia"`) só a pedido. Pediram **menos e mais discreto**?
+  `vsl.json` `"sfxAlvo": 0.3` (efeitos/s) e `"sfxVol": 0.4`; um efeito específico incomodou (ex.: o whoosh de ruído
+  "parece vento/móvel arrastando")? gere um mais suave com o **mesmo nome** em `motor/sfx-projeto/` — ele substitui
+  o do kit só naquele reel.
+- **Cores da marca:** com logo ou manual da marca, escreva `<P>/pele-resolvida.json` com `cores` (`origem`, `fundo`,
+  `texto`, `destaque`, `apoio`, `acento2`) medidas na logo; destaque claro (dourado, amarelo) ganha texto escuro nos
+  botões e pílulas sozinho (`--onAcc`). Logo com fundo preto: alfa pelo brilho → PNG em `<P>/assets/oficiais/`.
 - **Material real** sempre; ilustração só declarada. **Rosto nunca coberto.** **Zona segura.**
 - **Você produz** nesta sessão. Se a pessoa pedir um agente ou um modelo específico, lance um agente
   general-purpose com este SKILL.md + `ESTILO.md` + `modelo/README.md` como brief e critique a entrega.

@@ -16,6 +16,8 @@
 //   e −3 dB; 0,6 ou ausente → o que o vsl.json diz; 0,85 → "referencia" (o som exato do vídeo aprovado);
 // - liga o VÍDEO DE APOIO (K.broll, broll.js) se existir assets/broll/ com algum .mp4 (ferramentas/pixabay.py da skill);
 //   sem a pasta nada muda e o resultado é o da referência;
+// - sons do projeto: sfx-projeto/<nome>.wav (mesmo nome do kit) substitui o efeito do kit só neste reel;
+//   vsl.json "sfxAlvo" (efeitos/s, padrão 0,8) e "sfxVol" (volume geral, padrão 0,55) deixam o som mais enxuto/discreto;
 // - escreve index.html e meta.json; imprime o resumo.
 import { readFileSync, writeFileSync, existsSync, cpSync, mkdirSync, readdirSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
@@ -34,6 +36,8 @@ if (!gsapSrc) { console.error("falta o GSAP: rode npm install na raiz do projeto
 cpSync(gsapSrc, join("assets", "gsap.min.js"));
 cpSync(join(M, "fonts"), join("assets", "fonts"), { recursive: true });
 cpSync(join(M, "sfx"), join("assets", "sfx"), { recursive: true });
+// sons do projeto (ex.: um whoosh mais suave a pedido): sfx-projeto/<nome>.wav substitui o do kit com o mesmo nome
+if (existsSync("sfx-projeto")) cpSync("sfx-projeto", join("assets", "sfx"), { recursive: true });
 mkdirSync("src", { recursive: true });
 if (!existsSync("src/index.template.html")) cpSync(join(M, "index.template.html"), "src/index.template.html");
 if (!existsSync("src/beats.js")) cpSync(join(MOD, "beats-modelo.js"), "src/beats.js");
@@ -75,7 +79,14 @@ if (cores && !String(cores.origem || "nativa").startsWith("nativa")) {
   --white:${T}; --muted:${X}; --dim:${dk(X, 0.35)};
 }
 #vsl, html, body{ color:${T}; }\n`;
-  peleNota = `cores ${cores.origem}`;
+  // destaque claro (dourado, amarelo…): texto escuro sobre botões e pílulas, senão o branco some (--onAcc)
+  const lum = (c) => { const [r, g, b] = hex(c).map((v) => v / 255); return 0.2126 * r + 0.7152 * g + 0.0722 * b; };
+  const onAcc = lum(D) > 0.45 ? dk(F, 0.2) : "#ffffff";
+  peleCss += `#vsl{ --onAcc:${onAcc}; }\n`;
+  if (onAcc !== "#ffffff") peleCss += `#vsl .pill:not(.dark), #vsl .cta, #vsl .badge span{ color:${onAcc}; }
+#vsl .pill:not(.dark) .pico svg, #vsl .cta svg{ stroke:${onAcc} !important; }
+#vsl .pill.strike .ptxt{ color:${onAcc}; opacity:.8; }\n`;
+  peleNota = `cores ${cores.origem}${onAcc !== "#ffffff" ? " · texto escuro sobre o destaque" : ""}`;
 }
 const fontes = pele && pele.fontes;
 let fontesLink = "";
@@ -91,7 +102,8 @@ if (fontes && existsSync("assets/fonts/fontes.css")) {
 if (peleCss) writeFileSync("assets/pele.css", "/* gerado por montar.mjs a partir de pele-resolvida.json — não edite */\n" + peleCss);
 
 // ---------------- som ----------------
-let sfxNota = cfg.sfxModo === "enxuto" ? "enxuto (R2)" : "como na referência";
+let sfxNota = cfg.sfxModo === "enxuto" ? `enxuto (R2${cfg.sfxAlvo ? `, alvo ${cfg.sfxAlvo}/s` : ""})` : "como na referência";
+if (existsSync("sfx-projeto")) sfxNota += ` · sons do projeto: ${readdirSync("sfx-projeto").filter((f) => f.endsWith(".wav")).join(", ")}`;
 const som = pele && pele.som;
 if (som && som.sfx === false) { cfg.sfx = false; sfxNota = "desligado (pele)"; }
 else if (som && som.sfxIntensidade != null) {
