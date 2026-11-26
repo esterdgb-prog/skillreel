@@ -29,3 +29,17 @@
 ## Verificação
 - lint 0 erros · snapshots em cada beat (rosto livre; dois ajustes: letreiros quebrando linha → nowrap + tamanho calculado;
   topo da cabeça no plano médio → enquadramento desceu) · zona segura DOM OK (largura máx. 790 px, entrada com escala 1,25).
+
+## v2 (pedido: execuções da aluna inteiras · laranja → vermelho · nenhuma palavra comida)
+- **Corte refeito por outro critério** (registrado em `corte/keeps.json` → `_metodo`): 0–23,45 s sem corte nenhum (execuções e
+  as duas tentativas da aluna); no resto, corte **só em silêncio digital** (< −70 dB por ≥ 0,35 s; o áudio tem gate e as pausas
+  ficam a ~−95 dB), com 0,1 s de folga de cada lado, keeps `raw` (o detector de fala do motor não decide borda). 13 silêncios
+  cortados, 71,4 s. Medição independente das 24 bordas no áudio-fonte: a mais alta a −82 dB (fala > −45 dB) → nenhuma emenda
+  toca palavra. v1 guardada em `keeps-v1.json` / `ajustes-v1.json`.
+- Transcript: 0–23 s com os tempos da transcrição por trecho (a longa estica as palavras sobre as execuções); final
+  ("Então bora… faz mais uma") reposicionado pelo nível do áudio.
+- Abertura nova: HUD → glitch em 1,0 s → zoom na aluna executando + gancho O TENTAR / NÃO EXISTE → aberto → dois → "Boa!".
+  2ª tentativa dela também ganhou plano próprio.
+- Cores: pele com destaque vermelho (#ff2d2d) e apoio #ff3b3b. O tema "laranja" do kit (`#vsl.t-laranja`) vencia a pele no
+  CSS (especificidade maior) → `theme` voltou ao padrão e a pele manda. Rosto sem tinta vermelha visível nos snapshots.
+- Zona segura: escala de entrada dos letreiros limitada pela largura (nunca passa de 840 px na animação).

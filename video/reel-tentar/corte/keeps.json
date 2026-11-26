@@ -1,20 +1,89 @@
 {
  "keeps": [
   {
-   "from": 6.4,
-   "to": 9.5,
-   "why": "Boa. Agora eu quero que você tenta fazer mais uma repetição aí."
-  },
-  {
-   "from": 9.55,
-   "to": 10.55,
+   "from": 0.0,
+   "to": 23.45,
    "raw": true,
-   "why": "esforço da aluna na 1a tentativa (faz parte da história)"
+   "why": "execuções e tentativas da aluna + diálogo inicial: sem corte (pedido)"
   },
   {
-   "from": 12.5,
+   "from": 23.45,
+   "to": 23.57,
+   "raw": true,
+   "why": "fala; corte só no silêncio digital, folga 0,1 s"
+  },
+  {
+   "from": 23.85,
+   "to": 26.61,
+   "raw": true,
+   "why": "fala; corte só no silêncio digital, folga 0,1 s"
+  },
+  {
+   "from": 27.0,
+   "to": 27.65,
+   "raw": true,
+   "why": "fala; corte só no silêncio digital, folga 0,1 s"
+  },
+  {
+   "from": 28.23,
+   "to": 33.1,
+   "raw": true,
+   "why": "fala; corte só no silêncio digital, folga 0,1 s"
+  },
+  {
+   "from": 33.27,
+   "to": 34.5,
+   "raw": true,
+   "why": "fala; corte só no silêncio digital, folga 0,1 s"
+  },
+  {
+   "from": 34.86,
+   "to": 38.43,
+   "raw": true,
+   "why": "fala; corte só no silêncio digital, folga 0,1 s"
+  },
+  {
+   "from": 38.71,
+   "to": 43.74,
+   "raw": true,
+   "why": "fala; corte só no silêncio digital, folga 0,1 s"
+  },
+  {
+   "from": 43.91,
+   "to": 45.86,
+   "raw": true,
+   "why": "fala; corte só no silêncio digital, folga 0,1 s"
+  },
+  {
+   "from": 46.2,
+   "to": 51.29,
+   "raw": true,
+   "why": "fala; corte só no silêncio digital, folga 0,1 s"
+  },
+  {
+   "from": 51.57,
+   "to": 58.11,
+   "raw": true,
+   "why": "fala; corte só no silêncio digital, folga 0,1 s"
+  },
+  {
+   "from": 58.39,
+   "to": 63.95,
+   "raw": true,
+   "why": "fala; corte só no silêncio digital, folga 0,1 s"
+  },
+  {
+   "from": 64.26,
+   "to": 69.7,
+   "raw": true,
+   "why": "fala; corte só no silêncio digital, folga 0,1 s"
+  },
+  {
+   "from": 70.02,
    "to": 75.2,
-   "why": "resto do diálogo, tomada única; pausas internas saem pelo motor"
+   "raw": true,
+   "why": "fala final + respiro (cauda sem corte)"
   }
- ]
+ ],
+ "_metodo": "v2: corte só em silêncio digital (< -70 dB por >= 0,35 s), 0,1 s de folga de cada lado; nenhum trecho com som é removido"
 }

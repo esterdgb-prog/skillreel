@@ -1,2 +1,14 @@
 /* gerado por montar.mjs a partir de pele-resolvida.json — não edite */
+#vsl{
+  --bg0:#0f0606; --bg1:#1c0a0a; --bg2:#372727; --bg3:#554747; --panel2:#180909; --thumb:#2e1e1e;
+  --panelRGB:51,35,35; --panel2RGB:22,8,8; --shadowRGB:6,2,2;
+  --blob1:#bb2323; --blob2:#7d1717; --blob3:#971c1c;
+  --acc:#ff2d2d; --acc2:#ff3e3e; --deep:#e62929; --accRGB:255,45,45;
+  --btnA:#ff2d2d; --btnB:#ff5757;
+  --tintTopRGB:179,32,32; --tintMidRGB:102,18,18; --tintEndRGB:31,5,5;
+  --lav:#ff3b3b; --lav2:#eb3636; --lavT:#ff8989; --hiRGB:255,59,59;
+  --tint2:linear-gradient(100deg,rgba(255,59,59,.55) 0%,rgba(255,45,45,.25) 45%,rgba(255,87,87,.35) 100%);
+  --white:#ffffff; --muted:#c9a0a0; --dim:#836868;
+}
+#vsl, html, body{ color:#ffffff; }
 #vsl{  --fS:"Poppins",sans-serif; }

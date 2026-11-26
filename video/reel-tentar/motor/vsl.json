@@ -1,6 +1,6 @@
 {
  "_leia": "Valores da referência aprovada. face/head/punch/fullPos/splitPos mudam por vídeo (meça num quadro do clean com o punch aplicado); grade e tinta NÃO mudam (R4). sfxModo: 'enxuto' (padrão, regra R2: ≤ 0,8 efeito/s com a digitação) ou 'referencia' (o som exato do vídeo aprovado, ~1,4/s — reprova o item de SFX do verificar.py).",
- "theme": "laranja",
+ "theme": "roxo",
  "font": "padrao",
  "punch": 1.0,
  "fullPos": "50% 50%",
@@ -22,5 +22,6 @@
  "tint": 0.3,
  "tint2": 0.25,
  "sfxModo": "enxuto",
- "_enquadramento": "plano aberto com 2 pessoas: rosto do treinador ≈ x170–320 · y460–620, da aluna ≈ x800–930 · y720–840 (quadro 1080×1920, escala 1). Zooms por janela em src/beats.js (SHOT). Legenda fixa no chão via face-track fixo."
+ "_enquadramento": "plano aberto com 2 pessoas: rosto do treinador ≈ x170–320 · y460–620, da aluna ≈ x800–930 · y720–840 (quadro 1080×1920, escala 1). Zooms por janela em src/beats.js (SHOT). Legenda fixa no chão via face-track fixo.",
+ "_tema": "tema padrão: as cores vêm da pele (vermelho). O tema laranja tinha prioridade no CSS sobre a pele."
 }

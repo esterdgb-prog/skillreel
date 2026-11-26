@@ -1,49 +1,58 @@
 == TEXTO DO CORTE (leia inteiro) ==
-Boa, agora eu quero que você tenta fazer mais uma repetição Não, não foi isso que eu pedi Eu pedi pra você tentar fazer mais uma repetição Não, presta atenção no que eu tô falando Tenta fazer mais uma repetição Eu já fiz Exatamente, você conseguiu perceber o que aconteceu aqui agora? Não O que acontece, o tentar, ele não existe Ou a gente faz uma coisa, ou a gente não faz O tentar, a gente acaba usando isso pra sabotar a nossa mente Quando a gente fala que a gente vai tentar fazer alguma coisa A gente tem muito mais chance de falhar nisso Por quê? Se a gente fala, a gente fala, ah, eu tentei Por exemplo, eu vou tentar fazer uma dieta Eu vou tentar fazer cardio todos os dias da semana Eu vou tentar me alimentar bem Eu vou tentar treinar todo dia Quando a gente bota isso na cabeça, é muito mais fácil da gente falhar Então a gente tem que pensar o quê? Eu vou fazer dieta essa semana Eu vou treinar bem Eu vou me alimentar Porque dessa forma, a gente tem muito menos chance de falhar Porque a gente não vai estar tentando Entendeu? Verdade Então bora, já deu um minuto, faz mais uma
+Boa, agora eu quero que você tenta fazer mais uma repetição Não, não foi isso que eu pedi Eu pedi pra você tentar fazer mais uma repetição Não, presta atenção no que eu tô falando Tenta fazer mais uma repetição Eu já fiz Exatamente, você conseguiu perceber o que aconteceu aqui agora? Não O que acontece? O tentar, ele não existe Ou a gente faz uma coisa, ou a gente não faz O tentar, a gente acaba usando isso pra sabotar a nossa mente Quando a gente fala que a gente vai tentar fazer alguma coisa A gente tem muito mais chance de falhar nisso Por quê? Se a gente fala, a gente fala, ah, eu tentei Por exemplo, eu vou tentar fazer uma dieta Eu vou tentar fazer cardio todos os dias da semana Eu vou tentar me alimentar bem Eu vou tentar treinar todo dia Quando a gente bota isso na cabeça, é muito mais fácil da gente falhar Então a gente tem que pensar o quê? Eu vou fazer dieta essa semana Eu vou treinar bem Eu vou me alimentar Porque dessa forma, a gente tem muito menos chance de falhar Porque a gente não vai estar tentando Entendeu? Verdade Então bora, já deu um minuto Faz mais uma
 
 == REPETIÇÕES COLADAS ==
-    2.30s  "Não, não"
-    4.60s  "eu pedi Eu pedi"
-   26.64s  "a gente fala, a gente fala,"
+    9.04s  "Não, não"
+   12.57s  "eu pedi Eu pedi"
+   41.72s  "a gente fala, a gente fala,"
 
 == EMENDAS (janela ±2 s, transcrita sozinha) ==
-    0.43s  (fonte 7.17) :: Boa. Agora eu quero que você tenta fazer mais uma repetição aí.
-    2.50s  (fonte 9.53) :: Agora eu quero que você tenta fazer mais uma repetição aí. Não, não foi isso.
-    3.50s  (fonte 12.53) :: fazer mais uma repetição ainda. Não, não foi isso que eu pedi. Eu pedi pra você
-    7.27s  (fonte 18.93) :: você tentar fazer mais uma repetição. Não, presta atenção no que eu tô falando. Tenta fazer
-    8.60s  (fonte 20.63) :: repetição. Não, presta atenção no que eu tô falando. Tenta fazer mais uma repetição. Deixa
-   11.57s  (fonte 24.17) :: na repetição. Eu já fiz. Exatamente. Você conseguiu perceber o que aconteceu aqui agora?
-   12.07s  (fonte 24.93) :: Eu já fiz. Exatamente. Você conseguiu perceber o que aconteceu aqui agora? Não. É.
-   13.57s  (fonte 27.17) :: Exatamente. Você conseguiu perceber o que aconteceu aqui agora? Não. O que acontece? O tentar
-   13.93s  (fonte 28.33) :: Você conseguiu perceber o que aconteceu aqui agora? Não. O que acontece? O tentar...
-   15.80s  (fonte 30.33) :: O que acontece? O tentar, ele não existe. Ou a gente faz uma coisa,
-   16.60s  (fonte 31.47) :: O tentar, ele não existe. Ou a gente faz uma coisa, ou a gente não
-   18.10s  (fonte 33.33) :: existe. Ou a gente faz uma coisa, ou a gente não faz. Por tentar, a gente
-   19.10s  (fonte 34.93) :: faz uma coisa ou a gente não faz. Por tentar, a gente acaba usando isso pra
-   19.90s  (fonte 35.87) :: ou a gente não faz. Por tentar, a gente acaba usando isso pra sabotar a nossa
-   22.30s  (fonte 38.80) :: abusando isso pra sabotar a nossa mente. Quando a gente fala que a gente vai tentar fazer alguma coisa,
-   24.37s  (fonte 41.13) :: Quando a gente fala que a gente vai tentar fazer alguma coisa, a gente tem muito mais chance de falhar nisso.
-   26.17s  (fonte 43.13) :: a gente tem muito mais chance de falhar nisso. Por quê? Porque a gente fala, a gente fala, ah, eu tentei,
-   26.63s  (fonte 43.97) :: tem muito mais chance de falhar nisso. Por quê? Porque a gente fala, a gente fala, ah, eu tentei. Por exemplo,
-   28.37s  (fonte 46.23) :: Porque a gente fala, a gente fala, ah, eu tentei. Por exemplo, eu vou tentar fazer uma dieta.
-   30.57s  (fonte 48.93) :: exemplo, vou tentar fazer uma dieta, vou tentar fazer cardio todos os dias da semana,
-   32.80s  (fonte 51.50) :: tentar fazer cardio todos os dias da semana, eu vou tentar me alimentar bem,
-   36.50s  (fonte 55.33) :: bem, eu vou tentar treinar todo dia. Quando a gente bota assim na cabeça, é muito mais fácil da
-   39.20s  (fonte 58.53) :: cabeça, é muito mais fácil da gente falhar. Então a gente tem que pensar o quê? Eu vou fazer
-   43.10s  (fonte 62.77) :: Eu vou fazer dieta essa semana. Eu vou treinar bem. Eu vou me alimentar. Porque dessa forma...
-   44.17s  (fonte 64.40) :: Eu vou treinar bem. Eu vou me alimentar. Porque dessa forma, a gente tem muito menos chance.
-   45.43s  (fonte 65.83) :: Porque dessa forma a gente tem muito menos chance de falhar.
-   49.50s  (fonte 70.13) :: porque a gente não vai estar tentando. Entendeu? Verdade. Então, bora.
-   49.87s  (fonte 70.77) :: não vai estar tentando. Entendeu? Então, bora. Já deu um minuto?
-   51.03s  (fonte 72.07) :: Entendeu? Então bora, já deu um minuto, faz mais uma.
-   52.23s  (fonte 73.37) :: Então bora, já deu um minuto, faz mais uma.
+   23.57s  (fonte 23.87) :: uma repetição. Eu já fiz? Exatamente. Você conseguiu perceber o que aconteceu
+   26.30s  (fonte 27.00) :: Você conseguiu perceber o que aconteceu aqui agora? Não. O que acontece? O
+   26.97s  (fonte 28.23) :: perceber o que aconteceu aqui agora? Não. O que acontece? O tentar
+   31.83s  (fonte 33.27) :: Ou a gente faz uma coisa ou a gente não faz. O tentar
+   33.07s  (fonte 34.87) :: coisa, ou a gente não faz. O tentar, a gente acaba usando isso,
+   36.63s  (fonte 38.70) :: usando isso pra sabotar a nossa mente. Quando a gente fala que a gente vai tentar fazer alguma coisa,
+   41.67s  (fonte 43.90) :: mais chance de falhar nisso. Por quê? Porque a gente fala, a gente fala, ah, eu tentei.
+   43.63s  (fonte 46.20) :: A gente fala, a gente fala, ah, eu tentei. Por exemplo, eu vou tentar fazer uma dieta
+   48.73s  (fonte 51.57) :: fazer cardio todos os dias da semana, eu vou tentar me alimentar bem,
+   55.27s  (fonte 58.40) :: cabeça, é muito mais fácil a gente falhar. Então a gente tem que pensar o quê? Eu volto
+   60.80s  (fonte 64.27) :: eu vou me alimentar. Porque dessa forma, a gente tem muito melhoramento
+   66.23s  (fonte 70.03) :: porque a gente não vai estar tentando. Entendeu? Verdade.
 
 == PAUSAS > 0,25 s QUE SOBRARAM ==
-  fim 2.82046 | silence_duration: 0.331583
-  fim 3.86687 | silence_duration: 0.429437
-  fim 10.4438 | silence_duration: 0.281229
-  fim 46.9946 | silence_duration: 0.400042
-  fim 49.5042 | silence_duration: 0.339667
-  fim 51.0099 | silence_duration: 0.262646
+  fim 1.33723 | silence_duration: 1.33723
+  fim 2.90119 | silence_duration: 0.643021
+  fim 4.41973 | silence_duration: 1.30156
+  fim 5.24217 | silence_duration: 0.537125
+  fim 6.69071 | silence_duration: 0.813125
+  fim 9.85379 | silence_duration: 0.627271
+  fim 12.1841 | silence_duration: 1.71329
+  fim 12.9002 | silence_duration: 0.402875
+  fim 18.5481 | silence_duration: 2.31785
+  fim 18.9481 | silence_duration: 0.289687
+  fim 20.5788 | silence_duration: 0.292104
+  fim 22.4772 | silence_duration: 0.281229
+  fim 23.7055 | silence_duration: 0.285187
+  fim 26.4106 | silence_duration: 0.352104
+  fim 27.0765 | silence_duration: 0.325625
+  fim 30.265 | silence_duration: 0.344187
+  fim 31.951 | silence_duration: 0.353583
+  fim 33.177 | silence_duration: 0.264125
+  fim 36.761 | silence_duration: 0.285562
+  fim 39.0923 | silence_duration: 0.390333
+  fim 41.7944 | silence_duration: 0.294208
+  fim 43.7392 | silence_duration: 0.32625
+  fim 46.3626 | silence_duration: 0.407042
+  fim 48.8578 | silence_duration: 0.278021
+  fim 52.5347 | silence_duration: 0.370896
+  fim 55.375 | silence_duration: 0.282938
+  fim 59.7049 | silence_duration: 0.351271
+  fim 60.9113 | silence_duration: 0.291375
+  fim 63.9279 | silence_duration: 0.400042
+  fim 67.1123 | silence_duration: 0.377292
+  fim 68.1099 | silence_duration: 0.262646
+  fim 70.5934 | silence_duration: 0.568417
+  fim 71.4 | silence_duration: 0.806583
 
-duração do corte: 52.77s
+duração do corte: 71.40s

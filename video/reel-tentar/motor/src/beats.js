@@ -6,7 +6,7 @@ const A = (p, n = 1, after = 0) => K.at(p, n, after);
 const E = (p, n = 1, after = 0) => K.end(p, n, after);
 const SPLIT_TOP = 240;
 const W = 1080, H = 1920, F = { x: 540, y: 0.32 * 1920 }; // origem do zoom da .lens (C.focus "50% 32%")
-const RED = "#ff3d3d", ORANGE = "var(--acc)";
+const RED = "#ff2d2d", ORANGE = "var(--acc)";  // pedido: tudo o que era laranja agora é vermelho (pele: destaque vermelho)
 
 // ---------- câmera: janela (x0, y0) do quadro-fonte com escala s → tela cheia, sem borda preta ----------
 const SHOT = {
@@ -50,7 +50,7 @@ function big(lines, opt = {}) {
       K.fromTo(d.querySelectorAll("span"), { opacity: 0, y: 46, scale: 0.4 }, { opacity: 1, y: 0, scale: 1, duration: 0.3, ease: "back.out(2.4)", stagger: 0.035 }, L.t);
     } else {
       d.textContent = L.text;
-      K.fromTo(d, { opacity: 0, scale: 1.25, filter: "blur(14px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.3, ease: "back.out(2)" }, L.t);
+      K.fromTo(d, { opacity: 0, scale: Math.min(1.25, 840 / (L.text.length * 1.05 * size)), filter: "blur(14px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.3, ease: "back.out(2)" }, L.t);
     }
     if (L.strike != null) {
       const bar = K.mk(d, "", "", { position: "absolute", left: "50%", top: "46%", height: Math.max(8, size * 0.09) + "px", width: Math.min(940, L.text.length * size * 1.05) + "px",
@@ -65,27 +65,42 @@ function big(lines, opt = {}) {
   return g;
 }
 
-// ================= 1) GANCHO "Boa! Agora eu quero que você tenta fazer mais uma repetição aí"
-const tG = A("tenta fazer") - 0.05;
+// ================= 0) ABERTURA — a aluna executando a série (sem corte, pedido) + gancho com a frase-tese
+const tG = 1.0;   // gancho visual: não há fala antes de "Boa!" (6,6 s), então o glitch tem tempo fixo
 K.camcorder(0, tG, { label: "TREINO · AO VIVO" });
 K.glitch(tG);
-drift(tG + 0.1, "aberto", 1.45, 0.08);
+drift(tG + 0.05, "aluna", 2.5, 0.1);
+big([{ text: "O TENTAR", t: tG + 0.3, style: "letters", color: RED },
+     { text: "NÃO EXISTE", t: tG + 1.1, style: "glow" }], { top: 240, until: tG + 2.5 });
+drift(tG + 2.55, "aberto", A("boa") - tG - 2.6 - 1.4, 0.08);
+drift(A("boa") - 1.45, "dois", 1.4, 0.05);
+
+// 1) "Boa! Agora eu quero que você tenta fazer mais uma repetição"
+cam(A("boa") - 0.04, "medio");
+cam(A("mais uma") - 0.05, "aberto");
+cam(A("mais uma"), { s: 1.08, x0: 40, y0: 60 }, A("repetição") + 0.5 - A("mais uma"), "none");
 big([{ text: "MAIS UMA", t: A("mais uma"), style: "pop" }, { text: "REPETIÇÃO", t: A("repetição"), style: "glow", color: ORANGE }], { top: 236, max: 110, until: A("repetição") + 0.62 });
 
-// 2) ela tenta (sem fala) — zoom na aluna + HUD no rosto
+// 2) 1ª tentativa dela (sem fala, inteira) — zoom na aluna + HUD no rosto
 const tTry = E("repetição") + 0.12;
 cam(tTry, "aluna");
-cam(tTry + 0.01, { s: 1.72, x0: 440, y0: 430 }, A("não foi") - tTry - 0.2, "none");
-K.faceHud(tTry + 0.05, { box: { x: 590, y: 450, w: 300, h: 290 }, label: "TENTANDO…", scan: false, until: A("não foi") - 0.2 });
+cam(tTry + 0.01, { s: 1.75, x0: 445, y0: 435 }, A("não não foi") - tTry - 0.15, "none");
+K.faceHud(tTry + 0.05, { box: { x: 590, y: 450, w: 300, h: 290 }, label: "TENTANDO…", scan: false, until: A("não não foi") - 0.15 });
 
 // 3) "Não, não foi isso que eu pedi. Eu pedi pra você tentar fazer mais uma repetição"
-cam(A("não foi") - 0.15, "medio");
-big([{ text: "TENTAR", t: A("tentar"), style: "letters", color: RED, size: 150 }], { top: 250, until: A("presta atenção") - 0.25 });
-drift(A("eu pedi pra"), "medio", A("presta atenção") - A("eu pedi pra") - 0.2, 0.07);
+cam(A("não não foi") - 0.1, "medio");
+drift(A("eu pedi pra"), "medio", A("tentar") - A("eu pedi pra") - 0.05, 0.05);
+cam(A("tentar") - 0.04, "close");
+big([{ text: "TENTAR", t: A("tentar"), style: "letters", color: RED, size: 150 }], { top: 1000, until: E("repetição", 2) + 0.1 });
+
+// 3b) 2ª tentativa dela (sem fala, inteira) — aluna
+const tTry2 = E("repetição", 2) + 0.12;
+cam(tTry2, "aluna");
+cam(tTry2 + 0.01, { s: 1.75, x0: 445, y0: 435 }, A("não presta") - tTry2 - 0.12, "none");
 
 // 4) "Não, presta atenção no que eu tô falando" — close
-cam(A("presta atenção") - 0.2, "close");
-big([{ text: "PRESTA", t: A("presta"), style: "pop" }, { text: "ATENÇÃO", t: A("atenção"), style: "glow", color: ORANGE }], { top: 1060, max: 140, until: A("tenta fazer", 2) - 0.08 });
+cam(A("não presta") - 0.08, "close");
+big([{ text: "PRESTA", t: A("presta"), style: "pop" }, { text: "ATENÇÃO", t: A("atenção"), style: "glow", color: ORANGE }], { top: 1060, max: 96, until: A("tenta fazer", 2) - 0.08 });
 
 // 5) "Tenta fazer mais uma repetição" — aberto com push-in lento
 drift(A("tenta fazer", 2) - 0.02, "aberto", A("eu já fiz") - A("tenta fazer", 2) - 0.1, 0.14);
