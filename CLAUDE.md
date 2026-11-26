@@ -6,6 +6,8 @@
   → Wikimedia Commons (sem chave; conferir a licença de cada arquivo e dar crédito quando a licença pedir).
 - Pode usar material que **combine** com o vídeo, mesmo que não tenha exatamente as mesmas cores ou o mesmo design.
   Quando destoar, aproximar com tratamento leve de cor e com as transições e a luz do próprio vídeo.
+- Chave do Pixabay: variável de ambiente `PIXABAY_API_KEY` (a pessoa cadastra nas configurações do ambiente; nunca no chat).
+  A API recebe a chave como parâmetro `key=` (https://pixabay.com/api/docs/).
 - Registrar a origem e a licença de cada arquivo usado (`FONTES.md` na pasta do reel).
 - Imagem parada pode ser animada (zoom, giro 3D leve, luz, partículas); ação real só com vídeo.
 
