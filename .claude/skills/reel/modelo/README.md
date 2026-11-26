@@ -19,6 +19,7 @@ na pasta do projeto); sem ela, cores, fontes e som são os da referência: nunca
 | `sfx-enxuto.js` | o modo `"sfxModo": "enxuto"`, o padrão (R2: ≤ 0,8 efeito/s contando a digitação), injetado pelo `montar.mjs` |
 | `ferramentas/rastrear-boca.py` | `assets/face-track.json` (MediaPipe; sem ele, OpenCV) — sem esse arquivo a legenda não aparece |
 | `ferramentas/cards.mjs` | os cards da fase 1: um PNG por tela de `../entrega/planta.json`, tirado do motor no meio da tela |
+| `ferramentas/mixar-sfx.py` | mixa os efeitos do `../sons.json` no áudio do render com ffmpeg e mede cada um no arquivo. **Obrigatório:** o `hyperframes render` não mixa os `<audio>` criados em tempo de execução, então sem ele o vídeo sai só com a voz |
 | `ferramentas/sons.mjs` | `../sons.json` com os efeitos que o kit criou (densidade para o VERIFY e o crítico) |
 | `ferramentas/audio-final-vsl.sh` | o áudio final deste estilo: ganho + limitador em 192 kHz, calibrado em até 3 passadas (−14 LUFS ±0,3, pico ≤ −1 dBTP). Use este, não o `audio-final.sh` comum: com os ataques rápidos dos efeitos do kit, o comum deixa o pico passar (+1,2 dBTP no teste) |
 | `ferramentas/folha.sh` | `../qa/folha-final.png` (16 quadros do final) |
@@ -54,8 +55,9 @@ npx hyperframes snapshot --at <cada troca e cada beat> -o snapshots   # rosto li
 node ferramentas/zona-segura-dom.mjs . --strict                       # "zona segura OK"
 npx hyperframes render -q high -o ../render/_reel-bruto.mp4
 node montar.mjs --so-camera && npx hyperframes render -q high -o ../render/_camera-so.mp4 && node montar.mjs
-bash ferramentas/audio-final-vsl.sh ../render/_reel-bruto.mp4 ../render/reel-vN.mp4   # −14 LUFS ±0,3, pico ≤ −1 dBTP
 node ferramentas/sons.mjs                                             # ../sons.json
+python3 ferramentas/mixar-sfx.py ../render/_reel-bruto.mp4 ../sons.json ../render/_reel-sfx.mp4   # efeitos (o render não os mixa)
+bash ferramentas/audio-final-vsl.sh ../render/_reel-sfx.mp4 ../render/reel-vN.mp4   # −14 LUFS ±0,3, pico ≤ −1 dBTP
 bash ferramentas/folha.sh ../render/reel-vN.mp4 ../qa/folha-final.png
 python3 "$S/ferramentas/verificar.py" .. --video render/reel-vN.mp4 --sfx ../sons.json --camera ../render/_camera-so.mp4
 #   (S = a raiz da skill reel; o verificar.py escreve ../VERIFY.md e roda a zona segura → ../qa/zona-segura.png; --sfx e --camera são relativos a esta pasta)

@@ -105,10 +105,16 @@ npx hyperframes snapshot --at <cada troca e cada beat> -o snapshots      # rosto
 node ferramentas/zona-segura-dom.mjs . --strict                           # "zona segura OK"
 npx hyperframes render -q high -o ../render/_reel-bruto.mp4
 node montar.mjs --so-camera && npx hyperframes render -q high -o ../render/_camera-so.mp4 && node montar.mjs
-bash ferramentas/audio-final-vsl.sh ../render/_reel-bruto.mp4 ../render/reel-v1.mp4   # −14 LUFS ±0,3 · pico ≤ −1 dBTP
-node ferramentas/sons.mjs && bash ferramentas/folha.sh ../render/reel-v1.mp4 ../qa/folha-final.png
+node ferramentas/sons.mjs                                                 # ../sons.json: os efeitos que a página agendou
+python3 ferramentas/mixar-sfx.py ../render/_reel-bruto.mp4 ../sons.json ../render/_reel-sfx.mp4   # OBRIGATÓRIO (abaixo)
+bash ferramentas/audio-final-vsl.sh ../render/_reel-sfx.mp4 ../render/reel-v1.mp4   # −14 LUFS ±0,3 · pico ≤ −1 dBTP
+bash ferramentas/folha.sh ../render/reel-v1.mp4 ../qa/folha-final.png
 python3 "$S/ferramentas/verificar.py" .. --video render/reel-v1.mp4 --sfx ../sons.json --camera ../render/_camera-so.mp4
 ```
+**Os efeitos sonoros só existem depois do `mixar-sfx.py`.** O kit cria os `<audio>` dos efeitos em tempo de execução e o
+`hyperframes render` (0.7.109) não os mixa: o render sai só com a voz. O `mixar-sfx.py` mixa o `sons.json` com ffmpeg e
+imprime o pico de cada efeito medido no arquivo (diferença mixado − original); nenhum pode sair "FRACO". Nunca dê os
+efeitos como entregues pela conta do `sons.json`: só pela medição no arquivo.
 Depois escreva `MINUTAGEM.md` (beat a beat: tempo, fala, o que aparece, layout, som) e `progresso.md` na pasta
 do projeto. **Critique antes de mostrar:** `VERIFY.md` todo aprovado, folha de quadros, R1 (rosto), R2 (SFX ≤ 0,8/s
 no modo enxuto), R6 (legenda), R7 (zona segura), R8 (áudio). Até 2 rodadas de ajuste antes de entregar.
