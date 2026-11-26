@@ -4,3 +4,17 @@
 *.wav
 qa/
 whisper*.log
+# motor do reel: dependências, cópias do kit e capturas são regeneráveis
+node_modules/
+reel-tentar/motor/snapshots/
+reel-tentar/motor/assets/kit.js
+reel-tentar/motor/assets/kit.css
+reel-tentar/motor/assets/gsap.min.js
+reel-tentar/motor/assets/fonts/
+reel-tentar/motor/assets/sfx/
+reel-tentar/motor/exemplo/
+reel-tentar/motor/kit/
+reel-tentar/corte/*.json.bak
+*.log
+reel-tentar/render/
+reel-tentar/motor/.modelos/

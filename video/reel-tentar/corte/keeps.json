@@ -1,0 +1,20 @@
+{
+ "keeps": [
+  {
+   "from": 6.4,
+   "to": 9.5,
+   "why": "Boa. Agora eu quero que você tenta fazer mais uma repetição aí."
+  },
+  {
+   "from": 9.55,
+   "to": 10.55,
+   "raw": true,
+   "why": "esforço da aluna na 1a tentativa (faz parte da história)"
+  },
+  {
+   "from": 12.5,
+   "to": 75.2,
+   "why": "resto do diálogo, tomada única; pausas internas saem pelo motor"
+  }
+ ]
+}

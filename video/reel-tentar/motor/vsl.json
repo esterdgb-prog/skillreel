@@ -1,0 +1,26 @@
+{
+ "_leia": "Valores da referência aprovada. face/head/punch/fullPos/splitPos mudam por vídeo (meça num quadro do clean com o punch aplicado); grade e tinta NÃO mudam (R4). sfxModo: 'enxuto' (padrão, regra R2: ≤ 0,8 efeito/s com a digitação) ou 'referencia' (o som exato do vídeo aprovado, ~1,4/s — reprova o item de SFX do verificar.py).",
+ "theme": "laranja",
+ "font": "padrao",
+ "punch": 1.0,
+ "fullPos": "50% 50%",
+ "splitPos": "50% 26%",
+ "pipPos": "50% 24%",
+ "face": {
+  "x": 170,
+  "y": 460,
+  "w": 150,
+  "h": 160
+ },
+ "head": {
+  "x": 245,
+  "y": 540
+ },
+ "topY": 240,
+ "capY": 1500,
+ "gradeFilter": "saturate(1.04) contrast(1.05) brightness(0.97)",
+ "tint": 0.3,
+ "tint2": 0.25,
+ "sfxModo": "enxuto",
+ "_enquadramento": "plano aberto com 2 pessoas: rosto do treinador ≈ x170–320 · y460–620, da aluna ≈ x800–930 · y720–840 (quadro 1080×1920, escala 1). Zooms por janela em src/beats.js (SHOT). Legenda fixa no chão via face-track fixo."
+}
