@@ -3,7 +3,6 @@
 de efeitos desenhada à mão. Gera os .wav na pasta atual (normalizados em −1 dBFS). Uso: cd motor/sfx-projeto && python3 ../ferramentas/paleta-sfx.py
 Sopros (sobe/desce/curto) para trocas de cena; carimbo, impacto, pop1-3, tick, check, ding, moeda, brilho, erro, alerta, tictac, glitch, click.
 """
-"""
 import wave
 import numpy as np
 
