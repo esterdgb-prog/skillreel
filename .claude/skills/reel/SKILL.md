@@ -138,6 +138,11 @@ retranscreva e remapeie (`corte/scripts/remapear.py`), nunca recronometre à mã
   multiplica por ~0,1–0,3), o que dá −16 a −24 dBFS na mixagem, 12–20 dB abaixo da voz. Meça depois do render
   (pico do arquivo + 20·log10(volume do `sons.json`)); um som abaixo de ~−30 dBFS na mixagem não existe para quem
   assiste. Prefira sons tonais e curtos; ruído largo (pink/white) soa como vento ou móvel arrastando.
+  Pediram efeitos **variados**? Faça a trilha à mão: `ferramentas/paleta-sfx.py` em `sfx-projeto/` (sopros sobe/desce/curto
+  para trocas de cena, carimbo, pop1-3, check, moeda, erro, ding, alerta, tictac, impacto, brilho, clique), `"sfxModo":
+  "manual"` + `"sfxVol": 1`, e no fim do `beats.js` remova os automáticos (`#vsl audio[src^="assets/sfx/"]`) e chame
+  `K.sfx(nome, t, vol)` momento a momento. Calibre o volume pela intensidade acima de 400 Hz (o grave não toca no celular):
+  efeitos 2–5 dB abaixo da mediana da fala, impactos no nível dela.
 - **Cores da marca:** com logo ou manual da marca, escreva `<P>/pele-resolvida.json` com `cores` (`origem`, `fundo`,
   `texto`, `destaque`, `apoio`, `acento2`) medidas na logo; destaque claro (dourado, amarelo) ganha texto escuro nos
   botões e pílulas sozinho (`--onAcc`). Logo com fundo preto: alfa pelo brilho → PNG em `<P>/assets/oficiais/`.
