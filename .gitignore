@@ -1,0 +1,6 @@
+# mídia pesada: fica fora do git
+bruto/
+render/
+legenda/*.mp4
+legenda/*.wav
+legenda/*.jpg
