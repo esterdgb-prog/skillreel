@@ -32,7 +32,7 @@ def rastreio_fixo():
     d = json.load(open(p))
     if "_nota" not in d:
         shutil.copy(p, "assets/face-track-mediapipe.json")
-    dur = json.load(open("assets/transcript.json")).get("duration") or (d["rows"][-1][0] if d.get("rows") else 60)
+    t_ = json.load(open("assets/transcript.json")); dur = t_.get("audio_duration_secs") or t_.get("duration") or (d["rows"][-1][0] if d.get("rows") else 60)
     n = int(float(dur) * 30) + 30
     base = [540.0, 1060.0, 160.0, 1130.0, 900.0, 380.0, 700.0]
     d["rows"] = [[round(i / 30, 3)] + base[: len(d["cols"]) - 1] for i in range(n)]

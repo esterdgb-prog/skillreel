@@ -104,6 +104,14 @@ python3 ../../$F/ferramentas/sem-rosto.py                    # rastreio fixo, vs
   própria tela em `SRC` e no `../assets/SOURCES.md`. Se não achar fonte oficial, mostre só o que a fala diz e
   avise na entrega ("vale um contador conferir"). Planalto (planalto.gov.br) é bloqueado na rede: use a busca na web.
 - `K.mouthCaps({accent: [...]})` por último, com as palavras-chave da fala (inclua "Resultax", "Bio", "link").
+- **Armadilhas já vistas (Reel 61):**
+  - A legenda em FULL fica em y ≈ 1190. Uma `K.chain` de 3 itens no peito bate nela: ponha a corrente no alto
+    (`y: 380`) ou esconda a boca (`K.hideMouth`) no trecho.
+  - Toda peça com `until` precisa **começar antes** do `until`. Se começar depois, o `K.out` já passou e ela fica
+    parada, borrada, nas cenas seguintes (aconteceu com um `K.stamp` em `E("aqui") + 0.1`).
+  - `A("palavra")` pega a **1ª ocorrência**. Palavras repetidas ("mora", "fiscal", "saída fiscal", "no exterior")
+    pedem `A("frase", n)` ou `A("palavra", 1, depoisDe)`. Confira cada âncora no snapshot.
+  - Painel que entra antes da 1ª linha fica vazio: faça o painel entrar ≤ 0,5 s antes da primeira linha.
 
 ### 5 · Trilha de efeitos — desenhada à mão (obrigatória)
 No fim do `beats.js`, copie o bloco **TRILHA DE EFEITOS** do exemplo e reescreva os momentos:
