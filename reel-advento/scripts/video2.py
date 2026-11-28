@@ -227,17 +227,20 @@ def spot(out, M, t, t0, x, y, r):
 _yy = np.arange(H, dtype=np.float32)[:, None] * np.ones((1, W), np.float32)
 BAND = np.clip(1 - np.abs(_yy - 1440) / 230, 0, 1) ** 1.5      # faixa escura suave atrás da legenda
 class Captions:
-    def __init__(self):
-        self.body = ImageFont.truetype(os.path.join(FONTS, "CormorantGaramond-VF.ttf"), 90)
+    def __init__(self, body=90, deco=78, items=None):
+        self.items = items
+        self.body = ImageFont.truetype(os.path.join(FONTS, "CormorantGaramond-VF.ttf"), body)
         try: self.body.set_variation_by_name(b"Bold")
         except Exception: pass
-        self.deco = ImageFont.truetype(os.path.join(FONTS, "CinzelDecorative-Bold.ttf"), 78)
+        self.deco = ImageFont.truetype(os.path.join(FONTS, "CinzelDecorative-Bold.ttf"), deco)
+        self.lh = int(max(body, deco) * 1.16)
         self.cache = {}
 
     def _tokens(self, text):
         out = []; deco = False
-        for part in text.split("*"):
+        for part in text.replace("|", " | ").split("*"):
             for w in part.split():
+                if w == "|": out.append(("|", None)); continue
                 if out and all(ch in ",.:;!?" for ch in w):
                     out[-1] = (out[-1][0] + w, out[-1][1]); continue
                 out.append((w, deco))
@@ -249,24 +252,27 @@ class Captions:
         toks = self._tokens(text); maxw = 800; space = 22
         lines, cur, cw = [], [], 0
         for w, dc in toks:
+            if dc is None:
+                if cur: lines.append(cur)
+                cur, cw = [], 0; continue
             f = self.deco if dc else self.body
             ww = f.getlength(w)
             if cur and cw + space + ww > maxw: lines.append(cur); cur, cw = [], 0
             cur.append((w, dc, ww)); cw += (space if len(cur) > 1 else 0) + ww
         if cur: lines.append(cur)
-        lh = 104; pad = 44
+        lh = self.lh; pad = 44
         Wc, Hc = W, lh * len(lines) + pad * 2
         mask = Image.new("L", (Wc, Hc), 0); d = ImageDraw.Draw(mask)
         for li, line in enumerate(lines):
             tw = sum(x[2] for x in line) + space * (len(line) - 1)
-            x = (Wc - tw) / 2; base = pad + li * lh + 76
+            x = (Wc - tw) / 2; base = pad + li * lh + int(lh * 0.73)
             for w, dc, ww in line:
                 f = self.deco if dc else self.body
                 d.text((x, base), w, font=f, fill=255, anchor="ls"); x += ww + space
         stroke = Image.new("L", (Wc, Hc), 0); ds = ImageDraw.Draw(stroke)
         for li, line in enumerate(lines):
             tw = sum(x[2] for x in line) + space * (len(line) - 1)
-            x = (Wc - tw) / 2; base = pad + li * lh + 76
+            x = (Wc - tw) / 2; base = pad + li * lh + int(lh * 0.73)
             for w, dc, ww in line:
                 f = self.deco if dc else self.body
                 ds.text((x, base), w, font=f, fill=255, anchor="ls", stroke_width=3, stroke_fill=255); x += ww + space
@@ -274,7 +280,7 @@ class Captions:
         # degradê dourado vertical por linha
         grad = np.zeros((Hc, Wc, 3), np.float32)
         for li in range(len(lines)):
-            y0 = pad + li * lh + 10; y1 = y0 + 72
+            y0 = pad + li * lh + int(lh * 0.1); y1 = y0 + int(lh * 0.7)
             for c in range(3):
                 col = np.interp(np.arange(Hc), [y0, y1], [GOLD_TOP[2 - c], GOLD_BOT[2 - c]])
                 sel = slice(pad + li * lh - 10, pad + (li + 1) * lh + 10)
@@ -287,12 +293,13 @@ class Captions:
         return res
 
     def apply(self, out, t):
-        for a, b, text in CAPTIONS:
+        for it in (self.items if self.items is not None else CAPTIONS):
+            a, b, text = it[:3]; ybase = it[3] if len(it) > 3 else 1440
             if a - 0.01 <= t < b:
                 grad, m, sh, st = self.render(text)
                 fi = ease((t - a) / 0.16); fo = ease((b - t) / 0.14); al = min(fi, fo)
                 rise = int((1 - fi) * 18)
-                Hc = m.shape[0]; yc = 1440 + rise; y0 = int(yc - Hc / 2)
+                Hc = m.shape[0]; yc = ybase + rise; y0 = int(yc - Hc / 2)
                 y0 = max(0, min(H - Hc, y0))
                 out *= (1 - np.roll(BAND, int(yc - 1440), axis=0)[..., None] * 0.55 * al)
                 reg = out[y0:y0 + Hc]
@@ -362,6 +369,7 @@ def render_frame(t, ctx):
     if t > DUR - 0.8: out = out * ease((DUR - t) / 0.8)
     out = np.clip(out, 0, 255)
     if ctx.get("cap"): out = ctx["cap"].apply(out, t)
+    for layer in ctx.get("textos", []): out = layer.apply(out, t)
     return np.clip(out, 0, 255).astype(np.uint8)
 
 

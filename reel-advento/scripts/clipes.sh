@@ -16,3 +16,6 @@ cut feira     feira.mp4     2.0 2.2  607 656  1080 "eq=brightness=-0.04:gamma=0.
 cut ceia      ceia.mp4      2.4 2.2  607 656  1080 "eq=gamma=0.95,vignette=PI/5"
 cut presentes presentes.mp4 4.0 2.2  607 465  1080 "$WARM"
 ls -la "$D"
+# v4: clipes de imposto
+cut calculadora calculadora.mp4 4.0 1.6  607 1079 1080 "eq=gamma=0.95,vignette=PI/5"
+cut moeda_gira  moeda_gira.mp4  0.3 2.4  607 811  1080 "eq=saturation=0.85:gamma=0.92,colorbalance=rs=0.05:bs=-0.05,vignette=PI/5"

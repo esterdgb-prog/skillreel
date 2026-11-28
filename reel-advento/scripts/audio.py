@@ -254,6 +254,35 @@ def sfx_sand(d=1.2):
     return reverb(stereo(norm(y * env), 0.1) * 0.8, 0.15)
 
 
+def sfx_stamp():
+    t = t_(0.6)
+    thump = np.sin(2 * np.pi * np.cumsum(70 + 80 * np.exp(-t * 40)) / SR) * np.exp(-t * 14)
+    slap = bp_fast(rng.standard_normal(len(t)), 700, 4500) * np.exp(-t * 70)
+    return reverb(stereo(norm(thump + slap * 0.8)), 0.15)
+
+
+def sfx_register():
+    out = np.zeros(int(1.6 * SR)); t = t_(0.2)
+    clunk = lp_fast(rng.standard_normal(len(t)), 1800) * np.exp(-t * 35) + np.sin(2 * np.pi * 160 * t) * np.exp(-t * 30)
+    out[:len(t)] += clunk * 0.8
+    b = bell_tone(2637, 1.4, [1, 1.5, 2.0, 2.76], [3, 4, 5, 8], [1, 0.4, 0.5, 0.2])
+    i = int(0.09 * SR); out[i:i + len(b)] += b[: len(out) - i] * 0.9
+    return reverb(stereo(norm(out)), 0.25)
+
+
+def sfx_keys(n=4):
+    out = np.zeros(int((n * 0.11 + 0.2) * SR))
+    for k in range(n):
+        t = t_(0.05); y = bp_fast(rng.standard_normal(len(t)), 1500, 7000) * np.exp(-t * 160) + np.sin(2 * np.pi * 1200 * t) * np.exp(-t * 120) * 0.3
+        i = int((k * 0.11 + rng.uniform(-0.01, 0.01)) * SR); i = max(0, i); out[i:i + len(y)] += y * rng.uniform(0.7, 1)
+    return reverb(stereo(norm(out)), 0.1)
+
+
+def sfx_handbell():
+    y = bell_tone(1760, 2.2, [1, 2.0, 2.76, 3.0, 4.07, 5.4], [1.8, 2.6, 3.4, 3.8, 5, 7], [1, 0.5, 0.45, 0.3, 0.2, 0.12])
+    return reverb(stereo(y), 0.35)
+
+
 def render_sfx(kind, extra):
     off = 0.0
     if kind == "whoosh_s": x = sfx_whoosh(0.45, 400, 5000, 0.6); off = 0.27
@@ -275,6 +304,10 @@ def render_sfx(kind, extra):
     elif kind == "ignite": x = sfx_ignite()
     elif kind == "swell": x = sfx_swell(extra or 1.2)
     elif kind == "sand": x = sfx_sand(extra or 1.2)
+    elif kind == "stamp": x = sfx_stamp()
+    elif kind == "register": x = sfx_register()
+    elif kind == "keys": x = sfx_keys(int(extra or 4))
+    elif kind == "handbell": x = sfx_handbell()
     else: raise ValueError(kind)
     return x, off
 
@@ -368,6 +401,91 @@ def make_music():
     return mus * fe[:, None]
 
 
+# ---------------------------------------------------------------- música natalina constante (v4)
+NATAL_A = [(0,78,1),(1,81,1),(2,86,1.5),(3.5,85,0.5),(4,83,1),(5,79,1),(6,83,1),(7,86,1),
+           (8,85,1),(9,81,1),(10,76,1),(11,79,0.5),(11.5,81,0.5),(12,78,2),(14,74,1),(15,76,1)]
+NATAL_B = [(0,79,1),(1,83,1),(2,86,1),(3,83,1),(4,81,1.5),(5.5,78,0.5),(6,74,1),(7,78,1),
+           (8,76,1),(9,81,1),(10,85,1),(11,88,1),(12,86,3),(15,81,1)]
+TRI = {"D": [62, 66, 69], "G": [62, 67, 71], "A": [61, 64, 69]}
+ROOT = {"D": 38, "G": 43, "A": 45}
+
+
+def sleigh(vel=1.0, seed=0):
+    r = np.random.default_rng(seed); t = t_(0.12); y = np.zeros(len(t))
+    for _ in range(7):
+        f = r.uniform(4200, 9800); y += np.sin(2 * np.pi * f * t + r.uniform(0, 6)) * np.exp(-t * r.uniform(35, 70))
+    y += bp_fast(r.standard_normal(len(t)), 5000, 12000) * np.exp(-t * 60) * 1.2
+    return norm(y) * vel
+
+
+def rhodes(f, d, vel=1.0):
+    t = t_(d + 0.8)
+    y = (np.sin(2 * np.pi * f * t) + 0.45 * np.sin(2 * np.pi * 2 * f * t) * np.exp(-t * 3)
+         + 0.2 * np.sin(2 * np.pi * 3 * f * t) * np.exp(-t * 5) + 0.25 * np.sin(2 * np.pi * 7 * f * t) * np.exp(-t * 25))
+    env = np.exp(-t * 1.6) * np.minimum(1, (d + 0.8 - t) / 0.3)
+    att = int(0.004 * SR); env[:att] *= np.linspace(0, 1, att)
+    return y * env * vel
+
+
+def glock(f, vel=1.0):
+    t = t_(1.6)
+    y = (np.sin(2 * np.pi * f * t) * np.exp(-t * 3.2) + 0.35 * np.sin(2 * np.pi * f * 2.76 * t) * np.exp(-t * 8)
+         + 0.15 * np.sin(2 * np.pi * f * 5.4 * t) * np.exp(-t * 14))
+    att = int(0.002 * SR); y[:att] *= np.linspace(0, 1, att)
+    return y * vel
+
+
+def brush(vel=1.0):
+    t = t_(0.25)
+    return bp_fast(rng.standard_normal(len(t)), 900, 6000) * np.exp(-t * 18) * vel
+
+
+def make_music_natal():
+    L = N; pi = np.zeros(L); bs = np.zeros(L); gl = np.zeros((L, 2)); dr = np.zeros(L); sb = np.zeros((L, 2))
+    nbars = int(round(DUR / (BEAT * 4)))
+    phrases = []
+    for k in range((nbars + 3) // 4): phrases.append(("A", ["D", "G", "A", "D"]) if k % 2 == 0 else ("B", ["G", "D", "A", "D"]))
+    def put(buf, x, t0, pan=None):
+        i = int(t0 * SR)
+        if i >= L: return
+        if i < 0: x = x[-i:]; i = 0
+        m = min(len(x), L - i)
+        if pan is None: buf[i:i + m] += x[:m]
+        else: buf[i:i + m] += stereo(x, pan)[:m]
+    for b in range(nbars):
+        ph, chords = phrases[b // 4]; ch = chords[b % 4]; st = b * BEAT * 4
+        last = b == nbars - 1
+        if last: ch = "D"
+        # piano: acordes em 1, 2e, 4 (sincopado e constante)
+        hits = [(0, 1.4, 1.0), (1.5, 1.0, 0.7), (3, 0.9, 0.8)] if not last else [(0, 3.5, 1.0)]
+        for off, dur, v in hits:
+            for m in TRI[ch]: put(pi, rhodes(midi(m), dur * BEAT, v * 0.33), st + off * BEAT)
+        # baixo: tônica no 1, quinta no 3
+        put(bs, lp_fast(rhodes(midi(ROOT[ch]), 1.8 * BEAT, 1.0), 300), st)
+        if not last: put(bs, lp_fast(rhodes(midi(ROOT[ch] + 7), 1.6 * BEAT, 0.8), 300), st + 2 * BEAT)
+        # bateria leve: bumbo 1 e 3, vassourinha 2 e 4
+        if not last:
+            for q in range(4):
+                if q in (0, 2): put(dr, kick(0.7), st + q * BEAT)
+                else: put(dr, brush(0.35), st + q * BEAT)
+        # guizos: colcheias, acento nos tempos 2 e 4
+        if not last:
+            for e in range(8):
+                v = 0.55 if e % 2 else (0.9 if (e // 2) % 2 else 0.7)
+                put(sb, sleigh(v, seed=b * 8 + e), st + e * BEAT / 2 + rng.uniform(-0.006, 0.006), pan=0.25)
+        # melodia (glockenspiel)
+        mel = NATAL_A if ph == "A" else NATAL_B
+        for off, m, dur in mel:
+            if (b % 4) * 4 <= off < (b % 4) * 4 + 4 and not last:
+                put(gl, glock(midi(m), 0.5), st + (off - (b % 4) * 4) * BEAT, pan=-0.2)
+        if last: put(gl, glock(midi(86), 0.6), st, pan=0)
+    mus = stereo(lp_fast(pi, 4000) * 0.9) + stereo(bs * 0.9) + stereo(dr * 0.5) + sb * 0.22 + gl * 0.42
+    mus = reverb(mus, 0.22)[:L]
+    tt = np.arange(L) / SR
+    fe = np.clip((DUR + 0.2 - tt) / 1.6, 0, 1)        # só um fade curto no fim
+    return mus * fe[:, None]
+
+
 # ---------------------------------------------------------------- narração
 def make_voice(orig):
     v = np.zeros((N, 2)); act = np.zeros(N)
@@ -384,7 +502,7 @@ def main():
     orig_p, out_dir = sys.argv[1], sys.argv[2]
     orig = read_wav(orig_p)
     voice, act = make_voice(orig)
-    music = make_music()
+    music = make_music_natal() if getattr(_tl, "MUSICA", "v1") == "natal" else make_music()
     sfx = np.zeros((N, 2))
     for t0, kind, g, extra in SFX:
         x, off = render_sfx(kind, extra)
@@ -394,9 +512,9 @@ def main():
         m = min(len(x), N - i); sfx[i:i + m] += x[:m]
     # ducking da música sob a voz (envelope suave)
     k = int(0.25 * SR); env = np.convolve(act, np.ones(k) / k, mode="same")
-    duck = 1 - 0.55 * np.clip(env * 1.6, 0, 1)
+    duck = 1 - getattr(_tl, "DUCK", 0.55) * np.clip(env * 1.6, 0, 1)
     vr = np.sqrt((voice ** 2).mean()) if voice.any() else 0.1
-    music = music / (np.sqrt((music ** 2).mean()) + 1e-9) * vr * db(-15) * 3.4
+    music = music / (np.sqrt((music ** 2).mean()) + 1e-9) * vr * db(getattr(_tl, "MUSIC_DB", -15)) * 3.4
     mix = voice + music * duck[:, None] + sfx
     L = int(DUR * SR)
     mix = mix[:L]
