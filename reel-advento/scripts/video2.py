@@ -18,8 +18,8 @@ GOLD_TOP, GOLD_BOT = (232, 211, 160), (184, 145, 90)       # degradê do dourado
 # vídeo: src=[(t, t_original)], cam=[(t, zoom, cx, cy)] em pixels do vídeo
 # imagem: img="imgNN", cam=[(t, zoom, cx, cy)] em pixels da imagem ampliada; zoom 1 = imagem inteira na largura/altura
 #   fx: efeitos — flames (auto), sweep=(t0, dur), dust=n, sand=(x, y0, y1), spot=(t0, x, y, r), yaw=graus
-def V(name, a, b, src, cam, kick=0.0):
-    return dict(kind="vid", name=name, a=a, b=b, src=src, cam=cam, kick=kick)
+def V(name, a, b, src, cam, kick=0.0, path=None):
+    return dict(kind="vid", name=name, a=a, b=b, src=src, cam=cam, kick=kick, path=path)
 
 
 def I(name, a, b, img, cam, kick=0.0, **fx):
@@ -307,7 +307,7 @@ def make_getter(src):
     readers = {}
 
     def get(sh, s, span):
-        if sh["name"] not in readers: readers[sh["name"]] = Reader(src, s - 2 / FPS)
+        if sh["name"] not in readers: readers[sh["name"]] = Reader(sh.get("path") or src, s - 2 / FPS)
         return readers[sh["name"]].get(s, span)
     return get, readers
 
@@ -370,8 +370,8 @@ def main():
     ctx = dict(imgs=imgs, cap=Captions() if "--legenda" in sys.argv else None)
     if "--at" in sys.argv:
         ts = [float(x) for x in sys.argv[sys.argv.index("--at") + 1].split(",")]
-        os.makedirs(dst, exist_ok=True); st = Still(src)
-        ctx["get"] = lambda sh, s, span: st.frame(s, span)
+        os.makedirs(dst, exist_ok=True)
+        ctx["get"] = lambda sh, s, span: Still(sh.get("path") or src).frame(s, span)
         for t in ts:
             cv2.imwrite(os.path.join(dst, f"t{t:06.2f}.jpg"), render_frame(t, ctx), [cv2.IMWRITE_JPEG_QUALITY, 88])
         return

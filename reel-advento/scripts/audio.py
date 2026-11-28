@@ -245,6 +245,15 @@ def sfx_swell(d=1.2):
     return s * env[:, None]
 
 
+def sfx_sand(d=1.2):
+    # areia escorrendo: chiado agudo e granulado, com entrada e saída suaves
+    t = t_(d); x = hp_fast(rng.standard_normal(len(t)), 2500)
+    grains = (rng.random(len(t)) < 0.02) * rng.standard_normal(len(t)) * 3
+    y = lp_fast(x + hp_fast(grains, 3000), 9000)
+    env = np.minimum(1, t / 0.15) * np.minimum(1, (d - t) / 0.3)
+    return reverb(stereo(norm(y * env), 0.1) * 0.8, 0.15)
+
+
 def render_sfx(kind, extra):
     off = 0.0
     if kind == "whoosh_s": x = sfx_whoosh(0.45, 400, 5000, 0.6); off = 0.27
@@ -265,6 +274,7 @@ def render_sfx(kind, extra):
     elif kind == "doorswing": x = sfx_doorswing(extra or 1.4)
     elif kind == "ignite": x = sfx_ignite()
     elif kind == "swell": x = sfx_swell(extra or 1.2)
+    elif kind == "sand": x = sfx_sand(extra or 1.2)
     else: raise ValueError(kind)
     return x, off
 
