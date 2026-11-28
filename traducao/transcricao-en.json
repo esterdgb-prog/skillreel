@@ -1,0 +1,1172 @@
+{
+	"systeminfo": "WHISPER : VITISAI = 0 | COREML = 0 | OPENVINO = 0 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX_VNNI = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | BMI2 = 1 | AVX512 = 1 | AVX512_VBMI = 1 | AVX512_VNNI = 1 | AVX512_BF16 = 1 | AMX_INT8 = 1 | OPENMP = 1 | REPACK = 1 | ",
+	"model": {
+		"type": "large",
+		"multilingual": true,
+		"vocab": 51866,
+		"audio": {
+			"ctx": 1500,
+			"state": 1280,
+			"head": 20,
+			"layer": 32
+		},
+		"text": {
+			"ctx": 448,
+			"state": 1280,
+			"head": 20,
+			"layer": 4
+		},
+		"mels": 128,
+		"ftype": 1
+	},
+	"params": {
+		"model": "/root/.cache/whisper-cpp/ggml-large-v3-turbo.bin",
+		"language": "auto",
+		"translate": false
+	},
+	"result": {
+		"language": "en"
+	},
+	"transcription": [
+		{
+			"timestamps": {
+				"from": "00:00:00,000",
+				"to": "00:00:01,540"
+			},
+			"offsets": {
+				"from": 0,
+				"to": 1540
+			},
+			"text": " - Can't feel your lats working?",
+			"tokens": [
+				{
+					"text": "[_BEG_]",
+					"timestamps": {
+						"from": "00:00:00,000",
+						"to": "00:00:00,000"
+					},
+					"offsets": {
+						"from": 0,
+						"to": 0
+					},
+					"id": 50365,
+					"p": 0.42013,
+					"t_dtw": -1
+				},
+				{
+					"text": " -",
+					"timestamps": {
+						"from": "00:00:00,020",
+						"to": "00:00:00,030"
+					},
+					"offsets": {
+						"from": 20,
+						"to": 30
+					},
+					"id": 359,
+					"p": 0.102062,
+					"t_dtw": -1
+				},
+				{
+					"text": " Can",
+					"timestamps": {
+						"from": "00:00:00,150",
+						"to": "00:00:00,210"
+					},
+					"offsets": {
+						"from": 150,
+						"to": 210
+					},
+					"id": 1664,
+					"p": 0.904003,
+					"t_dtw": -1
+				},
+				{
+					"text": "'t",
+					"timestamps": {
+						"from": "00:00:00,210",
+						"to": "00:00:00,260"
+					},
+					"offsets": {
+						"from": 210,
+						"to": 260
+					},
+					"id": 380,
+					"p": 0.999066,
+					"t_dtw": -1
+				},
+				{
+					"text": " feel",
+					"timestamps": {
+						"from": "00:00:00,370",
+						"to": "00:00:00,530"
+					},
+					"offsets": {
+						"from": 370,
+						"to": 530
+					},
+					"id": 841,
+					"p": 0.998285,
+					"t_dtw": -1
+				},
+				{
+					"text": " your",
+					"timestamps": {
+						"from": "00:00:00,530",
+						"to": "00:00:00,750"
+					},
+					"offsets": {
+						"from": 530,
+						"to": 750
+					},
+					"id": 428,
+					"p": 0.990543,
+					"t_dtw": -1
+				},
+				{
+					"text": " l",
+					"timestamps": {
+						"from": "00:00:00,750",
+						"to": "00:00:00,800"
+					},
+					"offsets": {
+						"from": 750,
+						"to": 800
+					},
+					"id": 287,
+					"p": 0.979996,
+					"t_dtw": -1
+				},
+				{
+					"text": "ats",
+					"timestamps": {
+						"from": "00:00:00,800",
+						"to": "00:00:00,940"
+					},
+					"offsets": {
+						"from": 800,
+						"to": 940
+					},
+					"id": 1720,
+					"p": 0.996103,
+					"t_dtw": -1
+				},
+				{
+					"text": " working",
+					"timestamps": {
+						"from": "00:00:00,990",
+						"to": "00:00:01,330"
+					},
+					"offsets": {
+						"from": 990,
+						"to": 1330
+					},
+					"id": 1364,
+					"p": 0.997379,
+					"t_dtw": -1
+				},
+				{
+					"text": "?",
+					"timestamps": {
+						"from": "00:00:01,330",
+						"to": "00:00:01,340"
+					},
+					"offsets": {
+						"from": 1330,
+						"to": 1340
+					},
+					"id": 30,
+					"p": 0.955737,
+					"t_dtw": -1
+				},
+				{
+					"text": "[_TT_77]",
+					"timestamps": {
+						"from": "00:00:01,540",
+						"to": "00:00:01,540"
+					},
+					"offsets": {
+						"from": 1540,
+						"to": 1540
+					},
+					"id": 50442,
+					"p": 0.206317,
+					"t_dtw": -1
+				}
+			]
+		},
+		{
+			"timestamps": {
+				"from": "00:00:01,540",
+				"to": "00:00:02,420"
+			},
+			"offsets": {
+				"from": 1540,
+				"to": 2420
+			},
+			"text": " Do this.",
+			"tokens": [
+				{
+					"text": " Do",
+					"timestamps": {
+						"from": "00:00:01,690",
+						"to": "00:00:01,730"
+					},
+					"offsets": {
+						"from": 1690,
+						"to": 1730
+					},
+					"id": 1144,
+					"p": 0.995657,
+					"t_dtw": -1
+				},
+				{
+					"text": " this",
+					"timestamps": {
+						"from": "00:00:01,730",
+						"to": "00:00:02,120"
+					},
+					"offsets": {
+						"from": 1730,
+						"to": 2120
+					},
+					"id": 341,
+					"p": 0.998978,
+					"t_dtw": -1
+				},
+				{
+					"text": ".",
+					"timestamps": {
+						"from": "00:00:02,120",
+						"to": "00:00:02,380"
+					},
+					"offsets": {
+						"from": 2120,
+						"to": 2380
+					},
+					"id": 13,
+					"p": 0.725167,
+					"t_dtw": -1
+				},
+				{
+					"text": "[_TT_121]",
+					"timestamps": {
+						"from": "00:00:02,420",
+						"to": "00:00:02,420"
+					},
+					"offsets": {
+						"from": 2420,
+						"to": 2420
+					},
+					"id": 50486,
+					"p": 0.243775,
+					"t_dtw": -1
+				}
+			]
+		},
+		{
+			"timestamps": {
+				"from": "00:00:02,420",
+				"to": "00:00:03,940"
+			},
+			"offsets": {
+				"from": 2420,
+				"to": 3940
+			},
+			"text": " Turn your elbows slightly inward.",
+			"tokens": [
+				{
+					"text": " Turn",
+					"timestamps": {
+						"from": "00:00:02,570",
+						"to": "00:00:02,610"
+					},
+					"offsets": {
+						"from": 2570,
+						"to": 2610
+					},
+					"id": 7956,
+					"p": 0.99731,
+					"t_dtw": -1
+				},
+				{
+					"text": " your",
+					"timestamps": {
+						"from": "00:00:02,610",
+						"to": "00:00:02,800"
+					},
+					"offsets": {
+						"from": 2610,
+						"to": 2800
+					},
+					"id": 428,
+					"p": 0.997221,
+					"t_dtw": -1
+				},
+				{
+					"text": " elbows",
+					"timestamps": {
+						"from": "00:00:02,800",
+						"to": "00:00:03,090"
+					},
+					"offsets": {
+						"from": 2800,
+						"to": 3090
+					},
+					"id": 26620,
+					"p": 0.987266,
+					"t_dtw": -1
+				},
+				{
+					"text": " slightly",
+					"timestamps": {
+						"from": "00:00:03,090",
+						"to": "00:00:03,480"
+					},
+					"offsets": {
+						"from": 3090,
+						"to": 3480
+					},
+					"id": 4748,
+					"p": 0.999072,
+					"t_dtw": -1
+				},
+				{
+					"text": " inward",
+					"timestamps": {
+						"from": "00:00:03,480",
+						"to": "00:00:03,750"
+					},
+					"offsets": {
+						"from": 3480,
+						"to": 3750
+					},
+					"id": 29876,
+					"p": 0.995027,
+					"t_dtw": -1
+				},
+				{
+					"text": ".",
+					"timestamps": {
+						"from": "00:00:03,940",
+						"to": "00:00:03,940"
+					},
+					"offsets": {
+						"from": 3940,
+						"to": 3940
+					},
+					"id": 13,
+					"p": 0.816556,
+					"t_dtw": -1
+				},
+				{
+					"text": "[_TT_197]",
+					"timestamps": {
+						"from": "00:00:03,940",
+						"to": "00:00:03,940"
+					},
+					"offsets": {
+						"from": 3940,
+						"to": 3940
+					},
+					"id": 50562,
+					"p": 0.32362,
+					"t_dtw": -1
+				}
+			]
+		},
+		{
+			"timestamps": {
+				"from": "00:00:03,940",
+				"to": "00:00:05,260"
+			},
+			"offsets": {
+				"from": 3940,
+				"to": 5260
+			},
+			"text": " Use a thumbless grip.",
+			"tokens": [
+				{
+					"text": " Use",
+					"timestamps": {
+						"from": "00:00:04,090",
+						"to": "00:00:04,130"
+					},
+					"offsets": {
+						"from": 4090,
+						"to": 4130
+					},
+					"id": 8278,
+					"p": 0.999165,
+					"t_dtw": -1
+				},
+				{
+					"text": " a",
+					"timestamps": {
+						"from": "00:00:04,130",
+						"to": "00:00:04,190"
+					},
+					"offsets": {
+						"from": 4130,
+						"to": 4190
+					},
+					"id": 257,
+					"p": 0.989449,
+					"t_dtw": -1
+				},
+				{
+					"text": " thumb",
+					"timestamps": {
+						"from": "00:00:04,190",
+						"to": "00:00:04,520"
+					},
+					"offsets": {
+						"from": 4190,
+						"to": 4520
+					},
+					"id": 9298,
+					"p": 0.995877,
+					"t_dtw": -1
+				},
+				{
+					"text": "less",
+					"timestamps": {
+						"from": "00:00:04,520",
+						"to": "00:00:04,780"
+					},
+					"offsets": {
+						"from": 4520,
+						"to": 4780
+					},
+					"id": 1832,
+					"p": 0.960572,
+					"t_dtw": -1
+				},
+				{
+					"text": " grip",
+					"timestamps": {
+						"from": "00:00:04,780",
+						"to": "00:00:05,040"
+					},
+					"offsets": {
+						"from": 4780,
+						"to": 5040
+					},
+					"id": 12007,
+					"p": 0.998969,
+					"t_dtw": -1
+				},
+				{
+					"text": ".",
+					"timestamps": {
+						"from": "00:00:05,040",
+						"to": "00:00:05,260"
+					},
+					"offsets": {
+						"from": 5040,
+						"to": 5260
+					},
+					"id": 13,
+					"p": 0.906193,
+					"t_dtw": -1
+				},
+				{
+					"text": "[_TT_263]",
+					"timestamps": {
+						"from": "00:00:05,260",
+						"to": "00:00:05,260"
+					},
+					"offsets": {
+						"from": 5260,
+						"to": 5260
+					},
+					"id": 50628,
+					"p": 0.474996,
+					"t_dtw": -1
+				}
+			]
+		},
+		{
+			"timestamps": {
+				"from": "00:00:05,260",
+				"to": "00:00:07,040"
+			},
+			"offsets": {
+				"from": 5260,
+				"to": 7040
+			},
+			"text": " Pull your shoulders down before initiating.",
+			"tokens": [
+				{
+					"text": " Pull",
+					"timestamps": {
+						"from": "00:00:05,410",
+						"to": "00:00:05,430"
+					},
+					"offsets": {
+						"from": 5410,
+						"to": 5430
+					},
+					"id": 15074,
+					"p": 0.997735,
+					"t_dtw": -1
+				},
+				{
+					"text": " your",
+					"timestamps": {
+						"from": "00:00:05,440",
+						"to": "00:00:05,520"
+					},
+					"offsets": {
+						"from": 5440,
+						"to": 5520
+					},
+					"id": 428,
+					"p": 0.997609,
+					"t_dtw": -1
+				},
+				{
+					"text": " shoulders",
+					"timestamps": {
+						"from": "00:00:05,630",
+						"to": "00:00:06,000"
+					},
+					"offsets": {
+						"from": 5630,
+						"to": 6000
+					},
+					"id": 10245,
+					"p": 0.997879,
+					"t_dtw": -1
+				},
+				{
+					"text": " down",
+					"timestamps": {
+						"from": "00:00:06,000",
+						"to": "00:00:06,100"
+					},
+					"offsets": {
+						"from": 6000,
+						"to": 6100
+					},
+					"id": 760,
+					"p": 0.999089,
+					"t_dtw": -1
+				},
+				{
+					"text": " before",
+					"timestamps": {
+						"from": "00:00:06,180",
+						"to": "00:00:06,370"
+					},
+					"offsets": {
+						"from": 6180,
+						"to": 6370
+					},
+					"id": 949,
+					"p": 0.989974,
+					"t_dtw": -1
+				},
+				{
+					"text": " initi",
+					"timestamps": {
+						"from": "00:00:06,440",
+						"to": "00:00:06,590"
+					},
+					"offsets": {
+						"from": 6440,
+						"to": 6590
+					},
+					"id": 6265,
+					"p": 0.998993,
+					"t_dtw": -1
+				},
+				{
+					"text": "ating",
+					"timestamps": {
+						"from": "00:00:06,820",
+						"to": "00:00:06,820"
+					},
+					"offsets": {
+						"from": 6820,
+						"to": 6820
+					},
+					"id": 990,
+					"p": 0.99958,
+					"t_dtw": -1
+				},
+				{
+					"text": ".",
+					"timestamps": {
+						"from": "00:00:06,890",
+						"to": "00:00:07,040"
+					},
+					"offsets": {
+						"from": 6890,
+						"to": 7040
+					},
+					"id": 13,
+					"p": 0.90077,
+					"t_dtw": -1
+				},
+				{
+					"text": "[_TT_352]",
+					"timestamps": {
+						"from": "00:00:07,040",
+						"to": "00:00:07,040"
+					},
+					"offsets": {
+						"from": 7040,
+						"to": 7040
+					},
+					"id": 50717,
+					"p": 0.619111,
+					"t_dtw": -1
+				}
+			]
+		},
+		{
+			"timestamps": {
+				"from": "00:00:07,040",
+				"to": "00:00:10,000"
+			},
+			"offsets": {
+				"from": 7040,
+				"to": 10000
+			},
+			"text": " Lean back slightly and pull the bar down to your upper chest,",
+			"tokens": [
+				{
+					"text": " Lean",
+					"timestamps": {
+						"from": "00:00:07,150",
+						"to": "00:00:07,310"
+					},
+					"offsets": {
+						"from": 7150,
+						"to": 7310
+					},
+					"id": 49303,
+					"p": 0.997415,
+					"t_dtw": -1
+				},
+				{
+					"text": " back",
+					"timestamps": {
+						"from": "00:00:07,410",
+						"to": "00:00:07,580"
+					},
+					"offsets": {
+						"from": 7410,
+						"to": 7580
+					},
+					"id": 646,
+					"p": 0.999007,
+					"t_dtw": -1
+				},
+				{
+					"text": " slightly",
+					"timestamps": {
+						"from": "00:00:07,580",
+						"to": "00:00:08,120"
+					},
+					"offsets": {
+						"from": 7580,
+						"to": 8120
+					},
+					"id": 4748,
+					"p": 0.997434,
+					"t_dtw": -1
+				},
+				{
+					"text": " and",
+					"timestamps": {
+						"from": "00:00:08,120",
+						"to": "00:00:08,270"
+					},
+					"offsets": {
+						"from": 8120,
+						"to": 8270
+					},
+					"id": 293,
+					"p": 0.457488,
+					"t_dtw": -1
+				},
+				{
+					"text": " pull",
+					"timestamps": {
+						"from": "00:00:08,270",
+						"to": "00:00:08,380"
+					},
+					"offsets": {
+						"from": 8270,
+						"to": 8380
+					},
+					"id": 2235,
+					"p": 0.994414,
+					"t_dtw": -1
+				},
+				{
+					"text": " the",
+					"timestamps": {
+						"from": "00:00:08,590",
+						"to": "00:00:08,610"
+					},
+					"offsets": {
+						"from": 8590,
+						"to": 8610
+					},
+					"id": 264,
+					"p": 0.986453,
+					"t_dtw": -1
+				},
+				{
+					"text": " bar",
+					"timestamps": {
+						"from": "00:00:08,670",
+						"to": "00:00:08,780"
+					},
+					"offsets": {
+						"from": 8670,
+						"to": 8780
+					},
+					"id": 2159,
+					"p": 0.994968,
+					"t_dtw": -1
+				},
+				{
+					"text": " down",
+					"timestamps": {
+						"from": "00:00:08,780",
+						"to": "00:00:08,990"
+					},
+					"offsets": {
+						"from": 8780,
+						"to": 8990
+					},
+					"id": 760,
+					"p": 0.945471,
+					"t_dtw": -1
+				},
+				{
+					"text": " to",
+					"timestamps": {
+						"from": "00:00:09,050",
+						"to": "00:00:09,130"
+					},
+					"offsets": {
+						"from": 9050,
+						"to": 9130
+					},
+					"id": 281,
+					"p": 0.64624,
+					"t_dtw": -1
+				},
+				{
+					"text": " your",
+					"timestamps": {
+						"from": "00:00:09,130",
+						"to": "00:00:09,280"
+					},
+					"offsets": {
+						"from": 9130,
+						"to": 9280
+					},
+					"id": 428,
+					"p": 0.991978,
+					"t_dtw": -1
+				},
+				{
+					"text": " upper",
+					"timestamps": {
+						"from": "00:00:09,280",
+						"to": "00:00:09,480"
+					},
+					"offsets": {
+						"from": 9280,
+						"to": 9480
+					},
+					"id": 6597,
+					"p": 0.991404,
+					"t_dtw": -1
+				},
+				{
+					"text": " chest",
+					"timestamps": {
+						"from": "00:00:09,530",
+						"to": "00:00:10,000"
+					},
+					"offsets": {
+						"from": 9530,
+						"to": 10000
+					},
+					"id": 7443,
+					"p": 0.961185,
+					"t_dtw": -1
+				},
+				{
+					"text": ",",
+					"timestamps": {
+						"from": "00:00:10,000",
+						"to": "00:00:10,000"
+					},
+					"offsets": {
+						"from": 10000,
+						"to": 10000
+					},
+					"id": 11,
+					"p": 0.712135,
+					"t_dtw": -1
+				},
+				{
+					"text": "[_TT_500]",
+					"timestamps": {
+						"from": "00:00:10,000",
+						"to": "00:00:10,000"
+					},
+					"offsets": {
+						"from": 10000,
+						"to": 10000
+					},
+					"id": 50865,
+					"p": 0.673878,
+					"t_dtw": -1
+				}
+			]
+		},
+		{
+			"timestamps": {
+				"from": "00:00:10,000",
+				"to": "00:00:12,000"
+			},
+			"offsets": {
+				"from": 10000,
+				"to": 12000
+			},
+			"text": " driving your elbows towards your hips.",
+			"tokens": [
+				{
+					"text": " driving",
+					"timestamps": {
+						"from": "00:00:10,180",
+						"to": "00:00:10,390"
+					},
+					"offsets": {
+						"from": 10180,
+						"to": 10390
+					},
+					"id": 4840,
+					"p": 0.995554,
+					"t_dtw": -1
+				},
+				{
+					"text": " your",
+					"timestamps": {
+						"from": "00:00:10,390",
+						"to": "00:00:10,610"
+					},
+					"offsets": {
+						"from": 10390,
+						"to": 10610
+					},
+					"id": 428,
+					"p": 0.996521,
+					"t_dtw": -1
+				},
+				{
+					"text": " elbows",
+					"timestamps": {
+						"from": "00:00:10,610",
+						"to": "00:00:10,930"
+					},
+					"offsets": {
+						"from": 10610,
+						"to": 10930
+					},
+					"id": 26620,
+					"p": 0.99835,
+					"t_dtw": -1
+				},
+				{
+					"text": " towards",
+					"timestamps": {
+						"from": "00:00:10,990",
+						"to": "00:00:11,330"
+					},
+					"offsets": {
+						"from": 10990,
+						"to": 11330
+					},
+					"id": 3030,
+					"p": 0.902718,
+					"t_dtw": -1
+				},
+				{
+					"text": " your",
+					"timestamps": {
+						"from": "00:00:11,550",
+						"to": "00:00:11,560"
+					},
+					"offsets": {
+						"from": 11550,
+						"to": 11560
+					},
+					"id": 428,
+					"p": 0.998784,
+					"t_dtw": -1
+				},
+				{
+					"text": " hips",
+					"timestamps": {
+						"from": "00:00:11,630",
+						"to": "00:00:11,780"
+					},
+					"offsets": {
+						"from": 11630,
+						"to": 11780
+					},
+					"id": 15233,
+					"p": 0.999152,
+					"t_dtw": -1
+				},
+				{
+					"text": ".",
+					"timestamps": {
+						"from": "00:00:11,780",
+						"to": "00:00:11,940"
+					},
+					"offsets": {
+						"from": 11780,
+						"to": 11940
+					},
+					"id": 13,
+					"p": 0.996999,
+					"t_dtw": -1
+				},
+				{
+					"text": "[_TT_600]",
+					"timestamps": {
+						"from": "00:00:12,000",
+						"to": "00:00:12,000"
+					},
+					"offsets": {
+						"from": 12000,
+						"to": 12000
+					},
+					"id": 50965,
+					"p": 0.759532,
+					"t_dtw": -1
+				}
+			]
+		},
+		{
+			"timestamps": {
+				"from": "00:00:12,000",
+				"to": "00:00:14,950"
+			},
+			"offsets": {
+				"from": 12000,
+				"to": 14950
+			},
+			"text": " Now your back is doing the pulling, not your biceps.",
+			"tokens": [
+				{
+					"text": " Now",
+					"timestamps": {
+						"from": "00:00:12,150",
+						"to": "00:00:12,170"
+					},
+					"offsets": {
+						"from": 12150,
+						"to": 12170
+					},
+					"id": 823,
+					"p": 0.9995,
+					"t_dtw": -1
+				},
+				{
+					"text": " your",
+					"timestamps": {
+						"from": "00:00:12,180",
+						"to": "00:00:12,400"
+					},
+					"offsets": {
+						"from": 12180,
+						"to": 12400
+					},
+					"id": 428,
+					"p": 0.896018,
+					"t_dtw": -1
+				},
+				{
+					"text": " back",
+					"timestamps": {
+						"from": "00:00:12,400",
+						"to": "00:00:12,630"
+					},
+					"offsets": {
+						"from": 12400,
+						"to": 12630
+					},
+					"id": 646,
+					"p": 0.999426,
+					"t_dtw": -1
+				},
+				{
+					"text": " is",
+					"timestamps": {
+						"from": "00:00:12,630",
+						"to": "00:00:12,740"
+					},
+					"offsets": {
+						"from": 12630,
+						"to": 12740
+					},
+					"id": 307,
+					"p": 0.999275,
+					"t_dtw": -1
+				},
+				{
+					"text": " doing",
+					"timestamps": {
+						"from": "00:00:12,740",
+						"to": "00:00:13,030"
+					},
+					"offsets": {
+						"from": 12740,
+						"to": 13030
+					},
+					"id": 884,
+					"p": 0.999535,
+					"t_dtw": -1
+				},
+				{
+					"text": " the",
+					"timestamps": {
+						"from": "00:00:13,030",
+						"to": "00:00:13,110"
+					},
+					"offsets": {
+						"from": 13030,
+						"to": 13110
+					},
+					"id": 264,
+					"p": 0.99858,
+					"t_dtw": -1
+				},
+				{
+					"text": " pulling",
+					"timestamps": {
+						"from": "00:00:13,200",
+						"to": "00:00:13,660"
+					},
+					"offsets": {
+						"from": 13200,
+						"to": 13660
+					},
+					"id": 8407,
+					"p": 0.997113,
+					"t_dtw": -1
+				},
+				{
+					"text": ",",
+					"timestamps": {
+						"from": "00:00:13,660",
+						"to": "00:00:13,800"
+					},
+					"offsets": {
+						"from": 13660,
+						"to": 13800
+					},
+					"id": 11,
+					"p": 0.925636,
+					"t_dtw": -1
+				},
+				{
+					"text": " not",
+					"timestamps": {
+						"from": "00:00:13,800",
+						"to": "00:00:13,950"
+					},
+					"offsets": {
+						"from": 13800,
+						"to": 13950
+					},
+					"id": 406,
+					"p": 0.862194,
+					"t_dtw": -1
+				},
+				{
+					"text": " your",
+					"timestamps": {
+						"from": "00:00:13,990",
+						"to": "00:00:14,240"
+					},
+					"offsets": {
+						"from": 13990,
+						"to": 14240
+					},
+					"id": 428,
+					"p": 0.998904,
+					"t_dtw": -1
+				},
+				{
+					"text": " b",
+					"timestamps": {
+						"from": "00:00:14,340",
+						"to": "00:00:14,350"
+					},
+					"offsets": {
+						"from": 14340,
+						"to": 14350
+					},
+					"id": 272,
+					"p": 0.999171,
+					"t_dtw": -1
+				},
+				{
+					"text": "iceps",
+					"timestamps": {
+						"from": "00:00:14,430",
+						"to": "00:00:14,710"
+					},
+					"offsets": {
+						"from": 14430,
+						"to": 14710
+					},
+					"id": 35552,
+					"p": 0.996312,
+					"t_dtw": -1
+				},
+				{
+					"text": ".",
+					"timestamps": {
+						"from": "00:00:14,710",
+						"to": "00:00:14,900"
+					},
+					"offsets": {
+						"from": 14710,
+						"to": 14900
+					},
+					"id": 13,
+					"p": 0.981854,
+					"t_dtw": -1
+				},
+				{
+					"text": "[_TT_748]",
+					"timestamps": {
+						"from": "00:00:14,950",
+						"to": "00:00:14,950"
+					},
+					"offsets": {
+						"from": 14950,
+						"to": 14950
+					},
+					"id": 51113,
+					"p": 0.990507,
+					"t_dtw": -1
+				}
+			]
+		}
+	]
+}

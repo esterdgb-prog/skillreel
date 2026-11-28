@@ -4,3 +4,6 @@ render/
 legenda/*.mp4
 legenda/*.wav
 legenda/*.jpg
+*.mp4
+*.wav
+traducao/*.jpg
