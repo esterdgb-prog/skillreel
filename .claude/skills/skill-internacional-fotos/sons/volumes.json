@@ -1,0 +1,20 @@
+{
+ "sopro-sobe": 0.156,
+ "sopro-desce": 0.148,
+ "sopro-curto": 0.12,
+ "carimbo": 0.493,
+ "impacto": 0.402,
+ "pop1": 0.178,
+ "pop2": 0.176,
+ "pop3": 0.17,
+ "tick": 0.257,
+ "check": 0.131,
+ "ding": 0.111,
+ "moeda": 0.109,
+ "brilho": 0.14,
+ "erro": 0.052,
+ "alerta": 0.05,
+ "tictac": 0.33,
+ "glitch": 0.098,
+ "click": 0.313
+}

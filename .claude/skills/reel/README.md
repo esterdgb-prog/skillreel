@@ -24,6 +24,7 @@ Depois, no Claude Code, é só mandar o vídeo e pedir "edita esse reel" (ou `/r
 |---|---|
 | corte e transcrição | `ffmpeg`, `whisper-cli` (whisper.cpp) + modelo `ggml-large-v3-turbo.bin` em `~/.cache/whisper-cpp/` (ou `WHISPER_MODEL`), Python 3 com `numpy` |
 | enquadramento, zona segura, legenda que segue a boca | `opencv-python-headless` (e, se quiser o rastreio fino, `mediapipe` num Python apontado por `VSL_PYTHON`) |
+| imagem e vídeo de apoio (opcional) | chave grátis do Pixabay em `PIXABAY_API_KEY` (pixabay.com/api/docs) |
 | composição e render | Node 20+ (o `preparar.sh` instala `hyperframes` 0.7.109, `gsap` 3.14.2 e `playwright`), Google Chrome (ou `CHROME=<executável>`) |
 
 `python3 corte/scripts/0-checar.py` diz o que falta e como instalar. Mac: `brew install ffmpeg whisper-cpp`.
@@ -44,11 +45,12 @@ ESTILO.md             a especificação do motor VSL (layouts, movimento, legend
 pele.json             valores nativos (fontes, cores, invariantes)
 corte/                motor de corte: CORTE.md · references/EDICAO-BRUTA.md · scripts/ · exemplo/ (gabarito aprovado)
 modelo/               motor VSL: kit/ · montar.mjs · preparar.sh · ferramentas/ · exemplo/ (o reel aprovado inteiro)
-ferramentas/          preparar.py · rosto.py · ancoras.py · verificar.py · zona-segura.py · recortar.py · audio-final.sh
+ferramentas/          preparar.py · rosto.py · ancoras.py · verificar.py · zona-segura.py · recortar.py · audio-final.sh · pixabay.py
 anexos/               quadros da referência e o antes × depois da cor
 ```
 
 ## Licenças do material embutido
 Fontes Anybody, Plus Jakarta Sans e JetBrains Mono sob OFL (arquivos `OFL-*.txt` em `modelo/kit/fonts/`); os efeitos
 sonoros de `modelo/kit/sfx/` são procedurais (gerados por `modelo/ferramentas/gerar-sfx.mjs`); GSAP e HyperFrames vêm
-pelo `npm`. Os logos do exemplo vêm do Wikimedia Commons e estão listados em `modelo/exemplo/SOURCES.md`.
+pelo `npm`. Os logos do exemplo vêm do Wikimedia Commons e estão listados em `modelo/exemplo/SOURCES.md`. Imagens e vídeos de apoio
+baixados do Pixabay (`ferramentas/pixabay.py`) ficam sob a licença do Pixabay e são registrados no `SOURCES.md` de cada reel.

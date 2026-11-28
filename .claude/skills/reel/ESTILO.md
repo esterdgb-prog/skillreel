@@ -13,6 +13,25 @@
 > **Nunca escreva um motor novo nem edite `kit/`.** Cada vídeo novo escreve só o seu `src/beats.js` (o mapa daquele
 > conteúdo) e ajusta o `vsl.json` (enquadramento medido). Fluxo na seção 10.0.
 
+### 7.7 Imagem e vídeo de apoio do banco (Pixabay)
+Para cena, objeto, ambiente ou gesto que a fala descreve e que não tem print oficial (alguém digitando, uma
+reunião, uma cidade, dinheiro na mão), o banco Pixabay entra como **contexto**, com licença:
+- `python3 $S/ferramentas/pixabay.py buscar "<termos em português>" --tipo foto|video --folha ../qa/px.jpg` →
+  olhe a folha numerada e escolha; `… baixar <id> --projeto .. --tipo video --ate 4` baixa, converte e escreve a
+  linha em `assets/SOURCES.md` (página, autor, licença, data). Chave em `PIXABAY_API_KEY` (R10).
+- **Foto** → `assets/img/px-<id>.jpg` em qualquer peça de imagem (leque, grade de cards, órbita, parede, painel).
+- **Vídeo** → `K.broll("px-<id>.mp4", t0, t1)`, num trecho SPLIT (quadro 900×506 em y 290, a área de gráficos
+  da tela dividida) ou com `{box}` abaixo do queixo; `{tela: "cheia"}` cobre a câmera inteira como cena de fundo
+  própria (R1, opção 3), some a legenda no intervalo e pede a câmera de volta logo depois (≤ 2,5 s).
+  O `montar.mjs` liga o `K.broll` sozinho quando existe `assets/broll/`; sem a pasta, nada muda.
+- `--vertical` recorta em 1080×1920 escolhendo a versão que não amplia (em geral 4K ou 1080p deitado): é o
+  formato das cenas que viram a própria câmera num reel sem rosto (`SKILL.md` 1b).
+- Clipe de 2–4 s, cortado com `--ate` (≥ t1 − t0 a partir de `from`); zoom lento padrão 1,06; sem áudio.
+- **Nunca** como logo, print, capa, resultado, número ou depoimento (R3); pessoa reconhecível do banco não pode
+  parecer cliente ou aluno; resultado marcado "GERADO POR IA" fica de fora (não é cena real).
+- Densidade: vídeo de apoio é uma peça como as outras (algo novo a cada 1,5–3 s) e não substitui a interface:
+  no máximo ~1 clipe a cada 10 s; o vocabulário do estilo continua sendo a interface animada.
+
 ---
 
 ## 0 · Em uma frase + os 3 sinais
@@ -294,6 +313,7 @@ Toda peça recebe o tempo por âncora de frase e, opcionalmente, `until` (quando
 | **Grade de cards** `([{img, label, icon, t}], {top, cols, w, h, gx, until})` | lista falada | cards com imagem + rótulo + ícone, cada um entrando no nome falado |
 | **Pedido digitando** `(texto, t, {x, y, w, cps, send, until})` | "é só você pedir…" | campo de chat com o texto digitando e o envio em `send` |
 | **Barra de progresso** `(label, t, d, {box, until})` | "ele vai preparar…" | barra com rótulo e porcentagem, enchendo em `d` segundos |
+| **Vídeo de apoio** `(arquivo, t0, t1, {box, tela, from, pos, zoom, titulo})` | cena concreta falada ("quando você está no escritório…") | clipe do banco (Pixabay) num quadro de vidro na metade de cima do SPLIT; `tela: 'cheia'` = cena de fundo própria sem o apresentador (7.7) |
 | **Leque** `(imgs, t, {top, w, h, until})` | "todos os slides" / carrossel | 3–4 imagens em leque, leve rotação, entrando em cascata |
 | **Carimbo** `(texto, t, {x, y, rot, until})` | "prontos" | carimbo rotacionado com hit; **no peito**, nunca no alto (3.6) |
 | **Quadro tracejado** `(texto, t, {box}).recebe(img, t, {w, h})` | "um roteiro" | quadro com borda tracejada e rótulo em caixa alta que recebe o documento quando ele é dito |
@@ -441,7 +461,8 @@ critérios.
 - **Sai:** `assets/SOURCES.md` (arquivo, origem, URL, licença, data da consulta); `assets/img/` com logos
   oficiais e prints; `assets/mock/` com as ilustrações declaradas (HTML próprio → JPG).
 - **Critério (R3):** cada fato com página oficial; cada preço com página oficial de preço, moeda e período;
-  logos do Wikimedia Commons ou marca só como texto; CAPTCHA nunca burlado (ler a página num navegador
+  logos do Wikimedia Commons ou marca só como texto; cena de contexto do banco Pixabay (7.7) com a linha
+  no `SOURCES.md`; CAPTCHA nunca burlado (ler a página num navegador
   normal); fala e tela em moedas diferentes conferidas e avisadas na entrega (na referência: fala
   "centenas de dólares", tela "R$ 1.130/ano" ≈ US$ 200 — coerente, avisado).
 

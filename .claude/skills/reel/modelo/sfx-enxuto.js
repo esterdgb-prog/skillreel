@@ -7,7 +7,7 @@
 // 4. se ainda passar, corta whoosh/swoosh e ding (nunca glitch, boom, carimbo, clique nem digitação).
 (() => {
   const GRANDE = ["glitch", "boom", "stamp", "click", "whoosh", "ding"], FIXO = ["glitch", "boom", "stamp", "click", "type"];
-  const ALVO = 0.8;
+  const ALVO = CFG.sfxAlvo || 0.8;   // vsl.json "sfxAlvo": mais enxuto a pedido (ex.: 0.3)
   const nome = (a) => a.getAttribute("src").replace(/^.*\/|\.wav$/g, "");
   const all = [...document.querySelectorAll('#vsl audio[src^="assets/sfx/"]')]
     .map((a) => ({ a, n: nome(a), t: +a.dataset.start })).sort((x, y) => x.t - y.t);

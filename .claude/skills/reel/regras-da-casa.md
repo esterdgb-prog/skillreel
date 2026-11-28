@@ -37,6 +37,9 @@ No máximo **~0,85 SFX por segundo** (um reel de 40 s tem ~34, não 45).
 - **Prioridade de imagem:** 1. print/logo oficial; 2. Wikimedia Commons / Openverse com licença;
   3. arquivos do próprio apresentador; 4. **ilustração declarada**: HTML próprio, empresa fictícia,
   rotulada como ilustração.
+- **Cena de contexto** (ambiente, objeto, gesto — nunca produto, logo ou prova): foto ou vídeo do
+  **Pixabay** (`ferramentas/pixabay.py`, licença Pixabay, linha no `SOURCES.md` escrita pelo script).
+  Pessoa do banco não pode parecer cliente/aluno; resultado gerado por IA fica de fora.
 - **Nunca invente:** logo, capa, print, número, resultado ou contagem de seguidores. Marca sem logo
   livre entra só como texto.
 - CAPTCHA/anti-robô nunca se burla: troque de ferramenta ou peça o print ao apresentador.

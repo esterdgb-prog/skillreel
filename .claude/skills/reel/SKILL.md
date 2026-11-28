@@ -23,11 +23,12 @@ ESTILO.md             a espec do motor VSL: layouts, enquadramento, movimento, l
 pele.json             os valores nativos (fontes, cinco cores, invariantes) — a pele da referência
 corte/                motor de corte: CORTE.md (roteiro) · references/EDICAO-BRUTA.md (o porquê) · scripts/ · exemplo/
 modelo/               motor VSL: kit/ (intocado) · montar.mjs · preparar.sh · ferramentas/ · exemplo/ (o reel aprovado) · README.md
-ferramentas/          preparar.py · rosto.py · ancoras.py · verificar.py · zona-segura.py · recortar.py · audio-final.sh
+ferramentas/          preparar.py · rosto.py · ancoras.py · verificar.py · zona-segura.py · recortar.py · audio-final.sh · pixabay.py
 anexos/               quadros da referência e o antes × depois da cor
 ```
 `S=~/.claude/skills/reel` (ou `REEL_SKILL`). Variáveis de ambiente (R10): `WHISPER_MODEL`, `VSL_PYTHON`
-(Python com mediapipe ou opencv), `FACE_MODEL`, `VSL_NODE_MODULES`, `CHROME`, `RVM_PYTHON` (só para matte).
+(Python com mediapipe ou opencv), `FACE_MODEL`, `VSL_NODE_MODULES`, `CHROME`, `RVM_PYTHON` (só para matte),
+`PIXABAY_API_KEY` (imagem e vídeo de apoio do banco).
 
 ## Fluxo (ordem fixa)
 
@@ -52,6 +53,17 @@ Palavra comida → proteja o intervalo (`raw`/`force`) e corte de novo. Se a pes
 limpo**, pule: `cp "<vídeo>" corte/clean.mp4` e transcreva com `$S/ferramentas/preparar.py corte/clean.mp4 preparo`.
 Sai: `corte/clean.mp4`, `corte.wav`, `edl.json`, `cortepalavras.json`.
 
+### 1b · Só áudio (narração sem rosto)
+Veio só o áudio (locução, sem ninguém na câmera)? Pergunte se é para fazer sem rosto; se sim:
+1. Embrulhe o áudio num vídeo preto (`ffmpeg -f lavfi -i color=c=black:s=1080x1920:r=30 -i audio.mp3 -shortest …`)
+   e passe pelo corte normal (seção 1). Locução limpa: um keep por frase; a conferência ainda pega palavra comida.
+2. **A câmera é a montagem de cenas:** uma cena do Pixabay por trecho, cortada nas viradas de frase
+   (`pixabay.py baixar <id> --tipo video --vertical --ate <s> --nome cNN`), concatenadas com `corte/corte.wav` em
+   `corte/clean-916.mp4` (o `preparar.sh` usa esse arquivo). Troca FULL ↔ SPLIT junto com o corte de cena.
+3. Depois do `preparar.sh`, troque `assets/face-track.json` por um rastreio **fixo** (x 540, queixo ≈ 1130: legenda
+   centralizada no terço de baixo) — o rastreio real acharia rostos nas cenas de banco e a legenda pularia.
+4. R1 não se aplica (não há apresentador); evite só texto sobre o rosto de pessoa da cena. Marca sem logo: só texto.
+
 ### 2 · Motor VSL · preparo
 ```bash
 cp -R "$S/modelo" motor && cd motor && bash preparar.sh
@@ -68,6 +80,15 @@ boca e a 1ª montagem. Sem `pele-resolvida.json` a pele é a **nativa** (a da re
 3. **Material real** (R3): prints e logos oficiais em `assets/img/` + `../assets/SOURCES.md` (origem, licença,
    data); fato e preço com página oficial; tela sem print → ilustração declarada (`ferramentas/ilustracoes/`).
    Nunca invente logo, número ou print.
+   **Cena de contexto** (a fala descreve um lugar, objeto ou gesto: "no escritório", "digitando", "na rua"):
+   banco Pixabay (`ESTILO.md` 7.7), ~1 clipe a cada 10 s no máximo, sem substituir a interface:
+   ```bash
+   python3 $S/ferramentas/pixabay.py buscar "pessoa digitando notebook" --tipo video --folha ../qa/px.jpg  # olhe a folha
+   python3 $S/ferramentas/pixabay.py baixar <id> --projeto .. --tipo video --ate 4    # → assets/broll/ + SOURCES.md
+   python3 $S/ferramentas/pixabay.py baixar <id> --projeto .. --tipo foto             # → assets/img/px-<id>.jpg
+   ```
+   No `beats.js`: `K.broll("px-<id>.mp4", t0, t1)` num trecho SPLIT (ou `{tela: "cheia"}`, cena sem o
+   apresentador, ≤ 2,5 s); foto em `K.fan`/`K.grid`/`K.orbit`/`K.wall`/`K.panel` como `assets/img/px-<id>.jpg`.
 4. **Mapa → beats**: `assets/map.md` (tempo × fala × câmera × peça, como `exemplo/mapa.md`) e depois
    `src/beats.js`, uma chamada `K.*` por linha do mapa, tempos só por `K.at("frase exata")` (leia
    `exemplo/beats-exemplo.js` inteiro antes). Algo novo a cada 1,5–3 s; FULL ≈ SPLIT; `K.hideMouth` em toda
@@ -84,10 +105,16 @@ npx hyperframes snapshot --at <cada troca e cada beat> -o snapshots      # rosto
 node ferramentas/zona-segura-dom.mjs . --strict                           # "zona segura OK"
 npx hyperframes render -q high -o ../render/_reel-bruto.mp4
 node montar.mjs --so-camera && npx hyperframes render -q high -o ../render/_camera-so.mp4 && node montar.mjs
-bash ferramentas/audio-final-vsl.sh ../render/_reel-bruto.mp4 ../render/reel-v1.mp4   # −14 LUFS ±0,3 · pico ≤ −1 dBTP
-node ferramentas/sons.mjs && bash ferramentas/folha.sh ../render/reel-v1.mp4 ../qa/folha-final.png
+node ferramentas/sons.mjs                                                 # ../sons.json: os efeitos que a página agendou
+python3 ferramentas/mixar-sfx.py ../render/_reel-bruto.mp4 ../sons.json ../render/_reel-sfx.mp4   # OBRIGATÓRIO (abaixo)
+bash ferramentas/audio-final-vsl.sh ../render/_reel-sfx.mp4 ../render/reel-v1.mp4   # −14 LUFS ±0,3 · pico ≤ −1 dBTP
+bash ferramentas/folha.sh ../render/reel-v1.mp4 ../qa/folha-final.png
 python3 "$S/ferramentas/verificar.py" .. --video render/reel-v1.mp4 --sfx ../sons.json --camera ../render/_camera-so.mp4
 ```
+**Os efeitos sonoros só existem depois do `mixar-sfx.py`.** O kit cria os `<audio>` dos efeitos em tempo de execução e o
+`hyperframes render` (0.7.109) não os mixa: o render sai só com a voz. O `mixar-sfx.py` mixa o `sons.json` com ffmpeg e
+imprime o pico de cada efeito medido no arquivo (diferença mixado − original); nenhum pode sair "FRACO". Nunca dê os
+efeitos como entregues pela conta do `sons.json`: só pela medição no arquivo.
 Depois escreva `MINUTAGEM.md` (beat a beat: tempo, fala, o que aparece, layout, som) e `progresso.md` na pasta
 do projeto. **Critique antes de mostrar:** `VERIFY.md` todo aprovado, folha de quadros, R1 (rosto), R2 (SFX ≤ 0,8/s
 no modo enxuto), R6 (legenda), R7 (zona segura), R8 (áudio). Até 2 rodadas de ajuste antes de entregar.
@@ -104,7 +131,21 @@ retranscreva e remapeie (`corte/scripts/remapear.py`), nunca recronometre à mã
   seção 9 de `corte/references/EDICAO-BRUTA.md`, um de cada vez, registrado.
 - **Uma versão por rodada**, completa e verificada.
 - **Som enxuto** (`"sfxModo": "enxuto"`, o padrão do `vsl-padrao.json`): ≤ 0,8 efeito/s contando a digitação,
-  digitação sempre contínua. O som exato da referência (`"referencia"`) só a pedido.
+  digitação sempre contínua. O som exato da referência (`"referencia"`) só a pedido. Pediram **menos e mais discreto**?
+  `vsl.json` `"sfxAlvo": 0.3` (efeitos/s) e `"sfxVol": 0.4`; um efeito específico incomodou (ex.: o whoosh de ruído
+  "parece vento/móvel arrastando")? gere um mais suave com o **mesmo nome** em `motor/sfx-projeto/` — ele substitui
+  o do kit só naquele reel. **Discreto ≠ inaudível:** o arquivo novo tem pico entre −4 e −11 dBFS (o kit ainda
+  multiplica por ~0,1–0,3), o que dá −16 a −24 dBFS na mixagem, 12–20 dB abaixo da voz. Meça depois do render
+  (pico do arquivo + 20·log10(volume do `sons.json`)); um som abaixo de ~−30 dBFS na mixagem não existe para quem
+  assiste. Prefira sons tonais e curtos; ruído largo (pink/white) soa como vento ou móvel arrastando.
+  Pediram efeitos **variados**? Faça a trilha à mão: `ferramentas/paleta-sfx.py` em `sfx-projeto/` (sopros sobe/desce/curto
+  para trocas de cena, carimbo, pop1-3, check, moeda, erro, ding, alerta, tictac, impacto, brilho, clique), `"sfxModo":
+  "manual"` + `"sfxVol": 1`, e no fim do `beats.js` remova os automáticos (`#vsl audio[src^="assets/sfx/"]`) e chame
+  `K.sfx(nome, t, vol)` momento a momento. Calibre o volume pela intensidade acima de 400 Hz (o grave não toca no celular):
+  efeitos 2–5 dB abaixo da mediana da fala, impactos no nível dela.
+- **Cores da marca:** com logo ou manual da marca, escreva `<P>/pele-resolvida.json` com `cores` (`origem`, `fundo`,
+  `texto`, `destaque`, `apoio`, `acento2`) medidas na logo; destaque claro (dourado, amarelo) ganha texto escuro nos
+  botões e pílulas sozinho (`--onAcc`). Logo com fundo preto: alfa pelo brilho → PNG em `<P>/assets/oficiais/`.
 - **Material real** sempre; ilustração só declarada. **Rosto nunca coberto.** **Zona segura.**
 - **Você produz** nesta sessão. Se a pessoa pedir um agente ou um modelo específico, lance um agente
   general-purpose com este SKILL.md + `ESTILO.md` + `modelo/README.md` como brief e critique a entrega.

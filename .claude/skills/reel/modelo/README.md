@@ -15,9 +15,11 @@ na pasta do projeto); sem ela, cores, fontes e som são os da referência: nunca
 | `preparar.sh` | câmera 9:16 com a voz (`assets/clean.mp4`), transcript no formato do kit, fontes e material do projeto, `npm install`, rastreio da boca e a 1ª montagem |
 | `vsl-padrao.json` | o `vsl.json` inicial: a cor e a grade aprovadas (fixas, R4) e o enquadramento a medir (`punch`, `face`, `head`, `fullPos`, `splitPos`) |
 | `beats-modelo.js` | o `src/beats.js` inicial: a gramática fala → câmera → peça e as regras, com receitas comentadas |
+| `broll.js` | o `K.broll` (vídeo de apoio do banco Pixabay, `ESTILO.md` 7.7), injetado pelo `montar.mjs` antes dos beats só quando existe `assets/broll/`; sem a pasta o `index.html` sai igual ao de antes |
 | `sfx-enxuto.js` | o modo `"sfxModo": "enxuto"`, o padrão (R2: ≤ 0,8 efeito/s contando a digitação), injetado pelo `montar.mjs` |
 | `ferramentas/rastrear-boca.py` | `assets/face-track.json` (MediaPipe; sem ele, OpenCV) — sem esse arquivo a legenda não aparece |
 | `ferramentas/cards.mjs` | os cards da fase 1: um PNG por tela de `../entrega/planta.json`, tirado do motor no meio da tela |
+| `ferramentas/mixar-sfx.py` | mixa os efeitos do `../sons.json` no áudio do render com ffmpeg e mede cada um no arquivo. **Obrigatório:** o `hyperframes render` não mixa os `<audio>` criados em tempo de execução, então sem ele o vídeo sai só com a voz |
 | `ferramentas/sons.mjs` | `../sons.json` com os efeitos que o kit criou (densidade para o VERIFY e o crítico) |
 | `ferramentas/audio-final-vsl.sh` | o áudio final deste estilo: ganho + limitador em 192 kHz, calibrado em até 3 passadas (−14 LUFS ±0,3, pico ≤ −1 dBTP). Use este, não o `audio-final.sh` comum: com os ataques rápidos dos efeitos do kit, o comum deixa o pico passar (+1,2 dBTP no teste) |
 | `ferramentas/folha.sh` | `../qa/folha-final.png` (16 quadros do final) |
@@ -43,6 +45,7 @@ bash preparar.sh                       # câmera 9:16 + voz, transcript, fontes/
 # 2. meça num quadro de assets/clean.mp4, com o punch aplicado: face {x,y,w,h}, head {x,y}, punch, fullPos, splitPos → vsl.json
 #    (cor, grade e tinta NÃO mudam). Topo da cabeça alto (< ~300 px livres acima)? Nada no alto no FULL: tudo no peito (R1).
 # 3. material real em assets/img/ e ../assets/SOURCES.md (prints e logos oficiais; tela sem print → ferramentas/ilustracoes/)
+#    cena de contexto: python3 "$S/ferramentas/pixabay.py" buscar|baixar … --projeto .. (foto → assets/img/, vídeo → assets/broll/ + K.broll)
 # 4. assets/map.md (formato: exemplo/mapa.md) → src/beats.js (leia exemplo/beats-exemplo.js inteiro antes)
 node montar.mjs && npx hyperframes lint                       # 0 erros; snapshot vazio = âncora quebrada (veja o console)
 # 5. escreva ../entrega/planta.json (n, layout FULL|SPLIT, de, ate, fala, tela) — uma tela por linha do mapa
@@ -52,8 +55,9 @@ npx hyperframes snapshot --at <cada troca e cada beat> -o snapshots   # rosto li
 node ferramentas/zona-segura-dom.mjs . --strict                       # "zona segura OK"
 npx hyperframes render -q high -o ../render/_reel-bruto.mp4
 node montar.mjs --so-camera && npx hyperframes render -q high -o ../render/_camera-so.mp4 && node montar.mjs
-bash ferramentas/audio-final-vsl.sh ../render/_reel-bruto.mp4 ../render/reel-vN.mp4   # −14 LUFS ±0,3, pico ≤ −1 dBTP
 node ferramentas/sons.mjs                                             # ../sons.json
+python3 ferramentas/mixar-sfx.py ../render/_reel-bruto.mp4 ../sons.json ../render/_reel-sfx.mp4   # efeitos (o render não os mixa)
+bash ferramentas/audio-final-vsl.sh ../render/_reel-sfx.mp4 ../render/reel-vN.mp4   # −14 LUFS ±0,3, pico ≤ −1 dBTP
 bash ferramentas/folha.sh ../render/reel-vN.mp4 ../qa/folha-final.png
 python3 "$S/ferramentas/verificar.py" .. --video render/reel-vN.mp4 --sfx ../sons.json --camera ../render/_camera-so.mp4
 #   (S = a raiz da skill reel; o verificar.py escreve ../VERIFY.md e roda a zona segura → ../qa/zona-segura.png; --sfx e --camera são relativos a esta pasta)

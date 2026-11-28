@@ -8,6 +8,7 @@
 #   voz      P/corte/corte.wav (senão o áudio da própria câmera)
 #   palavras P/preparo/palavras.json (corrigido, R6) → senão P/corte/cortepalavras.json
 #   fontes   P/assets/fonts/ (fontes.css da pele) · material real P/assets/oficiais/ e P/assets/gerados/ → assets/img/
+#   banco    P/assets/banco/ (Pixabay: ferramentas/pixabay.py) → fotos em assets/img/, vídeos em assets/broll/
 # Escreve aqui (na pasta do motor):
 #   assets/clean.mp4        1080×1920, 30 fps, keyframe a cada 1 s (-g 30), com a voz (horizontal → recorte do centro)
 #   assets/transcript.json  {"words":[{"text","start","end"}],"audio_duration_secs"} (+ transcript-whisper.json, a cópia original)
@@ -69,11 +70,16 @@ fi
 # --- fontes da pele e material real do projeto ---
 if [[ -d "$P/assets/fonts" ]]; then cp -R "$P/assets/fonts/." assets/fonts/ 2>/dev/null || true; fi
 for d in "$P/assets/oficiais" "$P/assets/gerados"; do if [[ -d "$d" ]]; then cp -R "$d/." assets/img/ 2>/dev/null || true; fi; done
+# banco Pixabay (ferramentas/pixabay.py da skill): fotos → assets/img/, vídeos de apoio → assets/broll/ (liga o K.broll)
+if [[ -d "$P/assets/banco" ]]; then
+  for f in "$P/assets/banco"/*; do [[ -f "$f" ]] || continue
+    case "$f" in *.mp4) mkdir -p assets/broll; cp "$f" assets/broll/;; *) cp "$f" assets/img/;; esac; done
+fi
 
 # --- dependências (versões da referência) ---
 if [[ ! -e node_modules ]]; then
   if [[ -n "${VSL_NODE_MODULES:-}" && -d "$VSL_NODE_MODULES" ]]; then ln -s "$VSL_NODE_MODULES" node_modules; echo "node_modules: $VSL_NODE_MODULES"
-  else npm install --no-audit --no-fund --silent && echo "npm ok (hyperframes 0.7.109 · gsap 3.14.2)"; fi
+  else ONNXRUNTIME_NODE_INSTALL_CUDA=skip npm_config_onnxruntime_node_install_cuda=skip npm install --no-audit --no-fund --silent && echo "npm ok (hyperframes 0.7.109 · gsap 3.14.2)"; fi
 fi
 
 # --- rastreio da boca (a legenda que segue a boca depende dele) ---

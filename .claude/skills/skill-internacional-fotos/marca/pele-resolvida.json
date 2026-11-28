@@ -1,0 +1,11 @@
+{
+  "_nota": "Pele da marca Resultax Internacional, medida na logo (preto + dourado). Fontes nativas do motor. Copie para <projeto>/pele-resolvida.json.",
+  "cores": {
+    "origem": "logo da Resultax Internacional (marca/resultax-logo.png)",
+    "fundo": "#0b0a08",
+    "texto": "#f7f3ea",
+    "destaque": "#c9a85c",
+    "apoio": "#e6d29a",
+    "acento2": "#a89e88"
+  }
+}

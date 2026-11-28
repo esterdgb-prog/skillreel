@@ -14,8 +14,12 @@
 //   fontes → assets/fonts/fontes.css; com origem "nativa" nada muda e o resultado é o da referência;
 // - aplica o SOM: padrão do vsl.json = "enxuto" (R2); pele com efeitos desligados → nenhum; intensidade 0,3 → enxuto
 //   e −3 dB; 0,6 ou ausente → o que o vsl.json diz; 0,85 → "referencia" (o som exato do vídeo aprovado);
+// - liga o VÍDEO DE APOIO (K.broll, broll.js) se existir assets/broll/ com algum .mp4 (ferramentas/pixabay.py da skill);
+//   sem a pasta nada muda e o resultado é o da referência;
+// - sons do projeto: sfx-projeto/<nome>.wav (mesmo nome do kit) substitui o efeito do kit só neste reel;
+//   vsl.json "sfxAlvo" (efeitos/s, padrão 0,8) e "sfxVol" (volume geral, padrão 0,55) deixam o som mais enxuto/discreto;
 // - escreve index.html e meta.json; imprime o resumo.
-import { readFileSync, writeFileSync, existsSync, cpSync, mkdirSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync, cpSync, mkdirSync, readdirSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -32,6 +36,8 @@ if (!gsapSrc) { console.error("falta o GSAP: rode npm install na raiz do projeto
 cpSync(gsapSrc, join("assets", "gsap.min.js"));
 cpSync(join(M, "fonts"), join("assets", "fonts"), { recursive: true });
 cpSync(join(M, "sfx"), join("assets", "sfx"), { recursive: true });
+// sons do projeto (ex.: um whoosh mais suave a pedido): sfx-projeto/<nome>.wav substitui o do kit com o mesmo nome
+if (existsSync("sfx-projeto")) cpSync("sfx-projeto", join("assets", "sfx"), { recursive: true });
 mkdirSync("src", { recursive: true });
 if (!existsSync("src/index.template.html")) cpSync(join(M, "index.template.html"), "src/index.template.html");
 if (!existsSync("src/beats.js")) cpSync(join(MOD, "beats-modelo.js"), "src/beats.js");
@@ -73,7 +79,14 @@ if (cores && !String(cores.origem || "nativa").startsWith("nativa")) {
   --white:${T}; --muted:${X}; --dim:${dk(X, 0.35)};
 }
 #vsl, html, body{ color:${T}; }\n`;
-  peleNota = `cores ${cores.origem}`;
+  // destaque claro (dourado, amarelo…): texto escuro sobre botões e pílulas, senão o branco some (--onAcc)
+  const lum = (c) => { const [r, g, b] = hex(c).map((v) => v / 255); return 0.2126 * r + 0.7152 * g + 0.0722 * b; };
+  const onAcc = lum(D) > 0.45 ? dk(F, 0.2) : "#ffffff";
+  peleCss += `#vsl{ --onAcc:${onAcc}; }\n`;
+  if (onAcc !== "#ffffff") peleCss += `#vsl .pill:not(.dark), #vsl .cta, #vsl .badge span{ color:${onAcc}; }
+#vsl .pill:not(.dark) .pico svg, #vsl .cta svg{ stroke:${onAcc} !important; }
+#vsl .pill.strike .ptxt{ color:${onAcc}; opacity:.8; }\n`;
+  peleNota = `cores ${cores.origem}${onAcc !== "#ffffff" ? " · texto escuro sobre o destaque" : ""}`;
 }
 const fontes = pele && pele.fontes;
 let fontesLink = "";
@@ -89,7 +102,8 @@ if (fontes && existsSync("assets/fonts/fontes.css")) {
 if (peleCss) writeFileSync("assets/pele.css", "/* gerado por montar.mjs a partir de pele-resolvida.json — não edite */\n" + peleCss);
 
 // ---------------- som ----------------
-let sfxNota = cfg.sfxModo === "enxuto" ? "enxuto (R2)" : "como na referência";
+let sfxNota = cfg.sfxModo === "enxuto" ? `enxuto (R2${cfg.sfxAlvo ? `, alvo ${cfg.sfxAlvo}/s` : ""})` : "como na referência";
+if (existsSync("sfx-projeto")) sfxNota += ` · sons do projeto: ${readdirSync("sfx-projeto").filter((f) => f.endsWith(".wav")).join(", ")}`;
 const som = pele && pele.som;
 if (som && som.sfx === false) { cfg.sfx = false; sfxNota = "desligado (pele)"; }
 else if (som && som.sfxIntensidade != null) {
@@ -110,8 +124,12 @@ if (cfg.music && existsSync(join("assets", cfg.music.file))) {
   music = `<audio id="music" src="assets/${cfg.music.file}" data-start="${s}" data-duration="${(dur - s).toFixed(3)}" data-track-index="3" data-volume="${cfg.music.volume ?? 0.18}"></audio>`;
 }
 
+// ---------------- vídeo de apoio (K.broll) ----------------
+const brolls = existsSync("assets/broll") ? readdirSync("assets/broll").filter((f) => f.endsWith(".mp4")) : [];
+const brollJs = brolls.length ? readFileSync(join(MOD, "broll.js"), "utf8") + "\n" : "";
+
 // ---------------- index.html ----------------
-const beats = readFileSync("src/beats.js", "utf8");
+const beats = brollJs + readFileSync("src/beats.js", "utf8");
 let html = readFileSync("src/index.template.html", "utf8")
   .replaceAll("__DUR__", String(dur)).replace("__CFG__", JSON.stringify(cfg)).replace("__WORDS__", JSON.stringify(words)).replace("__FACE__", JSON.stringify(face))
   .replace("__CLASS__", `t-${cfg.theme || "roxo"} f-${cfg.font || "padrao"}`)
@@ -123,4 +141,4 @@ const meta = read("meta.json", {});
 Object.assign(meta, { id: "vsl", width: 1080, height: 1920, fps: 30 });
 writeFileSync("meta.json", JSON.stringify(meta, null, 2));
 if (!existsSync("hyperframes.json")) cpSync(join(MOD, "hyperframes.json"), "hyperframes.json");
-console.log(`index.html ok${SO_CAMERA ? " (SÓ CÂMERA — rode de novo sem --so-camera depois do render)" : ""} — ${dur}s · ${words.length} palavras · boca: ${face ? "sim" : "NÃO (rode ferramentas/rastrear-boca.py)"} · matte: ${matte.startsWith("<div") ? "sim" : "não"} · música: ${music ? "sim" : "não"} · pele: ${peleNota} · sfx: ${sfxNota}`);
+console.log(`index.html ok${SO_CAMERA ? " (SÓ CÂMERA — rode de novo sem --so-camera depois do render)" : ""} — ${dur}s · ${words.length} palavras · boca: ${face ? "sim" : "NÃO (rode ferramentas/rastrear-boca.py)"} · matte: ${matte.startsWith("<div") ? "sim" : "não"} · música: ${music ? "sim" : "não"} · pele: ${peleNota} · sfx: ${sfxNota}${brolls.length ? ` · vídeo de apoio: ${brolls.length} clipe(s)` : ""}`);
