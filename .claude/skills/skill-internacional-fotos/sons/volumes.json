@@ -16,5 +16,6 @@
  "alerta": 0.05,
  "tictac": 0.33,
  "glitch": 0.098,
- "click": 0.313
+ "click": 0.313,
+ "glitch-forte": 0.135
 }

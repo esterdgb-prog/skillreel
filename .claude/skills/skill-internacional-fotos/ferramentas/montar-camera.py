@@ -31,7 +31,8 @@ def main():
     total = dur("corte/corte.wav")
     b = [total if (x == "fim") else float(x) for x in m["cortes"]]
     b[-1] = total  # o último trecho vai até o fim da narração
-    clips = m.get("clipes") or sorted(glob.glob("assets/banco/px-*-c*.mp4"), key=lambda f: int(f.rsplit("-c", 1)[-1][:-4]))
+    import os
+    clips = m.get("clipes") if m.get("clipes") and all(os.path.exists(c) for c in m["clipes"]) else sorted(glob.glob("assets/banco/px-*-c*.mp4"), key=lambda f: int(f.rsplit("-c", 1)[-1][:-4]))
     assert len(clips) == len(b) - 1, f"{len(clips)} clipes para {len(b) - 1} trechos"
     args, fc = ["ffmpeg", "-v", "error", "-y"], []
     for i, c in enumerate(clips):
