@@ -3,7 +3,7 @@ from timeline import BPM, BEAT, VOICE as _V1
 
 DUR = 60.0
 MUSICA = "natal"
-DUCK = 0.25          # música abaixa pouco sob a voz (constante)
+DUCK = 0.35          # música abaixa ~4 dB sob a voz (constante)
 MUSIC_DB = -16
 GAP = 2.4            # pausa nova antes da logo ("Venha acompanhar essa jornada conosco")
 
@@ -61,8 +61,8 @@ SFX = [
     (49.20, "boom", -15, 0),
     (49.20, "handbell", -16, 0),
     (49.40, "sparkle_sweep", -22, 2.4),    # anel se formando + convite
-    (53.70, "boom", -18, 0),               # logo
-    (53.70, "logo_chime", -16, 0),
+    (53.50, "boom", -24, 0),               # logo (antes da voz, mais baixo)
+    (53.50, "logo_chime", -22, 0),
 ]
 for i in range(7):
     SFX.append((39.0 + i * BEAT, "tick" if i % 2 == 0 else "tock", -23, 0))
