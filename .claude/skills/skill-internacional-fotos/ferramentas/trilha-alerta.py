@@ -75,8 +75,8 @@ def main():
             padR[i0:i1] += saw(f * 1.003, tt) * env
         k += 1
         t0 = t1 if t1 > t0 else dur
-    padL, padR = lowpass(padL, 1300), lowpass(padR, 1300)
-    L += 0.16 * padL; R += 0.16 * padR
+    padL, padR = lowpass(padL, 2400), lowpass(padR, 2400)
+    L += 0.20 * padL; R += 0.20 * padR
 
     # ---- baixo: colcheias na fundamental (com 2º e 3º harmônicos, para o celular ouvir), do drop ao CTA
     raizes = ["D2", "Bb1", "G1", "A1"]
@@ -86,9 +86,9 @@ def main():
         f = nota(raizes[idx])
         i0 = int(tb * SR); m = int(0.28 * SR); tt = np.arange(min(m, n - i0)) / SR
         env = np.exp(-tt / 0.11) * np.minimum(1, tt / 0.004)
-        s = (np.sin(2 * np.pi * f * tt) + 0.6 * np.sin(2 * np.pi * 2 * f * tt) + 0.35 * np.sin(2 * np.pi * 3 * f * tt)) * env
+        s = (0.5 * np.sin(2 * np.pi * f * tt) + 0.7 * np.sin(2 * np.pi * 2 * f * tt) + 0.55 * np.sin(2 * np.pi * 3 * f * tt) + 0.35 * np.sin(2 * np.pi * 4 * f * tt)) * env
         acento = 1.0 if ((tb - a.drop) / (beat / 2)) % 2 < 0.5 else 0.7
-        L[i0:i0 + len(s)] += 0.30 * acento * s; R[i0:i0 + len(s)] += 0.30 * acento * s
+        L[i0:i0 + len(s)] += 0.22 * acento * s; R[i0:i0 + len(s)] += 0.22 * acento * s
         tb += beat / 2
 
     # ---- bumbo leve nos tempos 1 e 3, do drop ao CTA
@@ -97,7 +97,7 @@ def main():
         i0 = int(tk * SR); m = int(0.3 * SR); tt = np.arange(min(m, n - i0)) / SR
         f = 50 + 70 * np.exp(-tt / 0.03)
         s = np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-tt / 0.12)
-        L[i0:i0 + len(s)] += 0.32 * s; R[i0:i0 + len(s)] += 0.32 * s
+        L[i0:i0 + len(s)] += 0.16 * s; R[i0:i0 + len(s)] += 0.16 * s
         tk += 2 * beat
 
     # ---- tique de relógio em semicolcheias (o "alerta" constante), a música inteira até o CTA
@@ -107,7 +107,7 @@ def main():
         forte = abs(((tq / beat) % 1)) < 1e-3
         f = 3400 if forte else 2700
         s = np.sin(2 * np.pi * f * tt) * np.exp(-tt / 0.006)
-        g = 0.07 if forte else 0.035
+        g = 0.11 if forte else 0.055
         pan = 0.65 if int(round(tq / (beat / 4))) % 2 else 0.35
         L[i0:i0 + len(s)] += g * s * (1 - pan) * 2; R[i0:i0 + len(s)] += g * s * pan * 2
         tq += beat / 4
@@ -119,7 +119,7 @@ def main():
             i0 = int((ta + j * beat) * SR); m = int(0.5 * SR); tt = np.arange(min(m, n - i0)) / SR
             f = nota(nn)
             s = (np.sin(2 * np.pi * f * tt) + 0.3 * np.sin(2 * np.pi * 3 * f * tt)) * np.exp(-tt / 0.18) * np.minimum(1, tt / 0.01)
-            L[i0:i0 + len(s)] += 0.09 * s; R[i0:i0 + len(s)] += 0.09 * s
+            L[i0:i0 + len(s)] += 0.15 * s; R[i0:i0 + len(s)] += 0.15 * s
         ta += 2 * bar
 
     # ---- subida suave até o drop (seno de 220→660 Hz), sem ruído
